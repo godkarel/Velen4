@@ -117,6 +117,36 @@ local function constructNew_frmvelen()
     obj.edit7:setField("Level");
     obj.edit7:setName("edit7");
 
+    obj.edit8 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit8:setParent(obj.tab1);
+    obj.edit8:setLeft(20);
+    obj.edit8:setTop(120);
+    obj.edit8:setWidth(75);
+    obj.edit8:setType("number");
+    obj.edit8:setHeight(20);
+    obj.edit8:setField("CHPNivel");
+    obj.edit8:setName("edit8");
+
+    obj.edit9 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit9:setParent(obj.tab1);
+    obj.edit9:setLeft(20);
+    obj.edit9:setTop(160);
+    obj.edit9:setWidth(75);
+    obj.edit9:setType("number");
+    obj.edit9:setHeight(20);
+    obj.edit9:setField("EHPNivel");
+    obj.edit9:setName("edit9");
+
+    obj.edit10 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit10:setParent(obj.tab1);
+    obj.edit10:setLeft(20);
+    obj.edit10:setTop(200);
+    obj.edit10:setWidth(75);
+    obj.edit10:setType("number");
+    obj.edit10:setHeight(20);
+    obj.edit10:setField("MHPNivel");
+    obj.edit10:setName("edit10");
+
     obj.tab2 = GUI.fromHandle(_obj_newObject("tab"));
     obj.tab2:setParent(obj.tabControl1);
     obj.tab2:setTitle("Segunda Aba");
@@ -136,23 +166,23 @@ local function constructNew_frmvelen()
     obj.image1:setSRC("/imagens/1.png");
     obj.image1:setName("image1");
 
-    obj.edit8 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit8:setParent(obj.scrollBox1);
-    obj.edit8:setLeft(160);
-    obj.edit8:setTop(60);
-    obj.edit8:setWidth(75);
-    obj.edit8:setHeight(20);
-    obj.edit8:setField("Nome");
-    obj.edit8:setName("edit8");
+    obj.edit11 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit11:setParent(obj.scrollBox1);
+    obj.edit11:setLeft(160);
+    obj.edit11:setTop(60);
+    obj.edit11:setWidth(75);
+    obj.edit11:setHeight(20);
+    obj.edit11:setField("Nome");
+    obj.edit11:setName("edit11");
 
-    obj.edit9 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit9:setParent(obj.scrollBox1);
-    obj.edit9:setLeft(160);
-    obj.edit9:setTop(92);
-    obj.edit9:setWidth(75);
-    obj.edit9:setHeight(20);
-    obj.edit9:setField("idade");
-    obj.edit9:setName("edit9");
+    obj.edit12 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit12:setParent(obj.scrollBox1);
+    obj.edit12:setLeft(160);
+    obj.edit12:setTop(92);
+    obj.edit12:setWidth(75);
+    obj.edit12:setHeight(20);
+    obj.edit12:setField("idade");
+    obj.edit12:setName("edit12");
 
     obj.comboBox1 = GUI.fromHandle(_obj_newObject("comboBox"));
     obj.comboBox1:setParent(obj.scrollBox1);
@@ -176,26 +206,26 @@ local function constructNew_frmvelen()
     obj.cmbEspecializa:setEnabled(false);
     obj.cmbEspecializa:setItems({'Escolha', 'Druida', 'Shaman', 'Caçador', 'Sentinela Lunar', 'Encantador de Almas', 
 		'Necromance', 'Sacerdote', 'Juiz', 'Barbaro', 'Tanker', 'Acrobata', 'Assassino', 'Arcanista', 'Feiticeiro', 'Summoner', 'Duelista', 'Pirata', 'Guardião Espiritual', 
-		'CavaleirodasTrevas', 'Templario' });
+		'Cavaleiro das Trevas', 'Templario' });
 
-    obj.edit10 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit10:setParent(obj.scrollBox1);
-    obj.edit10:setLeft(490);
-    obj.edit10:setTop(60);
-    obj.edit10:setWidth(40);
-    obj.edit10:setHeight(20);
-    obj.edit10:setField("Velis");
-    obj.edit10:setName("edit10");
+    obj.edit13 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit13:setParent(obj.scrollBox1);
+    obj.edit13:setLeft(490);
+    obj.edit13:setTop(60);
+    obj.edit13:setWidth(40);
+    obj.edit13:setHeight(20);
+    obj.edit13:setField("Velis");
+    obj.edit13:setName("edit13");
 
-    obj.edit11 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit11:setParent(obj.scrollBox1);
-    obj.edit11:setLeft(490);
-    obj.edit11:setTop(60);
-    obj.edit11:setWidth(40);
-    obj.edit11:setVisible(false);
-    obj.edit11:setHeight(20);
-    obj.edit11:setField("PHPRacial");
-    obj.edit11:setName("edit11");
+    obj.edit14 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit14:setParent(obj.scrollBox1);
+    obj.edit14:setLeft(490);
+    obj.edit14:setTop(60);
+    obj.edit14:setWidth(40);
+    obj.edit14:setVisible(false);
+    obj.edit14:setHeight(20);
+    obj.edit14:setField("PHPRacial");
+    obj.edit14:setName("edit14");
 
     obj.comboBox2 = GUI.fromHandle(_obj_newObject("comboBox"));
     obj.comboBox2:setParent(obj.scrollBox1);
@@ -224,16 +254,16 @@ local function constructNew_frmvelen()
     obj.button2:setText("+");
     obj.button2:setName("button2");
 
-    obj.edit12 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit12:setParent(obj.scrollBox1);
-    obj.edit12:setLeft(170);
-    obj.edit12:setTop(265);
-    obj.edit12:setWidth(35);
-    obj.edit12:setHeight(20);
-    obj.edit12:setEnabled(false);
-    obj.edit12:setType("number");
-    obj.edit12:setField("Forca");
-    obj.edit12:setName("edit12");
+    obj.edit15 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit15:setParent(obj.scrollBox1);
+    obj.edit15:setLeft(170);
+    obj.edit15:setTop(265);
+    obj.edit15:setWidth(35);
+    obj.edit15:setHeight(20);
+    obj.edit15:setEnabled(false);
+    obj.edit15:setType("number");
+    obj.edit15:setField("Forca");
+    obj.edit15:setName("edit15");
 
     obj.rectangle1 = GUI.fromHandle(_obj_newObject("rectangle"));
     obj.rectangle1:setParent(obj.scrollBox1);
@@ -272,16 +302,16 @@ local function constructNew_frmvelen()
     obj.button4:setText("+");
     obj.button4:setName("button4");
 
-    obj.edit13 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit13:setParent(obj.scrollBox1);
-    obj.edit13:setLeft(170);
-    obj.edit13:setTop(327);
-    obj.edit13:setWidth(35);
-    obj.edit13:setHeight(20);
-    obj.edit13:setEnabled(false);
-    obj.edit13:setType("number");
-    obj.edit13:setField("Inteligencia");
-    obj.edit13:setName("edit13");
+    obj.edit16 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit16:setParent(obj.scrollBox1);
+    obj.edit16:setLeft(170);
+    obj.edit16:setTop(327);
+    obj.edit16:setWidth(35);
+    obj.edit16:setHeight(20);
+    obj.edit16:setEnabled(false);
+    obj.edit16:setType("number");
+    obj.edit16:setField("Inteligencia");
+    obj.edit16:setName("edit16");
 
     obj.rectangle2 = GUI.fromHandle(_obj_newObject("rectangle"));
     obj.rectangle2:setParent(obj.scrollBox1);
@@ -320,16 +350,16 @@ local function constructNew_frmvelen()
     obj.button6:setText("+");
     obj.button6:setName("button6");
 
-    obj.edit14 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit14:setParent(obj.scrollBox1);
-    obj.edit14:setLeft(170);
-    obj.edit14:setTop(388);
-    obj.edit14:setWidth(35);
-    obj.edit14:setHeight(20);
-    obj.edit14:setEnabled(false);
-    obj.edit14:setType("number");
-    obj.edit14:setField("Destreza");
-    obj.edit14:setName("edit14");
+    obj.edit17 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit17:setParent(obj.scrollBox1);
+    obj.edit17:setLeft(170);
+    obj.edit17:setTop(388);
+    obj.edit17:setWidth(35);
+    obj.edit17:setHeight(20);
+    obj.edit17:setEnabled(false);
+    obj.edit17:setType("number");
+    obj.edit17:setField("Destreza");
+    obj.edit17:setName("edit17");
 
     obj.rectangle3 = GUI.fromHandle(_obj_newObject("rectangle"));
     obj.rectangle3:setParent(obj.scrollBox1);
@@ -368,16 +398,16 @@ local function constructNew_frmvelen()
     obj.button8:setText("+");
     obj.button8:setName("button8");
 
-    obj.edit15 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit15:setParent(obj.scrollBox1);
-    obj.edit15:setLeft(170);
-    obj.edit15:setTop(449);
-    obj.edit15:setWidth(35);
-    obj.edit15:setHeight(20);
-    obj.edit15:setEnabled(false);
-    obj.edit15:setType("number");
-    obj.edit15:setField("Agilidade");
-    obj.edit15:setName("edit15");
+    obj.edit18 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit18:setParent(obj.scrollBox1);
+    obj.edit18:setLeft(170);
+    obj.edit18:setTop(449);
+    obj.edit18:setWidth(35);
+    obj.edit18:setHeight(20);
+    obj.edit18:setEnabled(false);
+    obj.edit18:setType("number");
+    obj.edit18:setField("Agilidade");
+    obj.edit18:setName("edit18");
 
     obj.rectangle4 = GUI.fromHandle(_obj_newObject("rectangle"));
     obj.rectangle4:setParent(obj.scrollBox1);
@@ -416,16 +446,16 @@ local function constructNew_frmvelen()
     obj.button10:setText("+");
     obj.button10:setName("button10");
 
-    obj.edit16 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit16:setParent(obj.scrollBox1);
-    obj.edit16:setLeft(170);
-    obj.edit16:setTop(510);
-    obj.edit16:setWidth(35);
-    obj.edit16:setHeight(20);
-    obj.edit16:setEnabled(false);
-    obj.edit16:setType("number");
-    obj.edit16:setField("Vitalidade");
-    obj.edit16:setName("edit16");
+    obj.edit19 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit19:setParent(obj.scrollBox1);
+    obj.edit19:setLeft(170);
+    obj.edit19:setTop(510);
+    obj.edit19:setWidth(35);
+    obj.edit19:setHeight(20);
+    obj.edit19:setEnabled(false);
+    obj.edit19:setType("number");
+    obj.edit19:setField("Vitalidade");
+    obj.edit19:setName("edit19");
 
     obj.rectangle5 = GUI.fromHandle(_obj_newObject("rectangle"));
     obj.rectangle5:setParent(obj.scrollBox1);
@@ -750,34 +780,34 @@ local function constructNew_frmvelen()
     obj.label22:setField("CMagico");
     obj.label22:setName("label22");
 
-    obj.edit17 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit17:setParent(obj.scrollBox1);
-    obj.edit17:setLeft(295);
-    obj.edit17:setTop(807);
-    obj.edit17:setFontColor("#00008B");
-    obj.edit17:setScale(2.0);
-    obj.edit17:setWidth(21);
-    obj.edit17:setHeight(50);
-    obj.edit17:setType("number");
-    obj.edit17:setTextPrompt("0");
-    obj.edit17:setEnabled(true);
-    obj.edit17:setMax(30);
-    obj.edit17:setField("Level");
-    obj.edit17:setTransparent(true);
-    obj.edit17:setName("edit17");
+    obj.edit20 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit20:setParent(obj.scrollBox1);
+    obj.edit20:setLeft(295);
+    obj.edit20:setTop(807);
+    obj.edit20:setFontColor("#00008B");
+    obj.edit20:setScale(2.0);
+    obj.edit20:setWidth(21);
+    obj.edit20:setHeight(50);
+    obj.edit20:setType("number");
+    obj.edit20:setTextPrompt("0");
+    obj.edit20:setEnabled(true);
+    obj.edit20:setMax(30);
+    obj.edit20:setField("Level");
+    obj.edit20:setTransparent(true);
+    obj.edit20:setName("edit20");
 
-    obj.edit18 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit18:setParent(obj.scrollBox1);
-    obj.edit18:setLeft(295);
-    obj.edit18:setTop(700);
-    obj.edit18:setFontColor("#00008B");
-    obj.edit18:setScale(2.0);
-    obj.edit18:setWidth(21);
-    obj.edit18:setVisible(false);
-    obj.edit18:setHeight(50);
-    obj.edit18:setField("Elevel");
-    obj.edit18:setTransparent(true);
-    obj.edit18:setName("edit18");
+    obj.edit21 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit21:setParent(obj.scrollBox1);
+    obj.edit21:setLeft(295);
+    obj.edit21:setTop(700);
+    obj.edit21:setFontColor("#00008B");
+    obj.edit21:setScale(2.0);
+    obj.edit21:setWidth(21);
+    obj.edit21:setVisible(false);
+    obj.edit21:setHeight(50);
+    obj.edit21:setField("Elevel");
+    obj.edit21:setTransparent(true);
+    obj.edit21:setName("edit21");
 
     obj.button11 = GUI.fromHandle(_obj_newObject("button"));
     obj.button11:setParent(obj.scrollBox1);
@@ -925,7 +955,7 @@ local function constructNew_frmvelen()
 				-- obter a mesa do personagem
 				local mesaDoPersonagem = Firecast.getMesaDe(sheet);        
 
-				-- se o usuário não preencheu modificador, vamos 	usar o valor 0
+				-- se o usuário não preencheu modificador, vamos usar o valor 0
 				sheet.Acerto = sheet.Acerto or 0;                        
 				if sheet.EscolheAtaqueBasico == nil then
 					showMessage("Escolha uma Base de Dano para seu Ataque Basico na lista acima");
@@ -974,39 +1004,6 @@ local function constructNew_frmvelen()
     obj.button21:setText("Ataque Basico");
     obj.button21:setName("button21");
 
-    obj.edit19 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit19:setParent(obj.scrollBox1);
-    obj.edit19:setLeft(270);
-    obj.edit19:setTop(670);
-    obj.edit19:setWidth(90);
-    obj.edit19:setType("number");
-    obj.edit19:setHeight(30);
-    obj.edit19:setVisible(false);
-    obj.edit19:setField("ClasseAcerto");
-    obj.edit19:setName("edit19");
-
-    obj.edit20 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit20:setParent(obj.scrollBox1);
-    obj.edit20:setLeft(270);
-    obj.edit20:setTop(720);
-    obj.edit20:setWidth(90);
-    obj.edit20:setType("number");
-    obj.edit20:setHeight(30);
-    obj.edit20:setVisible(false);
-    obj.edit20:setField("DestrezaAcerto");
-    obj.edit20:setName("edit20");
-
-    obj.edit21 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit21:setParent(obj.scrollBox1);
-    obj.edit21:setLeft(270);
-    obj.edit21:setTop(770);
-    obj.edit21:setWidth(90);
-    obj.edit21:setType("number");
-    obj.edit21:setHeight(30);
-    obj.edit21:setVisible(false);
-    obj.edit21:setField("EspecAcerto");
-    obj.edit21:setName("edit21");
-
     obj.edit22 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit22:setParent(obj.scrollBox1);
     obj.edit22:setLeft(270);
@@ -1015,113 +1012,106 @@ local function constructNew_frmvelen()
     obj.edit22:setType("number");
     obj.edit22:setHeight(30);
     obj.edit22:setVisible(false);
-    obj.edit22:setField("ClasseAM");
+    obj.edit22:setField("ClasseAcerto");
     obj.edit22:setName("edit22");
 
     obj.edit23 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit23:setParent(obj.scrollBox1);
     obj.edit23:setLeft(270);
-    obj.edit23:setTop(770);
+    obj.edit23:setTop(720);
     obj.edit23:setWidth(90);
     obj.edit23:setType("number");
     obj.edit23:setHeight(30);
     obj.edit23:setVisible(false);
-    obj.edit23:setField("EspecAM");
+    obj.edit23:setField("DestrezaAcerto");
     obj.edit23:setName("edit23");
 
     obj.edit24 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit24:setParent(obj.scrollBox1);
     obj.edit24:setLeft(270);
-    obj.edit24:setTop(670);
+    obj.edit24:setTop(770);
     obj.edit24:setWidth(90);
     obj.edit24:setType("number");
     obj.edit24:setHeight(30);
     obj.edit24:setVisible(false);
-    obj.edit24:setField("ClasseCR");
+    obj.edit24:setField("EspecAcerto");
     obj.edit24:setName("edit24");
 
     obj.edit25 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit25:setParent(obj.scrollBox1);
     obj.edit25:setLeft(270);
-    obj.edit25:setTop(770);
+    obj.edit25:setTop(670);
     obj.edit25:setWidth(90);
     obj.edit25:setType("number");
     obj.edit25:setHeight(30);
     obj.edit25:setVisible(false);
-    obj.edit25:setField("EspecCR");
+    obj.edit25:setField("ClasseAM");
     obj.edit25:setName("edit25");
 
     obj.edit26 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit26:setParent(obj.scrollBox1);
     obj.edit26:setLeft(270);
-    obj.edit26:setTop(670);
+    obj.edit26:setTop(770);
     obj.edit26:setWidth(90);
     obj.edit26:setType("number");
     obj.edit26:setHeight(30);
     obj.edit26:setVisible(false);
-    obj.edit26:setField("ClasseCM");
+    obj.edit26:setField("EspecAM");
     obj.edit26:setName("edit26");
 
     obj.edit27 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit27:setParent(obj.scrollBox1);
     obj.edit27:setLeft(270);
-    obj.edit27:setTop(770);
+    obj.edit27:setTop(670);
     obj.edit27:setWidth(90);
     obj.edit27:setType("number");
     obj.edit27:setHeight(30);
     obj.edit27:setVisible(false);
-    obj.edit27:setField("EspecCM");
+    obj.edit27:setField("ClasseCR");
     obj.edit27:setName("edit27");
 
     obj.edit28 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit28:setParent(obj.scrollBox1);
     obj.edit28:setLeft(270);
-    obj.edit28:setTop(670);
+    obj.edit28:setTop(770);
     obj.edit28:setWidth(90);
     obj.edit28:setType("number");
     obj.edit28:setHeight(30);
     obj.edit28:setVisible(false);
-    obj.edit28:setField("ClasseEsquiva");
+    obj.edit28:setField("EspecCR");
     obj.edit28:setName("edit28");
 
     obj.edit29 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit29:setParent(obj.scrollBox1);
     obj.edit29:setLeft(270);
-    obj.edit29:setTop(770);
+    obj.edit29:setTop(670);
     obj.edit29:setWidth(90);
     obj.edit29:setType("number");
-<<<<<<< HEAD
     obj.edit29:setHeight(30);
     obj.edit29:setVisible(false);
-    obj.edit29:setField("EspecEsquiva");
-=======
-    obj.edit29:setVisible(true);
-    obj.edit29:setFontSize(22);
-    obj.edit29:setEnabled(true);
-    obj.edit29:setField("ELevel");
->>>>>>> ead8ea0d8f37bb857bd5875f3013a02e07f3366f
+    obj.edit29:setField("ClasseCM");
     obj.edit29:setName("edit29");
 
     obj.edit30 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit30:setParent(obj.scrollBox1);
     obj.edit30:setLeft(270);
-    obj.edit30:setTop(670);
+    obj.edit30:setTop(770);
     obj.edit30:setWidth(90);
     obj.edit30:setType("number");
     obj.edit30:setHeight(30);
     obj.edit30:setVisible(false);
-    obj.edit30:setField("ClassePer");
+    obj.edit30:setField("EspecCM");
     obj.edit30:setName("edit30");
 
     obj.edit31 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit31:setParent(obj.scrollBox1);
     obj.edit31:setLeft(270);
-    obj.edit31:setTop(770);
+    obj.edit31:setTop(670);
     obj.edit31:setWidth(90);
     obj.edit31:setType("number");
     obj.edit31:setHeight(30);
     obj.edit31:setVisible(false);
-    obj.edit31:setField("EspecPer");
+    obj.edit31:setField("ClasseEsquiva");
     obj.edit31:setName("edit31");
 
     obj.edit32 = GUI.fromHandle(_obj_newObject("edit"));
@@ -1132,70 +1122,103 @@ local function constructNew_frmvelen()
     obj.edit32:setType("number");
     obj.edit32:setHeight(30);
     obj.edit32:setVisible(false);
-    obj.edit32:setField("AgilidadeESQ");
+    obj.edit32:setField("EspecEsquiva");
     obj.edit32:setName("edit32");
 
     obj.edit33 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit33:setParent(obj.scrollBox1);
     obj.edit33:setLeft(270);
-    obj.edit33:setTop(770);
+    obj.edit33:setTop(670);
     obj.edit33:setWidth(90);
     obj.edit33:setType("number");
     obj.edit33:setHeight(30);
     obj.edit33:setVisible(false);
-    obj.edit33:setField("ForcaPer");
+    obj.edit33:setField("ClassePer");
     obj.edit33:setName("edit33");
 
     obj.edit34 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit34:setParent(obj.scrollBox1);
-    obj.edit34:setTop(440);
-    obj.edit34:setLeft(292);
-    obj.edit34:setWidth(50);
-    obj.edit34:setHeight(30);
-    obj.edit34:setMax(160);
-    obj.edit34:setMin(0);
-    obj.edit34:setHorzTextAlign("center");
+    obj.edit34:setLeft(270);
+    obj.edit34:setTop(770);
+    obj.edit34:setWidth(90);
     obj.edit34:setType("number");
-    obj.edit34:setText("120");
-    obj.edit34:setTransparent(true);
-    obj.edit34:setFontColor("Black");
-    obj.edit34:setFontSize(22);
-    obj.edit34:setEnabled(false);
-    obj.edit34:setField("ControladorAtributos");
+    obj.edit34:setHeight(30);
+    obj.edit34:setVisible(false);
+    obj.edit34:setField("EspecPer");
     obj.edit34:setName("edit34");
 
     obj.edit35 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit35:setParent(obj.scrollBox1);
-    obj.edit35:setTop(530);
-    obj.edit35:setLeft(292);
-    obj.edit35:setWidth(50);
-    obj.edit35:setHeight(30);
-    obj.edit35:setMax(160);
-    obj.edit35:setMin(0);
-    obj.edit35:setHorzTextAlign("center");
+    obj.edit35:setLeft(270);
+    obj.edit35:setTop(770);
+    obj.edit35:setWidth(90);
     obj.edit35:setType("number");
-    obj.edit35:setText("120");
+    obj.edit35:setHeight(30);
     obj.edit35:setVisible(false);
-    obj.edit35:setFontSize(22);
-    obj.edit35:setEnabled(true);
-    obj.edit35:setField("LiberarRolagemUp");
+    obj.edit35:setField("AgilidadeESQ");
     obj.edit35:setName("edit35");
 
     obj.edit36 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit36:setParent(obj.scrollBox1);
-    obj.edit36:setTop(530);
-    obj.edit36:setLeft(292);
-    obj.edit36:setWidth(50);
-    obj.edit36:setHeight(30);
-    obj.edit36:setMax(20);
-    obj.edit36:setMin(0);
-    obj.edit36:setHorzTextAlign("center");
+    obj.edit36:setLeft(270);
+    obj.edit36:setTop(770);
+    obj.edit36:setWidth(90);
     obj.edit36:setType("number");
+    obj.edit36:setHeight(30);
     obj.edit36:setVisible(false);
-    obj.edit36:setFontSize(22);
-    obj.edit36:setEnabled(true);
-    obj.edit36:setField("CLevel");
+    obj.edit36:setField("ForcaPer");
     obj.edit36:setName("edit36");
+
+    obj.edit37 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit37:setParent(obj.scrollBox1);
+    obj.edit37:setTop(440);
+    obj.edit37:setLeft(292);
+    obj.edit37:setWidth(50);
+    obj.edit37:setHeight(30);
+    obj.edit37:setMax(160);
+    obj.edit37:setMin(0);
+    obj.edit37:setHorzTextAlign("center");
+    obj.edit37:setType("number");
+    obj.edit37:setText("120");
+    obj.edit37:setTransparent(true);
+    obj.edit37:setFontColor("Black");
+    obj.edit37:setFontSize(22);
+    obj.edit37:setEnabled(false);
+    obj.edit37:setField("ControladorAtributos");
+    obj.edit37:setName("edit37");
+
+    obj.edit38 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit38:setParent(obj.scrollBox1);
+    obj.edit38:setTop(530);
+    obj.edit38:setLeft(292);
+    obj.edit38:setWidth(50);
+    obj.edit38:setHeight(30);
+    obj.edit38:setMax(160);
+    obj.edit38:setMin(0);
+    obj.edit38:setHorzTextAlign("center");
+    obj.edit38:setType("number");
+    obj.edit38:setText("120");
+    obj.edit38:setVisible(false);
+    obj.edit38:setFontSize(22);
+    obj.edit38:setEnabled(true);
+    obj.edit38:setField("LiberarRolagemUp");
+    obj.edit38:setName("edit38");
+
+    obj.edit39 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit39:setParent(obj.scrollBox1);
+    obj.edit39:setTop(530);
+    obj.edit39:setLeft(292);
+    obj.edit39:setWidth(50);
+    obj.edit39:setHeight(30);
+    obj.edit39:setMax(20);
+    obj.edit39:setMin(0);
+    obj.edit39:setHorzTextAlign("center");
+    obj.edit39:setType("number");
+    obj.edit39:setVisible(false);
+    obj.edit39:setFontSize(22);
+    obj.edit39:setEnabled(true);
+    obj.edit39:setField("CLevel");
+    obj.edit39:setName("edit39");
 
 
 			function DiminuirPontosForca()
@@ -1339,18 +1362,18 @@ local function constructNew_frmvelen()
     obj.BarraXP:setPosition(50);
     obj.BarraXP:setMax(100);
 
-    obj.edit37 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit37:setParent(obj.scrollBox1);
-    obj.edit37:setWidth(35);
-    obj.edit37:setHeight(20);
-    obj.edit37:setTop(675);
-    obj.edit37:setLeft(157);
-    obj.edit37:setType("number");
-    obj.edit37:setMax(9999);
-    obj.edit37:setTransparent(true);
-    obj.edit37:setHorzTextAlign("center");
-    obj.edit37:setField("XPAtual");
-    obj.edit37:setName("edit37");
+    obj.edit40 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit40:setParent(obj.scrollBox1);
+    obj.edit40:setWidth(35);
+    obj.edit40:setHeight(20);
+    obj.edit40:setTop(675);
+    obj.edit40:setLeft(157);
+    obj.edit40:setType("number");
+    obj.edit40:setMax(9999);
+    obj.edit40:setTransparent(true);
+    obj.edit40:setHorzTextAlign("center");
+    obj.edit40:setField("XPAtual");
+    obj.edit40:setName("edit40");
 
     obj.label23 = GUI.fromHandle(_obj_newObject("label"));
     obj.label23:setParent(obj.scrollBox1);
@@ -1375,177 +1398,521 @@ local function constructNew_frmvelen()
     obj.dataLink11:setName("dataLink11");
 
 
-	------------------ area que controla o ganho da raça com HP -------------------------
-		
+	------------------ CALCULO DAS RAÇAS -----------------------------------
+	
 
 
 
-			function self.StatusPorRaca()
-				sheet.Deslocamento = 0;
-				sheet.Correndo = 0;
-				sheet.visao = 0;
-				sheet.RegenMP = 0;      
-				
-				if sheet.level < 21 then
-					if sheet.Raca == 'Humano' then
-						sheet.Deslocamento = 9;
-						sheet.Correndo = 18 + (tonumber(sheet.CorridaBasica) or 0);
-						sheet.visao = 10;
-						sheet.RegenMP = (tonumber(sheet.VitalidadeTotal) or 0) /4 + 4 + (tonumber(sheet.REGMPBasica) or 0);
-					end;
-					
-					if sheet.Raca == 'Elfo' then
-						sheet.Deslocamento = 8;
-						sheet.Correndo = 20 + (tonumber(sheet.CorridaBasica) or 0);
-						sheet.visao = 10;
-						sheet.RegenMP = (tonumber(sheet.VitalidadeTotal) or 0) /4 + 5 + (tonumber(sheet.REGMPBasica) or 0);
-					end;					
-					
-					if sheet.Raca == 'Elfo Negro' then
-						sheet.Deslocamento = 10;
-						sheet.Correndo = 17 + (tonumber(sheet.CorridaBasica) or 0);
-						sheet.visao = 11;
-						sheet.RegenMP = (tonumber(sheet.VitalidadeTotal) or 0) /4 + 4 + (tonumber(sheet.REGMPBasica) or 0);
-					end;
-					
-					if sheet.Raca == 'Anão' then
-						sheet.Deslocamento = 7;
-						sheet.Correndo = 15 + (tonumber(sheet.CorridaBasica) or 0);
-						sheet.visao = 10;
-						sheet.RegenMP = (tonumber(sheet.VitalidadeTotal) or 0) /4 + 4 + (tonumber(sheet.REGMPBasica) or 0);
-					end;	
-					
-					if sheet.Raca == 'Orc' then
-						sheet.Deslocamento = 8;
-						sheet.Correndo = 16 + (tonumber(sheet.CorridaBasica) or 0);
-						sheet.visao = 10;
-						sheet.RegenMP = (tonumber(sheet.VitalidadeTotal) or 0) /4 + 4 + (tonumber(sheet.REGMPBasica) or 0);
-					end;
-					
-					if sheet.Raca == 'Kamael' then
-						sheet.Deslocamento = 8;
-						sheet.Correndo = 18 + (tonumber(sheet.CorridaBasica) or 0);
-						sheet.visao = 12;
-						sheet.RegenMP = (tonumber(sheet.VitalidadeTotal) or 0) /4 + 5 + (tonumber(sheet.REGMPBasica) or 0);
-					end;
-					
-					if sheet.Raca == 'Thiefling' then
-						sheet.Deslocamento = 9;
-						sheet.Correndo = 20 + (tonumber(sheet.CorridaBasica) or 0);
-						sheet.visao = 11;
-						sheet.RegenMP = (tonumber(sheet.VitalidadeTotal) or 0) /4 + 4 + (tonumber(sheet.REGMPBasica) or 0);	
-					end;
-				end;
-				
-				if sheet.Level > 20 then
-					if sheet.Raca == 'Humano' then
-						sheet.Deslocamento = 9;
-						sheet.Correndo = 18 + (tonumber(sheet.CorridaBasica) or 0);
-						sheet.visao = 10;
-						sheet.RegenMP = (tonumber(sheet.VitalidadeTotal) or 0) /4 + 4 + (tonumber(sheet.REGMPBasica) or 0);
-					end;
-					
-					if sheet.Raca == 'Elfo' then
-						sheet.Deslocamento = 8;
-						sheet.Correndo = 20 + (tonumber(sheet.CorridaBasica) or 0);
-						sheet.visao = 10;
-						sheet.RegenMP = (tonumber(sheet.VitalidadeTotal) or 0) /4 + 5 + (tonumber(sheet.REGMPBasica) or 0);
-					end;
-					
-					if sheet.Raca == 'Elfo Negro' then
-						sheet.Deslocamento = 10;
-						sheet.Correndo = 17 + (tonumber(sheet.CorridaBasica) or 0);
-						sheet.visao = 11;
-						sheet.RegenMP = (tonumber(sheet.VitalidadeTotal) or 0) /4 + 4 + (tonumber(sheet.REGMPBasica) or 0);
-					end;
-					
-					if sheet.Raca == 'Anão' then
-						sheet.Deslocamento = 7;
-						sheet.Correndo = 15 + (tonumber(sheet.CorridaBasica) or 0);
-						sheet.visao = 10;
-						sheet.RegenMP = (tonumber(sheet.VitalidadeTotal) or 0) /4 + 4 + (tonumber(sheet.REGMPBasica) or 0);
-					end;
-					
-					if sheet.Raca == 'Orc' then
-						sheet.Deslocamento = 8;
-						sheet.Correndo = 16 + (tonumber(sheet.CorridaBasica) or 0);
-						sheet.visao = 10;
-						sheet.RegenMP = (tonumber(sheet.VitalidadeTotal) or 0) /4 + 4 + (tonumber(sheet.REGMPBasica) or 0);
-					end;
-					
-					if sheet.Raca == 'Kamael' then
-						sheet.Deslocamento = 8;
-						sheet.Correndo = 18 + (tonumber(sheet.CorridaBasica) or 0);
-						sheet.visao = 12;
-						sheet.RegenMP = (tonumber(sheet.VitalidadeTotal) or 0) /4 + 5 + (tonumber(sheet.REGMPBasica) or 0);
-					end;
-					
-					if sheet.Raca == 'Thiefling' then
-						sheet.Deslocamento = 9;
-						sheet.Correndo = 20 + (tonumber(sheet.CorridaBasica) or 0);
-						sheet.visao = 11;
-						sheet.RegenMP = (tonumber(sheet.VitalidadeTotal) or 0) /4 + 4 + (tonumber(sheet.REGMPBasica) or 0);
-					end;					
-				end;
-			end;			
-		
+		function self.StatusPorRaca()
+			sheet.Deslocamento = 0;
+			sheet.Correndo = 0;
+			sheet.visao = 0;
+			sheet.RegenMP = 0;      
+			
+			if sheet.Raca == 'Humano' then
+				sheet.Deslocamento = 9;
+				sheet.Correndo = 18 + (tonumber(sheet.CorridaBasica) or 0);
+				sheet.visao = 10;
+				sheet.RegenMP = (tonumber(sheet.VitalidadeTotal) or 0) /4 + 4 + (tonumber(sheet.REGMPBasica) or 0);
+			end;
+			
+			if sheet.Raca == 'Elfo' then
+				sheet.Deslocamento = 8;
+				sheet.Correndo = 20 + (tonumber(sheet.CorridaBasica) or 0);
+				sheet.visao = 10;
+				sheet.RegenMP = (tonumber(sheet.VitalidadeTotal) or 0) /4 + 5 + (tonumber(sheet.REGMPBasica) or 0);
+			end;					
+			
+			if sheet.Raca == 'Elfo Negro' then
+				sheet.Deslocamento = 10;
+				sheet.Correndo = 17 + (tonumber(sheet.CorridaBasica) or 0);
+				sheet.visao = 11;
+				sheet.RegenMP = (tonumber(sheet.VitalidadeTotal) or 0) /4 + 4 + (tonumber(sheet.REGMPBasica) or 0);
+			end;
+			
+			if sheet.Raca == 'Anão' then
+				sheet.Deslocamento = 7;
+				sheet.Correndo = 15 + (tonumber(sheet.CorridaBasica) or 0);
+				sheet.visao = 10;
+				sheet.RegenMP = (tonumber(sheet.VitalidadeTotal) or 0) /4 + 4 + (tonumber(sheet.REGMPBasica) or 0);
+			end;	
+			
+			if sheet.Raca == 'Orc' then
+				sheet.Deslocamento = 8;
+				sheet.Correndo = 16 + (tonumber(sheet.CorridaBasica) or 0);
+				sheet.visao = 10;
+				sheet.RegenMP = (tonumber(sheet.VitalidadeTotal) or 0) /4 + 4 + (tonumber(sheet.REGMPBasica) or 0);
+			end;
+			
+			if sheet.Raca == 'Kamael' then
+				sheet.Deslocamento = 8;
+				sheet.Correndo = 18 + (tonumber(sheet.CorridaBasica) or 0);
+				sheet.visao = 12;
+				sheet.RegenMP = (tonumber(sheet.VitalidadeTotal) or 0) /4 + 5 + (tonumber(sheet.REGMPBasica) or 0);
+			end;
+			
+			if sheet.Raca == 'Thiefling' then
+				sheet.Deslocamento = 9;
+				sheet.Correndo = 20 + (tonumber(sheet.CorridaBasica) or 0);
+				sheet.visao = 11;
+				sheet.RegenMP = (tonumber(sheet.VitalidadeTotal) or 0) /4 + 4 + (tonumber(sheet.REGMPBasica) or 0);	
+			end;
+		end;							
+	
 
 
 
-	------------------ area que controla o ganho da raça com HP -------------------------
-		
+		function self.ControlaRacaHPAte20()
+			sheet.RHPNivelAte20 = sheet.Level;
+			
+			if sheet.RHPNivelAte20 > 20 then
+				sheet.RHPNivelAte20 = 20;
+			end;
+			
+			if sheet.Raca == 'Humano' then
+				sheet.HPRACAATE20 = (tonumber(sheet.RHPNivelAte20) or 0) * 10;
+			end;
+			
+			if sheet.Raca == 'Elfo' then
+				sheet.HPRACAATE20 = (tonumber(sheet.RHPNivelAte20) or 0) * 8;
+			end;					
+			
+			if sheet.Raca == 'Elfo Negro' then
+				sheet.HPRACAATE20 = (tonumber(sheet.RHPNivelAte20) or 0) * 8;
+			end;
+			
+			if sheet.Raca == 'Anão' then
+				sheet.HPRACAATE20 = (tonumber(sheet.RHPNivelAte20) or 0) * 12;
+			end;	
+			
+			if sheet.Raca == 'Orc' then
+				sheet.HPRACAATE20 = (tonumber(sheet.RHPNivelAte20) or 0) * 11;
+			end;
+			
+			if sheet.Raca == 'Kamael' then
+				sheet.HPRACAATE20 = (tonumber(sheet.RHPNivelAte20) or 0) * 8;
+			end;
+			
+			if sheet.Raca == 'Thiefling' then
+				sheet.HPRACAATE20 = (tonumber(sheet.RHPNivelAte20) or 0) * 9;				
+			end;
+			
+		end;		
+	
 
 
 
-			function self.ControlaRacaHPAte20()
-				sheet.RHPNivelAte20 = sheet.Level;
-				
-				if sheet.RHPNivelAte20 > 20 then
-					sheet.RHPNivelAte20 = 20;
-				end;
-				
-				if sheet.Raca == 'Humano' then
-					sheet.HPRACAATE20 = (tonumber(sheet.RHPNivelAte20) or 0) * 10;
-				end;
-				
-				if sheet.Raca == 'Elfo' then
-					sheet.HPRACAATE20 = (tonumber(sheet.RHPNivelAte20) or 0) * 8;
-				end;					
-				
-				if sheet.Raca == 'Elfo Negro' then
-					sheet.HPRACAATE20 = (tonumber(sheet.RHPNivelAte20) or 0) * 8;
-				end;
-				
-				if sheet.Raca == 'Anão' then
-					sheet.HPRACAATE20 = (tonumber(sheet.RHPNivelAte20) or 0) * 12;
-				end;	
-				
-				if sheet.Raca == 'Orc' then
-					sheet.HPRACAATE20 = (tonumber(sheet.RHPNivelAte20) or 0) * 11;
-				end;
-				
-				if sheet.Raca == 'Kamael' then
-					sheet.HPRACAATE20 = (tonumber(sheet.RHPNivelAte20) or 0) * 8;
-				end;
-				
-				if sheet.Raca == 'Thiefling' then
-					sheet.HPRACAATE20 = (tonumber(sheet.RHPNivelAte20) or 0) * 9;				
-				end;
-				
+		function self.ControlaRacaHPAte30()   
+			sheet.HPRACAATE30 = 0;        
+			sheet.RHPNivelAte30 = math.floor((sheet.Level) - 20);
+			
+			if sheet.RHPNivelAte30 > 10 then
+				sheet.RHPNivelAte30 = 10;
+			end;
+
+			if sheet.RHPNivelAte30 < 0 then
+				sheet.RHPNivelAte30 = 0;
 			end;		
+							
+			if sheet.Raca == 'Humano' then
+				sheet.HPRACAATE30 = (tonumber(sheet.RHPNivelAte30) or 0) * 20;
+			end;
+			
+			if sheet.Raca == 'Elfo' then						
+				sheet.HPRACAATE30 = (tonumber(sheet.RHPNivelAte30) or 0) * 16;
+			end;
+			
+			if sheet.Raca == 'Elfo Negro' then					
+				sheet.HPRACAATE30 = (tonumber(sheet.RHPNivelAte30) or 0) * 16;						
+			end;
+			
+			if sheet.Raca == 'Anão' then						
+				sheet.HPRACAATE30 = (tonumber(sheet.RHPNivelAte30) or 0) * 24;				
+			end;
+			
+			if sheet.Raca == 'Orc' then						
+				sheet.HPRACAATE30 = (tonumber(sheet.RHPNivelAte30) or 0) * 22;						
+			end;
+			
+			if sheet.Raca == 'Kamael' then					
+				sheet.HPRACAATE30 = (tonumber(sheet.RHPNivelAte30) or 0) * 16;					
+			end;
+			
+			if sheet.Raca == 'Thiefling' then				
+				sheet.HPRACAATE30 = (tonumber(sheet.RHPNivelAte30) or 0) * 18;				
+			end;
+		end;
+	
+
+
+
+		function self.StatusClasseAte20()				
+			sheet.ClasseAcerto = 0;
+			sheet.ClasseAM = 0;
+			sheet.ClasseCR = 0;
+			sheet.ClasseCM = 0;
+			sheet.ClasseEsquiva = 0;
+			sheet.ClassePer = 0;
 		
+					
+			if sheet.Classe == 'Animago' then					
+				sheet.ClasseAcerto = 1
+				sheet.ClasseAM = 14
+				sheet.ClasseCR = 20
+				sheet.ClasseCM = 1
+				sheet.ClasseEsquiva = 11
+				sheet.ClassePer = 1						
+			end;	
+				
+			if sheet.Classe == 'Arqueiro' then
+				sheet.ClasseAcerto = 2;
+				sheet.ClasseAM = 14;
+				sheet.ClasseCR = 20;
+				sheet.ClasseCM = 1;
+				sheet.ClasseEsquiva = 11;
+				sheet.ClassePer = 1;
+			end;	
+				
+			if sheet.Classe == 'Bardo' then
+				sheet.ClasseAcerto = 1;
+				sheet.ClasseAM = 15;
+				sheet.ClasseCR = 20;
+				sheet.ClasseCM = 1;
+				sheet.ClasseEsquiva = 11;
+				sheet.ClassePer = 1;
+			end;	
+				
+			if sheet.Classe == 'Bispo' then
+				sheet.ClasseAcerto = 1;
+				sheet.ClasseAM = 15;
+				sheet.ClasseCR = 20;
+				sheet.ClasseCM = 1;
+				sheet.ClasseEsquiva = 11;
+				sheet.ClassePer = 1;
+			end;	
+				
+			if sheet.Classe == 'Caçador de Almas' then
+				sheet.ClasseAcerto = 1;
+				sheet.ClasseAM = 14;
+				sheet.ClasseCR = 20;
+				sheet.ClasseCM = 2;
+				sheet.ClasseEsquiva = 11;
+				sheet.ClassePer = 1;
+			end;	
+				
+			if sheet.Classe == 'Guerreiro' then
+				sheet.ClasseAcerto = 1;
+				sheet.ClasseAM = 13;
+				sheet.ClasseCR = 19;
+				sheet.ClasseCM = 1;
+				sheet.ClasseEsquiva = 11;
+				sheet.ClassePer = 2;
+			end;	
+				
+			if sheet.Classe == 'Ladino' then
+				sheet.ClasseAcerto = 1;
+				sheet.ClasseAM = 14;
+				sheet.ClasseCR = 20;
+				sheet.ClasseCM = 1;
+				sheet.ClasseEsquiva = 12;
+				sheet.ClassePer = 1;
+			end;	
+				
+			if sheet.Classe == 'Mago' then
+				sheet.ClasseAcerto = 1;
+				sheet.ClasseAM = 15;
+				sheet.ClasseCR = 20;
+				sheet.ClasseCM = 1;
+				sheet.ClasseEsquiva = 11;
+				sheet.ClassePer = 1;
+
+			end;	
+				
+			if sheet.Classe == 'Mercenario' then
+				sheet.ClasseAcerto = 1;
+				sheet.ClasseAM = 14;
+				sheet.ClasseCR = 19;
+				sheet.ClasseCM = 2;
+				sheet.ClasseEsquiva = 11;
+				sheet.ClassePer = 1;
+			end;	
+				
+			if sheet.Classe == 'Monge' then
+				sheet.ClasseAcerto = 1;
+				sheet.ClasseAM = 14;
+				sheet.ClasseCR = 20;
+				sheet.ClasseCM = 1;
+				sheet.ClasseEsquiva = 12;
+				sheet.ClassePer = 1;
+			end;	
+				
+			if sheet.Classe == 'Paladino' then
+				sheet.ClasseAcerto = 1;
+				sheet.ClasseAM = 14;
+				sheet.ClasseCR= 20;
+				sheet.ClasseCM = 1;
+				sheet.ClasseEsquiva = 11;
+				sheet.ClassePer = 1;
+			end;
+		end;	
+	
 
 
-<<<<<<< HEAD
 
-	------------------ area que controla o ganho da raça com HP -------------------------
+		function self.ControlaClasseHPAte20()	
+			sheet.RHPNivelAte20 = sheet.Level;
+			
+			if sheet.RHPNivelAte20 > 20 then
+				sheet.RHPNivelAte20 = 20;
+			end;
 		
+			if sheet.Classe == 'Animago' then		
+				sheet.CHPNivel = (tonumber(sheet.RHPNivelAte20) or 0) * 14 + 170;
+			end;	
+				
+			if sheet.Classe == 'Arqueiro' then
+				sheet.CHPNivel = (tonumber(sheet.RHPNivelAte20) or 0) * 16 + 170;
+			end;	
+				
+			if sheet.Classe == 'Bardo' then
+				sheet.CHPNivel = (tonumber(sheet.RHPNivelAte20) or 0) * 12 + 150;
+			end;	
+				
+			if sheet.Classe == 'Bispo' then
+				sheet.CHPNivel = (tonumber(sheet.RHPNivelAte20) or 0) * 14 + 160;
+			end;	
+				
+			if sheet.Classe == 'Caçador de Almas' then
+				sheet.CHPNivel = (tonumber(sheet.RHPNivelAte20) or 0) * 15 + 170;
+			end;	
+				
+			if sheet.Classe == 'Guerreiro' then
+				sheet.CHPNivel = (tonumber(sheet.RHPNivelAte20) or 0) * 20 + 220;
+			end;	
+				
+			if sheet.Classe == 'Ladino' then
+				sheet.CHPNivel = (tonumber(sheet.RHPNivelAte20) or 0) * 14 + 150;
+			end;	
+				
+			if sheet.Classe == 'Mago' then
+				sheet.CHPNivel = (tonumber(sheet.RHPNivelAte20) or 0) * 12 + 140;
+			end;	
+				
+			if sheet.Classe == 'Mercenario' then
+				sheet.CHPNivel = (tonumber(sheet.RHPNivelAte20) or 0) * 16 + 170;
+			end;	
+				
+			if sheet.Classe == 'Monge' then
+				sheet.CHPNivel = (tonumber(sheet.RHPNivelAte20) or 0) * 16 + 180;
+			end;	
+				
+			if sheet.Classe == 'Paladino' then
+				sheet.CHPNivel = (tonumber(sheet.RHPNivelAte20) or 0) * 18 + 200;
+			end;
+		end;
+	
 
 
 
-			function self.ControlaRacaHPAte30()
+		function self.StatusEspecAteLevel30() 
+			if sheet.Level < 20 then
+				sheet.EspecAcerto = 0;
+				sheet.EspecAM = 0;
+				sheet.EspecCR = 0;
+				sheet.EspecCM = 0;
+				sheet.EspecEsquiva = 0;
+				sheet.EspecPer = 0;	
+			end;
+			
+			if sheet.Espec == 'Druida' then
+				sheet.EspecAcerto = 0;
+				sheet.EspecAM = 1;
+				sheet.EspecCR = 0;
+				sheet.EspecCM = 0;
+				sheet.EspecEsquiva = 0;
+				sheet.EspecPer = 0;							
+			end;
+			
+			if sheet.Espec == 'Shaman' then
+				sheet.EspecAcerto = 0;
+				sheet.EspecAM = 0;
+				sheet.EspecCR = 0;
+				sheet.EspecCM = 1;
+				sheet.EspecEsquiva = 0;
+				sheet.EspecPer = 1;
+			end;
+			
+			if sheet.Espec == 'Caçador' then
+				sheet.EspecAcerto = 0;
+				sheet.EspecAM = 0;
+				sheet.EspecCR = 1;
+				sheet.EspecCM = 0;
+				sheet.EspecEsquiva = 1;
+				sheet.EspecPer = 0;
+			end;
+			
+			if sheet.Espec == 'Sentinela Lunar' then
+				sheet.EspecAcerto = 0;
+				sheet.EspecAM = 1;
+				sheet.EspecCR = 0;
+				sheet.EspecCM = 1;
+				sheet.EspecEsquiva = 0;
+				sheet.EspecPer = 0;
+			end;
+			
+			if sheet.Espec == 'Encantador de Almas' then
+				sheet.EspecAcerto = 0;
+				sheet.EspecAM = 1;
+				sheet.EspecCR = 0;
+				sheet.EspecCM = 0;
+				sheet.EspecEsquiva = 1;
+				sheet.EspecPer = 0;
+			end;
+			
+			if sheet.Espec == 'Necromance' then
+				sheet.EspecAcerto = 0;
+				sheet.EspecAM = 0;
+				sheet.EspecCR = 0;
+				sheet.EspecCM = 1;
+				sheet.EspecEsquiva = 0;
+				sheet.EspecPer = 0;
+			end;
+			
+			if sheet.Espec == 'Sacerdote' then
+				sheet.EspecAcerto = 0;
+				sheet.EspecAM = 1;
+				sheet.EspecCR = 0;
+				sheet.EspecCM = 0;
+				sheet.EspecEsquiva = 0;
+				sheet.EspecPer = 0;
+			end;
+			
+			if sheet.Espec == 'Juiz' then
+				sheet.EspecAcerto = 0;
+				sheet.EspecAM = 1;
+				sheet.EspecCR = 0;
+				sheet.EspecCM = 0;
+				sheet.EspecEsquiva = 0;
+				sheet.EspecPer = 0;
+			end;
+			
+			if sheet.Espec == 'Barbaro' then
+				sheet.EspecAcerto = 1;
+				sheet.EspecAM = 0;
+				sheet.EspecCR = 0;
+				sheet.EspecCM = 0;
+				sheet.EspecEsquiva = 0;
+				sheet.EspecPer = 0;
+			end;
+			
+			if sheet.Espec == 'Tanker' then
+				sheet.EspecAcerto = 0;
+				sheet.EspecAM = 0;
+				sheet.EspecCR = 0;
+				sheet.EspecCM = 0;
+				sheet.EspecEsquiva = 0;
+				sheet.EspecPer = 1;
+			end;
+			
+			if sheet.Espec == 'Acrobata' then
+				sheet.EspecAcerto = 0;
+				sheet.EspecAM = 1;
+				sheet.EspecCR = 0;
+				sheet.EspecCM = 1;
+				sheet.EspecEsquiva = 0;
+				sheet.EspecPer = 0;
+			end;
+			
+			if sheet.Espec == 'Assassino' then
+				sheet.EspecAcerto = 0;
+				sheet.EspecAM = 0;
+				sheet.EspecCR = 1;
+				sheet.EspecCM = 1;
+				sheet.EspecEsquiva = 0;
+				sheet.EspecPer = 0;
+			end;
+			
+			if sheet.Espec == 'Arcanista' then
+				sheet.EspecAcerto = 0;
+				sheet.EspecAM = 1;
+				sheet.EspecCR = 0;
+				sheet.EspecCM = 0;
+				sheet.EspecEsquiva = 0;
+				sheet.EspecPer = 0;
+			end;
+			
+			if sheet.Espec == 'Feiticeiro' then
+				sheet.EspecAcerto = 0;
+				sheet.EspecAM = 1;
+				sheet.EspecCR = 0;
+				sheet.EspecCM = 0;
+				sheet.EspecEsquiva = 0;
+				sheet.EspecPer = 0;
+			end;
+			
+			if sheet.Espec == 'Summoner' then
+				sheet.EspecAcerto = 0;
+				sheet.EspecAM = 1;
+				sheet.EspecCR = 0;
+				sheet.EspecCM = 0;
+				sheet.EspecEsquiva = 0;
+				sheet.EspecPer = 0;
+			end;
+			
+			if sheet.Espec == 'Duelista' then
+				sheet.EspecAcerto = 0;
+				sheet.EspecAM = 0;
+				sheet.EspecCR = 1;
+				sheet.EspecCM = 0;
+				sheet.EspecEsquiva = 0;
+				sheet.EspecPer = 0;
+			end;
+			
+			if sheet.Espec == 'Pirata' then
+				sheet.EspecAcerto = 1;
+				sheet.EspecAM = 0;
+				sheet.EspecCR = 0;
+				sheet.EspecCM = 0;
+				sheet.EspecEsquiva = 0;
+				sheet.EspecPer = 0;
+			end;
+			
+			if sheet.Espec == 'Guardião Espiritual' then
+				sheet.EspecAcerto = 1;
+				sheet.EspecAM = 1;
+				sheet.EspecCR = 0;
+				sheet.EspecCM = 0;
+				sheet.EspecEsquiva = 0;
+				sheet.EspecPer = 0;
+			end;
+			
+			if sheet.Espec == 'Cavaleiro das Trevas' then
+				sheet.EspecAcerto = 0;
+				sheet.EspecAM = 0;
+				sheet.EspecCR = 1;
+				sheet.EspecCM = 1;
+				sheet.EspecEsquiva = 0;
+				sheet.EspecPer = 0;
+			end;
+			
+			if sheet.Espec == 'Templario' then
+				sheet.EspecAcerto = 0;
+				sheet.EspecAM = 1;
+				sheet.EspecCR = 0;
+				sheet.EspecCM = 0;
+				sheet.EspecEsquiva = 0;
+				sheet.EspecPer = 1;
+			end;
+		end;	
+	
+
+
+
+		function self.ControlaEspecHPAte30()
+			if sheet.Level > 20 then 
 				sheet.HPRACAATE30 = 0;        
 				sheet.RHPNivelAte30 = math.floor((sheet.Level) - 20);
+				sheet.EHPNivel = 0;	
 				
 				if sheet.RHPNivelAte30 > 10 then
 					sheet.RHPNivelAte30 = 10;
@@ -1553,205 +1920,183 @@ local function constructNew_frmvelen()
 
 				if sheet.RHPNivelAte30 < 0 then
 					sheet.RHPNivelAte30 = 0;
-				end;		
-								
-				if sheet.Level > 20 then
-					if sheet.Raca == 'Humano' then
-						sheet.HPRACAATE30 = (tonumber(sheet.RHPNivelAte30) or 0) * 20;
-					end;
-					
-					if sheet.Raca == 'Elfo' then						
-						sheet.HPRACAATE30 = (tonumber(sheet.RHPNivelAte30) or 0) * 16;
-					end;
-					
-					if sheet.Raca == 'Elfo Negro' then					
-						sheet.HPRACAATE30 = (tonumber(sheet.RHPNivelAte30) or 0) * 16;						
-					end;
-					
-					if sheet.Raca == 'Anão' then						
-						sheet.HPRACAATE30 = (tonumber(sheet.RHPNivelAte30) or 0) * 24;				
-					end;
-					
-					if sheet.Raca == 'Orc' then						
-						sheet.HPRACAATE30 = (tonumber(sheet.RHPNivelAte30) or 0) * 22;						
-					end;
-					
-					if sheet.Raca == 'Kamael' then					
-						sheet.HPRACAATE30 = (tonumber(sheet.RHPNivelAte30) or 0) * 16;					
-					end;
-					
-					if sheet.Raca == 'Thiefling' then				
-						sheet.HPRACAATE30 = (tonumber(sheet.RHPNivelAte30) or 0) * 18;				
-					end;					
-=======
- 
-			function self.ResolveBugClasseMPLevel30()		
-				if sheet.Level > 19 then
-					sheet.RMPNivel = 0;
-					
-					if sheet.Espec == 'Druida' then
-						sheet.RMPNivel = (tonumber(sheet.CLevel) or 0) * 4 + 100;
-						sheet.EMPNivel = (tonumber(sheet.Elevel) or 0) * 3;
-						sheet.MPTotal = (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Shaman' then
-						sheet.RMPNivel = (tonumber(sheet.CLevel) or 0) * 4 + 100;
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 2;
-						sheet.MPTotal = (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Caçador' then
-						sheet.RMPNivel = (tonumber(sheet.CLevel) or 0) * 3 + 100;
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 3;
-						sheet.MPTotal = (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Sentinela Lunar' then
-						sheet.RMPNivel = (tonumber(sheet.CLevel) or 0) * 3 + 100;
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 4;
-						sheet.MPTotal = (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Encantador de Almas' then
-						sheet.RMPNivel = (tonumber(sheet.CLevel) or 0) * 4 + 100;
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 3;
-						sheet.MPTotal = (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Necromance' then
-						sheet.RMPNivel = (tonumber(sheet.CLevel) or 0) * 4 + 100;
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 3;
-						sheet.MPTotal = (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Sacerdote' then
-						sheet.RMPNivel = (tonumber(sheet.CLevel) or 0) * 4 + 100;
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 4;
-						sheet.MPTotal = (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Juiz' then
-						sheet.RMPNivel = (tonumber(sheet.CLevel) or 0) * 4 + 100;
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 3;
-						sheet.MPTotal = (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Barbaro' then
-						sheet.RMPNivel = (tonumber(sheet.CLevel) or 0) * 2	+ 100;
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 3;
-						sheet.MPTotal = (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Tanker' then
-						sheet.RMPNivel = (tonumber(sheet.CLevel) or 0) * 2	+ 100;
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 2;
-						sheet.MPTotal = (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Acrobata' then
-						sheet.RMPNivel = (tonumber(sheet.CLevel) or 0) * 2 + 100;
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 3;
-						sheet.MPTotal = (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Assassino' then
-						sheet.RMPNivel = (tonumber(sheet.CLevel) or 0) * 2 + 100;
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 2;
-						sheet.MPTotal = (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Arcanista' then
-						sheet.RMPNivel = (tonumber(sheet.CLevel) or 0) * 4 + 100;
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 3;
-						sheet.MPTotal = (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Feiticeiro' then
-						sheet.RMPNivel = (tonumber(sheet.CLevel) or 0) * 4 + 100;
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 3;
-						sheet.MPTotal = (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Summoner' then
-						sheet.RMPNivel = (tonumber(sheet.CLevel) or 0) * 4 + 100;
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 4;
-						sheet.MPTotal = (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Duelista' then
-						sheet.RMPNivel = (tonumber(sheet.CLevel) or 0) * 3 + 100;
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 3;
-						sheet.MPTotal = (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Pirata' then
-						sheet.RMPNivel = (tonumber(sheet.CLevel) or 0) * 3 + 100;
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 2;
-						sheet.MPTotal = (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Guardião Espiritual' then
-						sheet.RMPNivel = (tonumber(sheet.CLevel) or 0) * 3 + 100;
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 2;
-						sheet.MPTotal = (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'CavaleirodasTrevas' then
-						sheet.RMPNivel = (tonumber(sheet.CLevel) or 0) * 3 + 100;	
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 2;
-						sheet.MPTotal = (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.MPMont) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Templario' then
-						sheet.RMPNivel = (tonumber(sheet.CLevel) or 0) * 3 + 100;
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 3;
-						sheet.MPTotal = (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.MPMont) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
->>>>>>> ead8ea0d8f37bb857bd5875f3013a02e07f3366f
+				end;							
+				
+				if sheet.Espec == 'Druida' then
+					sheet.EHPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 22 + 600;					
+				end;
+				
+				if sheet.Espec == 'Shaman' then
+					sheet.EHPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 24 + 600;
+				end;
+				
+				if sheet.Espec == 'Caçador' then
+					sheet.EHPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 22 + 600;
+				end;
+				
+				if sheet.Espec == 'Sentinela Lunar' then
+					sheet.EHPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 21 + 600;
+				end;
+				
+				if sheet.Espec == 'Encantador de Almas' then						
+					sheet.EHPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 21 + 600;
+				end;
+				
+				if sheet.Espec == 'Necromance' then							
+					sheet.EHPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 22 + 600;
+				end;
+				
+				if sheet.Espec == 'Sacerdote' then
+					sheet.EHPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 25 + 600;
+				end;
+				
+				if sheet.Espec == 'Juiz' then							
+					sheet.EHPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 28 + 600;
+				end;
+				
+				if sheet.Espec == 'Barbaro' then							
+					sheet.EHPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 28 + 600;
+				end;
+				
+				if sheet.Espec == 'Tanker' then							
+					sheet.EHPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 30 + 600;
+				end;
+				
+				if sheet.Espec == 'Acrobata' then							
+					sheet.EHPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 23 + 600;
+				end;
+				
+				if sheet.Espec == 'Assassino' then							
+					sheet.EHPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 21 + 600;
+				end;
+				
+				if sheet.Espec == 'Arcanista' then							
+					sheet.EHPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 20 + 600;
+				end;
+				
+				if sheet.Espec == 'Feiticeiro' then							
+					sheet.EHPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 22 + 600;
+				end;
+				
+				if sheet.Espec == 'Summoner' then							
+					sheet.EHPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 20 + 600;
+				end;
+				
+				if sheet.Espec == 'Duelista' then							
+					sheet.EHPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 24 + 600;
+				end;
+				
+				if sheet.Espec == 'Pirata' then							
+					sheet.EHPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 26 + 600;
+				end;
+				
+				if sheet.Espec == 'Guardião Espiritual' then							
+					sheet.EHPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 26 + 600;
+				end;
+				
+				if sheet.Espec == 'Cavaleiro das Trevas' then							
+					sheet.EHPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 29 + 600;
+				end;
+				
+				if sheet.Espec == 'Templario' then						
+					sheet.EHPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 27 + 600;
+				end;
+				
+				if sheet.Level < 19 then
+					sheet.EHPNivel = 0;
 				end;
 			end;
-		
+		end;	
+	
+
+
+ 
+		function self.StatusClasseEspecialAteLevel20()	
+			if sheet.classe == 'Cavaleiro Draconico' then						
+				sheet.Deslocamento = 9;
+				sheet.Correndo = 18 + (tonumber(sheet.CorridaBasica) or 0);
+				sheet.visao = 10;
+				sheet.RegenMP = (tonumber(sheet.VitalidadeTotal) or 0) /4 + 4 + (tonumber(sheet.REGMPBasica) or 0);
+				sheet.ClasseAcerto = 1;
+				sheet.ClasseAM = 14;
+				sheet.ClasseCR = 20;
+				sheet.ClasseCM = 2;
+				sheet.ClasseEsquiva = 10;
+				sheet.ClassePer = 1;
+			end;
+		end;
+	
+
+
+ 
+		function self.ControlaClasseEspecialHPAte20()	
+			if sheet.classe == 'Cavaleiro Draconico' then
+				sheet.RHPNivelAte20 = sheet.Level;
+			
+				if sheet.RHPNivelAte20 > 20 then
+					sheet.RHPNivelAte20 = 20;
+				end;
+			
+				sheet.HPRACAATE20 = (tonumber(sheet.RHPNivelAte20) or 0) * 11;
+				sheet.CHPNivel = (tonumber(sheet.RHPNivelAte20) or 0) * 17  + 200;
+			end;					
+		end;
+	
+
+
+ 
+		function self.StatusClasseEspecialAteLevel30()
+			if sheet.classe == 'Cavaleiro Draconico' then
+				if sheet.level > 20 then
+					sheet.EspecAcerto = 0;
+					sheet.EspecAM = 1;
+					sheet.EspecCR = 0;
+					sheet.EspecCM = 0;
+					sheet.EspecEsquiva = 0;
+					sheet.EspecPer = 0;
+				end;
+			end;
+		end;
+	
+
+
+ 
+		function self.ControlaClasseEspecialHPAte30()		
+			if sheet.classe == 'Cavaleiro Draconico' then
+				if sheet.Level > 20 then
+					sheet.HPRACAATE30 = 0;        
+					sheet.RHPNivelAte30 = math.floor((sheet.Level) - 20);
+					sheet.EHPNivel = 0;	
+					
+					if sheet.RHPNivelAte30 > 10 then
+						sheet.RHPNivelAte30 = 10;
+					end;
+
+					if sheet.RHPNivelAte30 < 0 then
+						sheet.RHPNivelAte30 = 0;
+					end;
+					
+					sheet.HPRACAATE30 = (tonumber(sheet.RHPNivelAte30) or 0) * 22;
+					sheet.EHPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 28 + 600;
+				end;	
+			end;
+		end;
+	
+
+
+ 
+		function self.CalculaHP()
+			if sheet.Level < 21 then
+				sheet.EHPNivel = 0;
+				sheet.HPRACAATE30 = 0;
+			end;
+			
+			sheet.HPTotal = (tonumber(sheet.VitalidadeTotal) or 0) *20 + (tonumber(sheet.ArmaHP) or 0) + (tonumber(sheet.OutraHP) or 0) + 
+			(tonumber(sheet.ArmaduraHP) or 0) + (tonumber(sheet.AcessorioHP) or 0) +
+			(tonumber(sheet.PHPRacial) or 0) + (tonumber(sheet.PHPBasica) or 0) + (tonumber(sheet.HPRACAATE20) or 0) + (tonumber(sheet.CHPNivel) or 0) + 
+			(tonumber(sheet.EHPNivel) or 0) + (tonumber(sheet.HPRACAATE30) or 0);
+		end;
+	
 
 
 
@@ -1969,7 +2314,7 @@ local function constructNew_frmvelen()
 						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
 					end;
 					
-					if sheet.Espec == 'CavaleirodasTrevas' then
+					if sheet.Espec == 'Cavaleiro das Trevas' then
 						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 2;
 						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
 						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
@@ -1992,489 +2337,6 @@ local function constructNew_frmvelen()
 
 
  
-			function self.ResolveBugRacaLevel30()
-				if sheet.Level > 19 then
-					if sheet.Raca == 'Humano' then
-						sheet.Deslocamento = 9;
-						sheet.Correndo = 18 + (tonumber(sheet.CorridaBasica) or 0);
-						sheet.visao = 10;
-						sheet.RegenMP = (tonumber(sheet.VitalidadeTotal) or 0) /4 + 4 + (tonumber(sheet.REGMPBasica) or 0);
-						sheet.RHPNivel = (tonumber(sheet.CLevel) or 0) * 10;
-					end;
-					
-					if sheet.Raca == 'Elfo' then
-						sheet.Deslocamento = 8;
-						sheet.Correndo = 20 + (tonumber(sheet.CorridaBasica) or 0);
-						sheet.visao = 10;
-						sheet.RegenMP = (tonumber(sheet.VitalidadeTotal) or 0) /4 + 5 + (tonumber(sheet.REGMPBasica) or 0);
-						sheet.RHPNivel = (tonumber(sheet.CLevel) or 0) * 8;
-					end;					
-					
-					if sheet.Raca == 'Elfo Negro' then
-						sheet.Deslocamento = 10;
-						sheet.Correndo = 17 + (tonumber(sheet.CorridaBasica) or 0);
-						sheet.visao = 11;
-						sheet.RegenMP = (tonumber(sheet.VitalidadeTotal) or 0) /4 + 4 + (tonumber(sheet.REGMPBasica) or 0);
-						sheet.RHPNivel = (tonumber(sheet.CLevel) or 0) * 8;
-					end;
-					
-					if sheet.Raca == 'Anão' then
-						sheet.Deslocamento = 7;
-						sheet.Correndo = 15 + (tonumber(sheet.CorridaBasica) or 0);
-						sheet.visao = 10;
-						sheet.RegenMP = (tonumber(sheet.VitalidadeTotal) or 0) /4 + 4 + (tonumber(sheet.REGMPBasica) or 0);
-						sheet.RHPNivel = (tonumber(sheet.CLevel) or 0) * 12;
-					end;	
-					
-					if sheet.Raca == 'Orc' then
-						sheet.Deslocamento = 8;
-						sheet.Correndo = 16 + (tonumber(sheet.CorridaBasica) or 0);
-						sheet.visao = 10;
-						sheet.RegenMP = (tonumber(sheet.VitalidadeTotal) or 0) /4 + 4 + (tonumber(sheet.REGMPBasica) or 0);
-						sheet.RHPNivel = (tonumber(sheet.CLevel) or 0) * 11;
-					end;
-					
-					if sheet.Raca == 'Kamael' then
-						sheet.Deslocamento = 8;
-						sheet.Correndo = 18 + (tonumber(sheet.CorridaBasica) or 0);
-						sheet.visao = 12;
-						sheet.RegenMP = (tonumber(sheet.VitalidadeTotal) or 0) /4 + 5 + (tonumber(sheet.REGMPBasica) or 0);
-						sheet.RHPNivel = (tonumber(sheet.CLevel) or 0) * 8;
-					end;
-					
-					if sheet.Raca == 'Thiefling' then
-						sheet.Deslocamento = 9;
-						sheet.Correndo = 20 + (tonumber(sheet.CorridaBasica) or 0);
-						sheet.visao = 11;
-						sheet.RegenMP = (tonumber(sheet.VitalidadeTotal) or 0) /4 + 4 + (tonumber(sheet.REGMPBasica) or 0);
-						sheet.RHPNivel = (tonumber(sheet.CLevel) or 0) * 9;				
-					end;
-				end;
-			end;
-		
-
-
-
-			function self.ControlaClasseHP()				
-				if sheet.Level < 21 then					
-					sheet.EMPNivel = 0;
-					sheet.EspecAcerto = 0;
-					sheet.EspecAM = 0;
-					sheet.EspecCR = 0;
-					sheet.EspecCM = 0;
-					sheet.EspecEsquiva = 0;
-					sheet.EspecPer = 0;
-					sheet.EHPNivel = 0;
-				
-					if sheet.Classe == 'Animago' then					
-						sheet.ClasseAcerto = 1
-						sheet.ClasseAM = 14
-						sheet.ClasseCR = 20
-						sheet.ClasseCM = 1
-						sheet.ClasseEsquiva = 11
-						sheet.ClassePer = 1
-						sheet.CHPNivel = (tonumber(sheet.Level) or 0) * 14 + 170
-						sheet.HPTotal =  (tonumber(sheet.HP) or 0) + (tonumber(sheet.VitalidadeTotal) or 0) *20 + (tonumber(sheet.ArmaHP) or 0) + (tonumber(sheet.OutraHP) or 0) + 
-						(tonumber(sheet.ArmaduraHP) or 0) + (tonumber(sheet.AcessorioHP) or 0) +
-						(tonumber(sheet.PHPRacial) or 0) + (tonumber(sheet.PHPBasica) or 0) + (tonumber(sheet.RHPNivel) or 0) + (tonumber(sheet.CHPNivel) or 0);
-					end;	
-						
-					if sheet.Classe == 'Arqueiro' then
-						sheet.ClasseAcerto = 2;
-						sheet.ClasseAM = 14;
-						sheet.ClasseCR = 20;
-						sheet.ClasseCM = 1;
-						sheet.ClasseEsquiva = 11;
-						sheet.ClassePer = 1;
-						sheet.CHPNivel = (tonumber(sheet.Level) or 0) * 16 + 170;
-						sheet.HPTotal =  (tonumber(sheet.HP) or 0) + (tonumber(sheet.VitalidadeTotal) or 0) *20 + (tonumber(sheet.ArmaHP) or 0) + (tonumber(sheet.OutraHP) or 0) + 
-						(tonumber(sheet.ArmaduraHP) or 0) + (tonumber(sheet.AcessorioHP) or 0) +
-						(tonumber(sheet.PHPRacial) or 0) + (tonumber(sheet.PHPBasica) or 0) + (tonumber(sheet.RHPNivel) or 0) + (tonumber(sheet.CHPNivel) or 0);
-					end;	
-						
-					if sheet.Classe == 'Bardo' then
-						sheet.ClasseAcerto = 1;
-						sheet.ClasseAM = 15;
-						sheet.ClasseCR = 20;
-						sheet.ClasseCM = 1;
-						sheet.ClasseEsquiva = 11;
-						sheet.ClassePer = 1;
-						sheet.CHPNivel = (tonumber(sheet.Level) or 0) * 12 + 150;
-						sheet.HPTotal =  (tonumber(sheet.HP) or 0) + (tonumber(sheet.VitalidadeTotal) or 0) *20 + (tonumber(sheet.ArmaHP) or 0) + (tonumber(sheet.OutraHP) or 0) + 
-						(tonumber(sheet.ArmaduraHP) or 0) + (tonumber(sheet.AcessorioHP) or 0) +
-						(tonumber(sheet.PHPRacial) or 0) + (tonumber(sheet.PHPBasica) or 0) + (tonumber(sheet.RHPNivel) or 0) + (tonumber(sheet.CHPNivel) or 0);
-					end;	
-						
-					if sheet.Classe == 'Bispo' then
-						sheet.ClasseAcerto = 1;
-						sheet.ClasseAM = 15;
-						sheet.ClasseCR = 20;
-						sheet.ClasseCM = 1;
-						sheet.ClasseEsquiva = 11;
-						sheet.ClassePer = 1;
-						sheet.CHPNivel = (tonumber(sheet.Level) or 0) * 14 + 160;
-						sheet.HPTotal =  (tonumber(sheet.HP) or 0) + (tonumber(sheet.VitalidadeTotal) or 0) *20 + (tonumber(sheet.ArmaHP) or 0) + (tonumber(sheet.OutraHP) or 0) + 
-						(tonumber(sheet.ArmaduraHP) or 0) + (tonumber(sheet.AcessorioHP) or 0) +
-						(tonumber(sheet.PHPRacial) or 0) + (tonumber(sheet.PHPBasica) or 0) + (tonumber(sheet.RHPNivel) or 0) + (tonumber(sheet.CHPNivel) or 0);
-					end;	
-						
-					if sheet.Classe == 'Caçador de Almas' then
-						sheet.ClasseAcerto = 1;
-						sheet.ClasseAM = 14;
-						sheet.ClasseCR = 20;
-						sheet.ClasseCM = 2;
-						sheet.ClasseEsquiva = 11;
-						sheet.ClassePer = 1;
-						sheet.CHPNivel = (tonumber(sheet.Level) or 0) * 15 + 170;
-						sheet.HPTotal =  (tonumber(sheet.HP) or 0) + (tonumber(sheet.VitalidadeTotal) or 0) *20 + (tonumber(sheet.ArmaHP) or 0) + (tonumber(sheet.OutraHP) or 0) + 
-						(tonumber(sheet.ArmaduraHP) or 0) + (tonumber(sheet.AcessorioHP) or 0) +
-						(tonumber(sheet.PHPRacial) or 0) + (tonumber(sheet.PHPBasica) or 0) + (tonumber(sheet.RHPNivel) or 0) + (tonumber(sheet.CHPNivel) or 0);
-					end;	
-						
-					if sheet.Classe == 'Guerreiro' then
-						sheet.ClasseAcerto = 1;
-						sheet.ClasseAM = 13;
-						sheet.ClasseCR = 19;
-						sheet.ClasseCM = 1;
-						sheet.ClasseEsquiva = 11;
-						sheet.ClassePer = 2;
-						sheet.CHPNivel = (tonumber(sheet.Level) or 0) * 20 + 220;
-						sheet.HPTotal =  (tonumber(sheet.HP) or 0) + (tonumber(sheet.VitalidadeTotal) or 0) *20 + (tonumber(sheet.ArmaHP) or 0) + (tonumber(sheet.OutraHP) or 0) + 
-						(tonumber(sheet.ArmaduraHP) or 0) + (tonumber(sheet.AcessorioHP) or 0) +
-						(tonumber(sheet.PHPRacial) or 0) + (tonumber(sheet.PHPBasica) or 0) + (tonumber(sheet.RHPNivel) or 0) + (tonumber(sheet.CHPNivel) or 0);
-					end;	
-						
-					if sheet.Classe == 'Ladino' then
-						sheet.ClasseAcerto = 1;
-						sheet.ClasseAM = 14;
-						sheet.ClasseCR = 20;
-						sheet.ClasseCM = 1;
-						sheet.ClasseEsquiva = 12;
-						sheet.ClassePer = 1;
-						sheet.CHPNivel = (tonumber(sheet.Level) or 0) * 14 + 150;
-						sheet.HPTotal =  (tonumber(sheet.HP) or 0) + (tonumber(sheet.VitalidadeTotal) or 0) *20 + (tonumber(sheet.ArmaHP) or 0) + (tonumber(sheet.OutraHP) or 0) +
-						(tonumber(sheet.ArmaduraHP) or 0) + (tonumber(sheet.AcessorioHP) or 0) +
-						(tonumber(sheet.PHPRacial) or 0) + (tonumber(sheet.PHPBasica) or 0) + (tonumber(sheet.RHPNivel) or 0) + (tonumber(sheet.CHPNivel) or 0);
-					end;	
-						
-					if sheet.Classe == 'Mago' then
-						sheet.ClasseAcerto = 1;
-						sheet.ClasseAM = 15;
-						sheet.ClasseCR = 20;
-						sheet.ClasseCM = 1;
-						sheet.ClasseEsquiva = 11;
-						sheet.ClassePer = 1;
-						sheet.CHPNivel = (tonumber(sheet.Level) or 0) * 12 + 140;
-						sheet.HPTotal =  (tonumber(sheet.HP) or 0) + (tonumber(sheet.VitalidadeTotal) or 0) *20 + (tonumber(sheet.ArmaHP) or 0) + (tonumber(sheet.OutraHP) or 0) +  
-						(tonumber(sheet.ArmaduraHP) or 0) + (tonumber(sheet.AcessorioHP) or 0) +
-						(tonumber(sheet.PHPRacial) or 0) + (tonumber(sheet.PHPBasica) or 0) + (tonumber(sheet.RHPNivel) or 0) + (tonumber(sheet.CHPNivel) or 0);
-					end;	
-						
-					if sheet.Classe == 'Mercenario' then
-						sheet.ClasseAcerto = 1;
-						sheet.ClasseAM = 14;
-						sheet.ClasseCR = 19;
-						sheet.ClasseCM = 2;
-						sheet.ClasseEsquiva = 11;
-						sheet.ClassePer = 1;
-						sheet.CHPNivel = (tonumber(sheet.Level) or 0) * 16 + 170;
-						sheet.HPTotal =  (tonumber(sheet.HP) or 0) + (tonumber(sheet.VitalidadeTotal) or 0) *20 + (tonumber(sheet.ArmaHP) or 0) + (tonumber(sheet.OutraHP) or 0) + 
-						(tonumber(sheet.ArmaduraHP) or 0) + (tonumber(sheet.AcessorioHP) or 0) +
-						(tonumber(sheet.PHPRacial) or 0) + (tonumber(sheet.PHPBasica) or 0) + (tonumber(sheet.RHPNivel) or 0) + (tonumber(sheet.CHPNivel) or 0);
-					end;	
-						
-					if sheet.Classe == 'Monge' then
-						sheet.ClasseAcerto = 1;
-						sheet.ClasseAM = 14;
-						sheet.ClasseCR = 20;
-						sheet.ClasseCM = 1;
-						sheet.ClasseEsquiva = 12;
-						sheet.ClassePer = 1;
-						sheet.CHPNivel = (tonumber(sheet.Level) or 0) * 16 + 180;
-						sheet.HPTotal =  (tonumber(sheet.HP) or 0) + (tonumber(sheet.VitalidadeTotal) or 0) *20 + (tonumber(sheet.ArmaHP) or 0) + (tonumber(sheet.OutraHP) or 0) + 
-						(tonumber(sheet.ArmaduraHP) or 0) + (tonumber(sheet.AcessorioHP) or 0) +
-						(tonumber(sheet.PHPRacial) or 0) + (tonumber(sheet.PHPBasica) or 0) + (tonumber(sheet.RHPNivel) or 0) + (tonumber(sheet.CHPNivel) or 0);
-					end;	
-						
-					if sheet.Classe == 'Paladino' then
-						sheet.ClasseAcerto = 1;
-						sheet.ClasseAM = 14;
-						sheet.ClasseCR= 20;
-						sheet.ClasseCM = 1;
-						sheet.ClasseEsquiva = 11;
-						sheet.ClassePer = 1;
-						sheet.CHPNivel = (tonumber(sheet.Level) or 0) * 18 + 200;
-						sheet.HPTotal =  (tonumber(sheet.HP) or 0) + (tonumber(sheet.VitalidadeTotal) or 0) *20 + (tonumber(sheet.ArmaHP) or 0) + (tonumber(sheet.OutraHP) or 0) + 
-						(tonumber(sheet.ArmaduraHP) or 0) + (tonumber(sheet.AcessorioHP) or 0) +
-						(tonumber(sheet.PHPRacial) or 0) + (tonumber(sheet.PHPBasica) or 0) + (tonumber(sheet.RHPNivel) or 0) + (tonumber(sheet.CHPNivel) or 0);
-					end;
-				end;
-				
-				if sheet.level > 19 then
-					if sheet.Espec == 'Druida' then
-						sheet.EspecAcerto = 0;
-						sheet.EspecAM = 1;
-						sheet.EspecCR = 0;
-						sheet.EspecCM = 0;
-						sheet.EspecEsquiva = 0;
-						sheet.EspecPer = 0;
-						sheet.EHPNivel = (tonumber(sheet.Elevel) or 0) * 22 + 600;
-						sheet.HPTotal = (tonumber(sheet.VitalidadeTotal) or 0) *20 + (tonumber(sheet.ArmaHP) or 0) + (tonumber(sheet.OutraHP) or 0) + 
-						(tonumber(sheet.ArmaduraHP) or 0) + (tonumber(sheet.AcessorioHP) or 0) +
-						(tonumber(sheet.PHPRacial) or 0) + (tonumber(sheet.PHPBasica) or 0) + (tonumber(sheet.RHPNivel) or 0) + (tonumber(sheet.CHPNivel) or 0) + (tonumber(sheet.EHPNivel) or 0) + (tonumber(sheet.R20HPNivel) or 0);
-					end;
-					
-					if sheet.Espec == 'Shaman' then
-						sheet.EspecAcerto = 0;
-						sheet.EspecAM = 0;
-						sheet.EspecCR = 0;
-						sheet.EspecCM = 1;
-						sheet.EspecEsquiva = 0;
-						sheet.EspecPer = 1;
-						sheet.EHPNivel = (tonumber(sheet.ELevel) or 0) * 24 + 600;
-						sheet.HPTotal =  (tonumber(sheet.HP) or 0) + (tonumber(sheet.VitalidadeTotal) or 0) *20 + (tonumber(sheet.ArmaHP) or 0) + (tonumber(sheet.OutraHP) or 0) + 
-						(tonumber(sheet.ArmaduraHP) or 0) + (tonumber(sheet.AcessorioHP) or 0) +
-						(tonumber(sheet.PHPRacial) or 0) + (tonumber(sheet.PHPBasica) or 0) + (tonumber(sheet.RHPNivel) or 0) + (tonumber(sheet.CHPNivel) or 0) + (tonumber(sheet.EHPNivel) or 0) + (tonumber(sheet.R20HPNivel) or 0);
-					end;
-					
-					if sheet.Espec == 'Caçador' then
-						sheet.EspecAcerto = 0;
-						sheet.EspecAM = 0;
-						sheet.EspecCR = 1;
-						sheet.EspecCM = 0;
-						sheet.EspecEsquiva = 1;
-						sheet.EspecPer = 0;
-						sheet.EHPNivel = (tonumber(sheet.ELevel) or 0) * 22 + 600;
-						sheet.HPTotal =  (tonumber(sheet.HP) or 0) + (tonumber(sheet.VitalidadeTotal) or 0) *20 + (tonumber(sheet.ArmaHP) or 0) + (tonumber(sheet.OutraHP) or 0) + 
-						(tonumber(sheet.ArmaduraHP) or 0) + (tonumber(sheet.AcessorioHP) or 0) +
-						(tonumber(sheet.PHPRacial) or 0) + (tonumber(sheet.PHPBasica) or 0) + (tonumber(sheet.RHPNivel) or 0) + (tonumber(sheet.CHPNivel) or 0) + (tonumber(sheet.EHPNivel) or 0) + (tonumber(sheet.R20HPNivel) or 0);
-					end;
-					
-					if sheet.Espec == 'Sentinela Lunar' then
-						sheet.EspecAcerto = 0;
-						sheet.EspecAM = 1;
-						sheet.EspecCR = 0;
-						sheet.EspecCM = 1;
-						sheet.EspecEsquiva = 0;
-						sheet.EspecPer = 0;
-						sheet.EHPNivel = (tonumber(sheet.ELevel) or 0) * 21 + 600;
-						sheet.HPTotal =  (tonumber(sheet.HP) or 0) + (tonumber(sheet.VitalidadeTotal) or 0) *20 + (tonumber(sheet.ArmaHP) or 0) + (tonumber(sheet.OutraHP) or 0) + 
-						(tonumber(sheet.ArmaduraHP) or 0) + (tonumber(sheet.AcessorioHP) or 0) +
-						(tonumber(sheet.PHPRacial) or 0) + (tonumber(sheet.PHPBasica) or 0) + (tonumber(sheet.RHPNivel) or 0) + (tonumber(sheet.CHPNivel) or 0) + (tonumber(sheet.EHPNivel) or 0) + (tonumber(sheet.R20HPNivel) or 0);
-					end;
-					
-					if sheet.Espec == 'Encantador de Almas' then
-						sheet.EspecAcerto = 0;
-						sheet.EspecAM = 1;
-						sheet.EspecCR = 0;
-						sheet.EspecCM = 0;
-						sheet.EspecEsquiva = 1;
-						sheet.EspecPer = 0;
-						sheet.EHPNivel = (tonumber(sheet.ELevel) or 0) * 21 + 600;
-						sheet.HPTotal =  (tonumber(sheet.HP) or 0) + (tonumber(sheet.VitalidadeTotal) or 0) *20 + (tonumber(sheet.ArmaHP) or 0) + (tonumber(sheet.OutraHP) or 0) + (tonumber(sheet.ArmaduraHP) or 0) + (tonumber(sheet.AcessorioHP) or 0) +
-						(tonumber(sheet.PHPRacial) or 0) + (tonumber(sheet.PHPBasica) or 0) + (tonumber(sheet.RHPNivel) or 0) + (tonumber(sheet.CHPNivel) or 0) + (tonumber(sheet.EHPNivel) or 0) + (tonumber(sheet.R20HPNivel) or 0);
-					end;
-					
-					if sheet.Espec == 'Necromance' then
-						sheet.EspecAcerto = 0;
-						sheet.EspecAM = 0;
-						sheet.EspecCR = 0;
-						sheet.EspecCM = 1;
-						sheet.EspecEsquiva = 0;
-						sheet.EspecPer = 0;
-						sheet.EHPNivel = (tonumber(sheet.ELevel) or 0) * 22 + 600;
-						sheet.HPTotal =  (tonumber(sheet.HP) or 0) + (tonumber(sheet.VitalidadeTotal) or 0) *20 + (tonumber(sheet.ArmaHP) or 0) + 
-						(tonumber(sheet.OutraHP) or 0) + (tonumber(sheet.ArmaduraHP) or 0) + (tonumber(sheet.AcessorioHP) or 0) +
-						(tonumber(sheet.PHPRacial) or 0) + (tonumber(sheet.PHPBasica) or 0) + (tonumber(sheet.RHPNivel) or 0) + (tonumber(sheet.CHPNivel) or 0) + (tonumber(sheet.EHPNivel) or 0) + (tonumber(sheet.R20HPNivel) or 0);
-					end;
-					
-					if sheet.Espec == 'Sacerdote' then
-						sheet.EspecAcerto = 0;
-						sheet.EspecAM = 1;
-						sheet.EspecCR = 0;
-						sheet.EspecCM = 0;
-						sheet.EspecEsquiva = 0;
-						sheet.EspecPer = 0;
-						sheet.EHPNivel = (tonumber(sheet.ELevel) or 0) * 25 + 600;
-						sheet.HPTotal =  (tonumber(sheet.HP) or 0) + (tonumber(sheet.VitalidadeTotal) or 0) *20 + (tonumber(sheet.ArmaHP) or 0) + 
-						(tonumber(sheet.OutraHP) or 0) + (tonumber(sheet.ArmaduraHP) or 0) + (tonumber(sheet.AcessorioHP) or 0) +
-						(tonumber(sheet.PHPRacial) or 0) + (tonumber(sheet.PHPBasica) or 0) + (tonumber(sheet.RHPNivel) or 0) + (tonumber(sheet.CHPNivel) or 0) + (tonumber(sheet.EHPNivel) or 0) + (tonumber(sheet.R20HPNivel) or 0);
-					end;
-					
-					if sheet.Espec == 'Juiz' then
-						sheet.EspecAcerto = 0;
-						sheet.EspecAM = 1;
-						sheet.EspecCR = 0;
-						sheet.EspecCM = 0;
-						sheet.EspecEsquiva = 0;
-						sheet.EspecPer = 0;
-						sheet.EHPNivel = (tonumber(sheet.ELevel) or 0) * 28 + 600;
-						sheet.HPTotal =  (tonumber(sheet.HP) or 0) + (tonumber(sheet.VitalidadeTotal) or 0) *20 + (tonumber(sheet.ArmaHP) or 0) + (tonumber(sheet.OutraHP) or 0) + 
-						(tonumber(sheet.ArmaduraHP) or 0) + (tonumber(sheet.AcessorioHP) or 0) +
-						(tonumber(sheet.PHPRacial) or 0) + (tonumber(sheet.PHPBasica) or 0) + (tonumber(sheet.RHPNivel) or 0) + (tonumber(sheet.CHPNivel) or 0) + (tonumber(sheet.EHPNivel) or 0) + (tonumber(sheet.R20HPNivel) or 0);
-					end;
-					
-					if sheet.Espec == 'Barbaro' then
-						sheet.EspecAcerto = 1;
-						sheet.EspecAM = 0;
-						sheet.EspecCR = 0;
-						sheet.EspecCM = 0;
-						sheet.EspecEsquiva = 0;
-						sheet.EspecPer = 0;
-						sheet.EHPNivel = (tonumber(sheet.ELevel) or 0) * 28 + 600;
-						sheet.HPTotal =  (tonumber(sheet.HP) or 0) + (tonumber(sheet.VitalidadeTotal) or 0) *20 + (tonumber(sheet.ArmaHP) or 0) + (tonumber(sheet.OutraHP) or 0) + 
-						(tonumber(sheet.ArmaduraHP) or 0) + (tonumber(sheet.AcessorioHP) or 0) +
-						(tonumber(sheet.PHPRacial) or 0) + (tonumber(sheet.PHPBasica) or 0) + (tonumber(sheet.RHPNivel) or 0) + (tonumber(sheet.CHPNivel) or 0) + (tonumber(sheet.EHPNivel) or 0) + (tonumber(sheet.R20HPNivel) or 0);
-					end;
-					
-					if sheet.Espec == 'Tanker' then
-						sheet.EspecAcerto = 0;
-						sheet.EspecAM = 0;
-						sheet.EspecCR = 0;
-						sheet.EspecCM = 0;
-						sheet.EspecEsquiva = 0;
-						sheet.EspecPer = 1;
-						sheet.EHPNivel = (tonumber(sheet.ELevel) or 0) * 30 + 600;
-						sheet.HPTotal =  (tonumber(sheet.HP) or 0) + (tonumber(sheet.VitalidadeTotal) or 0) *20 + (tonumber(sheet.ArmaHP) or 0) + (tonumber(sheet.OutraHP) or 0) + 
-						(tonumber(sheet.ArmaduraHP) or 0) + (tonumber(sheet.AcessorioHP) or 0) +
-						(tonumber(sheet.PHPRacial) or 0) + (tonumber(sheet.PHPBasica) or 0) + (tonumber(sheet.RHPNivel) or 0) + (tonumber(sheet.CHPNivel) or 0) + (tonumber(sheet.EHPNivel) or 0) + (tonumber(sheet.R20HPNivel) or 0);
-					end;
-					
-					if sheet.Espec == 'Acrobata' then
-						sheet.EspecAcerto = 0;
-						sheet.EspecAM = 1;
-						sheet.EspecCR = 0;
-						sheet.EspecCM = 1;
-						sheet.EspecEsquiva = 0;
-						sheet.EspecPer = 0;
-						sheet.EHPNivel = (tonumber(sheet.ELevel) or 0) * 23 + 600;
-						sheet.HPTotal =  (tonumber(sheet.HP) or 0) + (tonumber(sheet.VitalidadeTotal) or 0) *20 + (tonumber(sheet.ArmaHP) or 0) + (tonumber(sheet.OutraHP) or 0) + 
-						(tonumber(sheet.ArmaduraHP) or 0) + (tonumber(sheet.AcessorioHP) or 0) +
-						(tonumber(sheet.PHPRacial) or 0) + (tonumber(sheet.PHPBasica) or 0) + (tonumber(sheet.RHPNivel) or 0) + (tonumber(sheet.CHPNivel) or 0) + (tonumber(sheet.EHPNivel) or 0) + (tonumber(sheet.R20HPNivel) or 0);
-					end;
-					
-					if sheet.Espec == 'Assassino' then
-						sheet.EspecAcerto = 0;
-						sheet.EspecAM = 0;
-						sheet.EspecCR = 1;
-						sheet.EspecCM = 1;
-						sheet.EspecEsquiva = 0;
-						sheet.EspecPer = 0;
-						sheet.EHPNivel = (tonumber(sheet.ELevel) or 0) * 21 + 600;
-						sheet.HPTotal =  (tonumber(sheet.HP) or 0) + (tonumber(sheet.VitalidadeTotal) or 0) *20 + (tonumber(sheet.ArmaHP) or 0) + (tonumber(sheet.OutraHP) or 0) + 
-						(tonumber(sheet.ArmaduraHP) or 0) + (tonumber(sheet.AcessorioHP) or 0) +
-						(tonumber(sheet.PHPRacial) or 0) + (tonumber(sheet.PHPBasica) or 0) + (tonumber(sheet.RHPNivel) or 0) + (tonumber(sheet.CHPNivel) or 0) + (tonumber(sheet.EHPNivel) or 0) + (tonumber(sheet.R20HPNivel) or 0);
-					end;
-					
-					if sheet.Espec == 'Arcanista' then
-						sheet.EspecAcerto = 0;
-						sheet.EspecAM = 1;
-						sheet.EspecCR = 0;
-						sheet.EspecCM = 0;
-						sheet.EspecEsquiva = 0;
-						sheet.EspecPer = 0;
-						sheet.EHPNivel = (tonumber(sheet.ELevel) or 0) * 20 + 600;
-						sheet.HPTotal =  (tonumber(sheet.HP) or 0) + (tonumber(sheet.VitalidadeTotal) or 0) *20 + (tonumber(sheet.ArmaHP) or 0) + (tonumber(sheet.OutraHP) or 0) + 
-						(tonumber(sheet.ArmaduraHP) or 0) + (tonumber(sheet.AcessorioHP) or 0) +
-						(tonumber(sheet.PHPRacial) or 0) + (tonumber(sheet.PHPBasica) or 0) + (tonumber(sheet.RHPNivel) or 0) + (tonumber(sheet.CHPNivel) or 0) + (tonumber(sheet.EHPNivel) or 0) + (tonumber(sheet.R20HPNivel) or 0);
-					end;
-					
-					if sheet.Espec == 'Feiticeiro' then
-						sheet.EspecAcerto = 0;
-						sheet.EspecAM = 1;
-						sheet.EspecCR = 0;
-						sheet.EspecCM = 0;
-						sheet.EspecEsquiva = 0;
-						sheet.EspecPer = 0;
-						sheet.EHPNivel = (tonumber(sheet.ELevel) or 0) * 22 + 600;
-						sheet.HPTotal =  (tonumber(sheet.HP) or 0) + (tonumber(sheet.VitalidadeTotal) or 0) *20 + (tonumber(sheet.ArmaHP) or 0) + (tonumber(sheet.OutraHP) or 0) + 
-						(tonumber(sheet.ArmaduraHP) or 0) + (tonumber(sheet.AcessorioHP) or 0) +
-						(tonumber(sheet.PHPRacial) or 0) + (tonumber(sheet.PHPBasica) or 0) + (tonumber(sheet.RHPNivel) or 0) + (tonumber(sheet.CHPNivel) or 0) + (tonumber(sheet.EHPNivel) or 0) + (tonumber(sheet.R20HPNivel) or 0);
-					end;
-					
-					if sheet.Espec == 'Summoner' then
-						sheet.EspecAcerto = 0;
-						sheet.EspecAM = 1;
-						sheet.EspecCR = 0;
-						sheet.EspecCM = 0;
-						sheet.EspecEsquiva = 0;
-						sheet.EspecPer = 0;
-						sheet.EHPNivel = (tonumber(sheet.ELevel) or 0) * 20 + 600;
-						sheet.HPTotal =  (tonumber(sheet.HP) or 0) + (tonumber(sheet.VitalidadeTotal) or 0) *20 + (tonumber(sheet.ArmaHP) or 0) + (tonumber(sheet.OutraHP) or 0) + 
-						(tonumber(sheet.ArmaduraHP) or 0) + (tonumber(sheet.AcessorioHP) or 0) +
-						(tonumber(sheet.PHPRacial) or 0) + (tonumber(sheet.PHPBasica) or 0) + (tonumber(sheet.RHPNivel) or 0) + (tonumber(sheet.CHPNivel) or 0) + (tonumber(sheet.EHPNivel) or 0) + (tonumber(sheet.R20HPNivel) or 0);
-					end;
-					
-					if sheet.Espec == 'Duelista' then
-						sheet.EspecAcerto = 0;
-						sheet.EspecAM = 0;
-						sheet.EspecCR = 1;
-						sheet.EspecCM = 0;
-						sheet.EspecEsquiva = 0;
-						sheet.EspecPer = 0;
-						sheet.EHPNivel = (tonumber(sheet.ELevel) or 0) * 24 + 600;
-						sheet.HPTotal =  (tonumber(sheet.HP) or 0) + (tonumber(sheet.VitalidadeTotal) or 0) *20 + (tonumber(sheet.ArmaHP) or 0) + (tonumber(sheet.OutraHP) or 0) + 
-						(tonumber(sheet.ArmaduraHP) or 0) + (tonumber(sheet.AcessorioHP) or 0) +
-						(tonumber(sheet.PHPRacial) or 0) + (tonumber(sheet.PHPBasica) or 0) + (tonumber(sheet.RHPNivel) or 0) + (tonumber(sheet.CHPNivel) or 0) + (tonumber(sheet.EHPNivel) or 0) + (tonumber(sheet.R20HPNivel) or 0);
-					end;
-					
-					if sheet.Espec == 'Pirata' then
-						sheet.EspecAcerto = 1;
-						sheet.EspecAM = 0;
-						sheet.EspecCR = 0;
-						sheet.EspecCM = 0;
-						sheet.EspecEsquiva = 0;
-						sheet.EspecPer = 0;
-						sheet.EHPNivel = (tonumber(sheet.ELevel) or 0) * 26 + 600;
-						sheet.HPTotal =  (tonumber(sheet.HP) or 0) + (tonumber(sheet.VitalidadeTotal) or 0) *20 + (tonumber(sheet.ArmaHP) or 0) + (tonumber(sheet.OutraHP) or 0) + 
-						(tonumber(sheet.ArmaduraHP) or 0) + (tonumber(sheet.AcessorioHP) or 0) +
-						(tonumber(sheet.PHPRacial) or 0) + (tonumber(sheet.PHPBasica) or 0) + (tonumber(sheet.RHPNivel) or 0) + (tonumber(sheet.CHPNivel) or 0) + (tonumber(sheet.EHPNivel) or 0) + (tonumber(sheet.R20HPNivel) or 0);
-					end;
-					
-					if sheet.Espec == 'Guardião Espiritual' then
-						sheet.EspecAcerto = 1;
-						sheet.EspecAM = 1;
-						sheet.EspecCR = 0;
-						sheet.EspecCM = 0;
-						sheet.EspecEsquiva = 0;
-						sheet.EspecPer = 0;
-						sheet.EHPNivel = (tonumber(sheet.ELevel) or 0) * 26 + 600;
-						sheet.HPTotal =  (tonumber(sheet.HP) or 0) + (tonumber(sheet.VitalidadeTotal) or 0) *20 + (tonumber(sheet.ArmaHP) or 0) + (tonumber(sheet.OutraHP) or 0) + 
-						(tonumber(sheet.ArmaduraHP) or 0) + (tonumber(sheet.AcessorioHP) or 0) +
-						(tonumber(sheet.PHPRacial) or 0) + (tonumber(sheet.PHPBasica) or 0) + (tonumber(sheet.RHPNivel) or 0) + (tonumber(sheet.CHPNivel) or 0) + (tonumber(sheet.EHPNivel) or 0) + (tonumber(sheet.R20HPNivel) or 0);
-					end;
-					
-					if sheet.Espec == 'CavaleirodasTrevas' then
-						sheet.EspecAcerto = 0;
-						sheet.EspecAM = 0;
-						sheet.EspecCR = 1;
-						sheet.EspecCM = 1;
-						sheet.EspecEsquiva = 0;
-						sheet.EspecPer = 0;
-						sheet.EHPNivel = (tonumber(sheet.ELevel) or 0) * 29 + 600;
-						sheet.HPTotal =  (tonumber(sheet.HP) or 0) + (tonumber(sheet.VitalidadeTotal) or 0) *20 + (tonumber(sheet.ArmaHP) or 0) + (tonumber(sheet.OutraHP) or 0) + 
-						(tonumber(sheet.ArmaduraHP) or 0) + (tonumber(sheet.AcessorioHP) or 0) +
-						(tonumber(sheet.PHPRacial) or 0) + (tonumber(sheet.PHPBasica) or 0) + (tonumber(sheet.RHPNivel) or 0) + (tonumber(sheet.CHPNivel) or 0) + (tonumber(sheet.EHPNivel) or 0) + (tonumber(sheet.R20HPNivel) or 0);
-					end;
-					
-					if sheet.Espec == 'Templario' then
-						sheet.EspecAcerto = 0;
-						sheet.EspecAM = 1;
-						sheet.EspecCR = 0;
-						sheet.EspecCM = 0;
-						sheet.EspecEsquiva = 0;
-						sheet.EspecPer = 1;
-						sheet.EHPNivel = (tonumber(sheet.ELevel) or 0) * 27 + 600;
-						sheet.HPTotal =  (tonumber(sheet.HP) or 0) + (tonumber(sheet.VitalidadeTotal) or 0) *20 + (tonumber(sheet.ArmaHP) or 0) + (tonumber(sheet.OutraHP) or 0) + 
-						(tonumber(sheet.ArmaduraHP) or 0) + (tonumber(sheet.AcessorioHP) or 0) +
-						(tonumber(sheet.PHPRacial) or 0) + (tonumber(sheet.PHPBasica) or 0) + (tonumber(sheet.RHPNivel) or 0) + (tonumber(sheet.CHPNivel) or 0) + (tonumber(sheet.EHPNivel) or 0) + (tonumber(sheet.R20HPNivel) or 0);
-					end;
-				end;	
-			end;	
-		
-
-
- 
 			function self.StatusDeChances()			
 				sheet.DestrezaAcerto = math.floor((tonumber(sheet.DestrezaTotal) or 0) /4);
 					
@@ -2484,31 +2346,31 @@ local function constructNew_frmvelen()
 						
 					sheet.Acerto = math.floor((tonumber(sheet.ClasseAcerto) or 0) + (tonumber(sheet.EspecAcerto) or 0) + (tonumber(sheet.DestrezaAcerto) or 0) + (tonumber(sheet.AcertoBasica) or 0) + (tonumber(sheet.AcertoRacial) or 0));
 
-					if sheet.Level > 19 then
+					if sheet.Level > 20 then
 						sheet.AcertoMagico = math.floor((tonumber(sheet.ClasseAM) or 0) + (tonumber(sheet.EspecAM) or 0) + (tonumber(sheet.AMBasica) or 0) + (tonumber(sheet.AMRacial) or 0));
 					else 
 						sheet.AcertoMagico = math.floor((tonumber(sheet.ClasseAM) or 0) + (tonumber(sheet.AMBasica) or 0) + (tonumber(sheet.AMRacial) or 0));
 					end;
 					
-					if sheet.Level > 19 then
+					if sheet.Level > 20 then
 						sheet.Critical = math.floor((tonumber(sheet.ClasseCR) or 0) - (tonumber(sheet.EspecCR) or 0) - (tonumber(sheet.CritBasica) or 0) - (tonumber(sheet.CritRacial) or 0));
 					else 
 						sheet.Critical = math.floor((tonumber(sheet.ClasseCR) or 0) - (tonumber(sheet.CritBasica) or 0) - (tonumber(sheet.CritRacial) or 0));
 					end;
 					
-					if sheet.Level > 19 then
+					if sheet.Level > 20 then
 						sheet.CMagico = math.floor((tonumber(sheet.ClasseCM) or 0) + (tonumber(sheet.EspecCM) or 0) + (tonumber(sheet.CMBasica) or 0) + (tonumber(sheet.CMRacial) or 0));
 					else 
 						sheet.CMagico = math.floor((tonumber(sheet.ClasseCM) or 0) + (tonumber(sheet.CMBasica) or 0) + (tonumber(sheet.CMRacial) or 0));
 					end;
 					
-					if sheet.Level > 19 then
+					if sheet.Level > 20 then
 						sheet.Esquiva = math.floor((tonumber(sheet.ClasseEsquiva) or 0) + (tonumber(sheet.EspecEsquiva) or 0) + (tonumber(sheet.ESQBasica) or 0) + (tonumber(sheet.ESQRacial) or 0) + (tonumber(sheet.AgilidadeESQ) or 0));
 					else 
 						sheet.Esquiva = math.floor((tonumber(sheet.ClasseEsquiva) or 0) + (tonumber(sheet.ESQBasica) or 0) + (tonumber(sheet.ESQRacial) or 0) + (tonumber(sheet.AgilidadeESQ) or 0));
 					end;
 
-					if sheet.Level > 19 then
+					if sheet.Level > 20 then
 						sheet.Persistencia = math.floor((tonumber(sheet.ClassePer) or 0) + (tonumber(sheet.EspecPer) or 0) + (tonumber(sheet.PersistBasica) or 0) + (tonumber(sheet.PersistRacial) or 0) + (tonumber(sheet.ForcaPer) or 0)); 
 					else 
 						sheet.Persistencia = math.floor((tonumber(sheet.ClassePer) or 0) + (tonumber(sheet.PersistBasica) or 0) + (tonumber(sheet.PersistRacial) or 0) + (tonumber(sheet.ForcaPer) or 0));
@@ -2525,61 +2387,6 @@ local function constructNew_frmvelen()
 					if sheet.Persistencia > 5 then
 						sheet.Persistencia = 5;
 					end;	
-			end;
-		
-
-
- 
-			function self.ChecaCavaleiroDraconicoHP()
-				if sheet.classe == 'Cavaleiro Draconico' then
-					if sheet.level < 21 then
-						sheet.Deslocamento = 9;
-						sheet.Correndo = 18 + (tonumber(sheet.CorridaBasica) or 0);
-						sheet.visao = 10;
-						sheet.RegenMP = (tonumber(sheet.VitalidadeTotal) or 0) /4 + 4 + (tonumber(sheet.REGMPBasica) or 0);
-						sheet.PA = (tonumber(sheet.FNIvel) or 0) * 2;
-						sheet.RHPNivel = (tonumber(sheet.Level) or 0) * 11;
-						sheet.HPTotal = (tonumber(sheet.VitalidadeTotal) or 0) *20 + (tonumber(sheet.ArmaHP) or 0) + (tonumber(sheet.OutraHP) or 0) + 
-						(tonumber(sheet.ArmaduraHP) or 0) + (tonumber(sheet.AcessorioHP) or 0) +
-						(tonumber(sheet.PHPRacial) or 0) + (tonumber(sheet.PHPBasica) or 0) + (tonumber(sheet.RHPNivel) or 0);
-						sheet.ClasseAcerto = 1;
-						sheet.ClasseAM = 14;
-						sheet.ClasseCR = 20;
-						sheet.ClasseCM = 2;
-						sheet.ClasseEsquiva = 10;
-						sheet.ClassePer = 1;
-						sheet.CHPNivel = (tonumber(sheet.Level) or 0) * 17  + 200;
-						sheet.HPTotal =  (tonumber(sheet.VitalidadeTotal) or 0) *20 + (tonumber(sheet.ArmaHP) or 0) + (tonumber(sheet.OutraHP) or 0) + 
-						(tonumber(sheet.ArmaduraHP) or 0) + (tonumber(sheet.AcessorioHP) or 0) +
-						(tonumber(sheet.PHPRacial) or 0) + (tonumber(sheet.PHPBasica) or 0) + (tonumber(sheet.RHPNivel) or 0) + (tonumber(sheet.CHPNivel) or 0);
-					end;
-				end;					
-
-				if sheet.classe == 'Cavaleiro Draconico' then
-					if sheet.level > 19 then
-						sheet.Deslocamento = 9;
-						sheet.Correndo = 18 + (tonumber(sheet.CorridaBasica) or 0);
-						sheet.visao = 10;
-						sheet.RegenMP = (tonumber(sheet.VitalidadeTotal) or 0) /4 + 4 + (tonumber(sheet.REGMPBasica) or 0);
-						sheet.R20HPNivel = (tonumber(sheet.ELevel) or 0) * 22;
-						sheet.HPTotal =  (tonumber(sheet.HP) or 0) + (tonumber(sheet.VitalidadeTotal) or 0) *20 + (tonumber(sheet.ArmaHP) or 0) + 
-						(tonumber(sheet.OutraHP) or 0) + (tonumber(sheet.ArmaduraHP) or 0) + (tonumber(sheet.AcessorioHP) or 0) +
-						(tonumber(sheet.HPHabilidade1) or 0) + (tonumber(sheet.HPHabilidade2) or 0) + (tonumber(sheet.HPHabilidade3) or 0) + 
-						(tonumber(sheet.HPHabilidade4) or 0) + (tonumber(sheet.HPHabilidade5) or 0) + (tonumber(sheet.HPHabilidade6) or 0) + 
-						(tonumber(sheet.PHPRacial) or 0) + (tonumber(sheet.PHPBasica) or 0) + (tonumber(sheet.RHPNivel) or 0) + (tonumber(sheet.ELevel) or 0);
-						sheet.EspecAcerto = 0;
-						sheet.EspecAM = 1;
-						sheet.EspecCR = 0;
-						sheet.EspecCM = 0;
-						sheet.EspecEsquiva = 0;
-						sheet.EspecPer = 0;
-						sheet.EHPNivel = (tonumber(sheet.Elevel) or 0) * 28 + 600;
-						sheet.HPTotal = (tonumber(sheet.VitalidadeTotal) or 0) *20 + (tonumber(sheet.ArmaHP) or 0) + (tonumber(sheet.OutraHP) or 0) + 
-						(tonumber(sheet.ArmaduraHP) or 0) + (tonumber(sheet.AcessorioHP) or 0) +
-						(tonumber(sheet.PHPRacial) or 0) + (tonumber(sheet.PHPBasica) or 0) + (tonumber(sheet.RHPNivel) or 0) + (tonumber(sheet.CHPNivel) or 0) + 
-						(tonumber(sheet.EHPNivel) or 0) + (tonumber(sheet.R20HPNivel) or 0);
-					end;
-				end;
 			end;
 		
 
@@ -3211,7 +3018,15 @@ local function constructNew_frmvelen()
             				self.StatusPorRaca(); 
             				self.ControlaRacaHPAte20();
             				self.ControlaRacaHPAte30();
-            				self.ChecaCavaleiroDraconicoHP();
+            				self.StatusClasseAte20();
+            				self.ControlaClasseHPAte20();
+            				self.StatusEspecAteLevel30();
+            				self.ControlaEspecHPAte30();
+            				self.StatusClasseEspecialAteLevel20();
+            				self.ControlaClasseEspecialHPAte20();
+            				self.StatusClasseEspecialAteLevel30();
+            				self.ControlaClasseEspecialHPAte30();
+            				self.CalculaHP();				
             			end;
         end, obj);
 
@@ -3239,10 +3054,7 @@ local function constructNew_frmvelen()
     obj._e_event28 = obj.dataLink8:addEventListener("onChange",
         function (_, field, oldValue, newValue)
             if sheet.SequenciaInicial == true then			
-            				self.ResolveBugRacaLevel30();
-            				self.ControlaClasseHP();
-            				self.ResolveBugClasseMPLevel30();
-            				self.ChecaCavaleiroDraconicoHP();
+            
             			end;
         end, obj);
 
@@ -3380,8 +3192,8 @@ local function constructNew_frmvelen()
         if self.edit11 ~= nil then self.edit11:destroy(); self.edit11 = nil; end;
         if self.label4 ~= nil then self.label4:destroy(); self.label4 = nil; end;
         if self.image1 ~= nil then self.image1:destroy(); self.image1 = nil; end;
-        if self.label6 ~= nil then self.label6:destroy(); self.label6 = nil; end;
         if self.edit19 ~= nil then self.edit19:destroy(); self.edit19 = nil; end;
+        if self.label6 ~= nil then self.label6:destroy(); self.label6 = nil; end;
         if self.rectangle17 ~= nil then self.rectangle17:destroy(); self.rectangle17 = nil; end;
         if self.edit5 ~= nil then self.edit5:destroy(); self.edit5 = nil; end;
         if self.button13 ~= nil then self.button13:destroy(); self.button13 = nil; end;
@@ -3411,6 +3223,7 @@ local function constructNew_frmvelen()
         if self.label17 ~= nil then self.label17:destroy(); self.label17 = nil; end;
         if self.comboBox1 ~= nil then self.comboBox1:destroy(); self.comboBox1 = nil; end;
         if self.edit13 ~= nil then self.edit13:destroy(); self.edit13 = nil; end;
+        if self.edit39 ~= nil then self.edit39:destroy(); self.edit39 = nil; end;
         if self.edit23 ~= nil then self.edit23:destroy(); self.edit23 = nil; end;
         if self.dataLink1 ~= nil then self.dataLink1:destroy(); self.dataLink1 = nil; end;
         if self.button11 ~= nil then self.button11:destroy(); self.button11 = nil; end;
@@ -3424,15 +3237,17 @@ local function constructNew_frmvelen()
         if self.rectangle6 ~= nil then self.rectangle6:destroy(); self.rectangle6 = nil; end;
         if self.label21 ~= nil then self.label21:destroy(); self.label21 = nil; end;
         if self.edit37 ~= nil then self.edit37:destroy(); self.edit37 = nil; end;
+        if self.edit40 ~= nil then self.edit40:destroy(); self.edit40 = nil; end;
         if self.dataLink6 ~= nil then self.dataLink6:destroy(); self.dataLink6 = nil; end;
         if self.tabControl1 ~= nil then self.tabControl1:destroy(); self.tabControl1 = nil; end;
         if self.btnUpaLevel ~= nil then self.btnUpaLevel:destroy(); self.btnUpaLevel = nil; end;
         if self.dataLink2 ~= nil then self.dataLink2:destroy(); self.dataLink2 = nil; end;
         if self.label10 ~= nil then self.label10:destroy(); self.label10 = nil; end;
-        if self.label19 ~= nil then self.label19:destroy(); self.label19 = nil; end;
-        if self.button10 ~= nil then self.button10:destroy(); self.button10 = nil; end;
         if self.edit17 ~= nil then self.edit17:destroy(); self.edit17 = nil; end;
+        if self.button10 ~= nil then self.button10:destroy(); self.button10 = nil; end;
+        if self.label19 ~= nil then self.label19:destroy(); self.label19 = nil; end;
         if self.button17 ~= nil then self.button17:destroy(); self.button17 = nil; end;
+        if self.edit38 ~= nil then self.edit38:destroy(); self.edit38 = nil; end;
         if self.rectangle12 ~= nil then self.rectangle12:destroy(); self.rectangle12 = nil; end;
         if self.edit15 ~= nil then self.edit15:destroy(); self.edit15 = nil; end;
         if self.label11 ~= nil then self.label11:destroy(); self.label11 = nil; end;
