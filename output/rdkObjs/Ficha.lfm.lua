@@ -147,6 +147,28 @@ local function constructNew_frmvelen()
     obj.edit10:setField("MHPNivel");
     obj.edit10:setName("edit10");
 
+    obj.edit11 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit11:setParent(obj.tab1);
+    obj.edit11:setLeft(20);
+    obj.edit11:setTop(240);
+    obj.edit11:setWidth(75);
+    obj.edit11:setType("number");
+    obj.edit11:setFontColor("blue");
+    obj.edit11:setHeight(20);
+    obj.edit11:setField("CMPNivel");
+    obj.edit11:setName("edit11");
+
+    obj.edit12 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit12:setParent(obj.tab1);
+    obj.edit12:setLeft(20);
+    obj.edit12:setTop(280);
+    obj.edit12:setWidth(75);
+    obj.edit12:setType("number");
+    obj.edit12:setFontColor("Cyan");
+    obj.edit12:setHeight(20);
+    obj.edit12:setField("EMPNivel");
+    obj.edit12:setName("edit12");
+
     obj.tab2 = GUI.fromHandle(_obj_newObject("tab"));
     obj.tab2:setParent(obj.tabControl1);
     obj.tab2:setTitle("Segunda Aba");
@@ -166,23 +188,23 @@ local function constructNew_frmvelen()
     obj.image1:setSRC("/imagens/1.png");
     obj.image1:setName("image1");
 
-    obj.edit11 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit11:setParent(obj.scrollBox1);
-    obj.edit11:setLeft(160);
-    obj.edit11:setTop(60);
-    obj.edit11:setWidth(75);
-    obj.edit11:setHeight(20);
-    obj.edit11:setField("Nome");
-    obj.edit11:setName("edit11");
+    obj.edit13 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit13:setParent(obj.scrollBox1);
+    obj.edit13:setLeft(160);
+    obj.edit13:setTop(60);
+    obj.edit13:setWidth(75);
+    obj.edit13:setHeight(20);
+    obj.edit13:setField("Nome");
+    obj.edit13:setName("edit13");
 
-    obj.edit12 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit12:setParent(obj.scrollBox1);
-    obj.edit12:setLeft(160);
-    obj.edit12:setTop(92);
-    obj.edit12:setWidth(75);
-    obj.edit12:setHeight(20);
-    obj.edit12:setField("idade");
-    obj.edit12:setName("edit12");
+    obj.edit14 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit14:setParent(obj.scrollBox1);
+    obj.edit14:setLeft(160);
+    obj.edit14:setTop(92);
+    obj.edit14:setWidth(75);
+    obj.edit14:setHeight(20);
+    obj.edit14:setField("idade");
+    obj.edit14:setName("edit14");
 
     obj.comboBox1 = GUI.fromHandle(_obj_newObject("comboBox"));
     obj.comboBox1:setParent(obj.scrollBox1);
@@ -208,24 +230,24 @@ local function constructNew_frmvelen()
 		'Necromance', 'Sacerdote', 'Juiz', 'Barbaro', 'Tanker', 'Acrobata', 'Assassino', 'Arcanista', 'Feiticeiro', 'Summoner', 'Duelista', 'Pirata', 'Guardião Espiritual', 
 		'Cavaleiro das Trevas', 'Templario' });
 
-    obj.edit13 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit13:setParent(obj.scrollBox1);
-    obj.edit13:setLeft(490);
-    obj.edit13:setTop(60);
-    obj.edit13:setWidth(40);
-    obj.edit13:setHeight(20);
-    obj.edit13:setField("Velis");
-    obj.edit13:setName("edit13");
+    obj.edit15 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit15:setParent(obj.scrollBox1);
+    obj.edit15:setLeft(490);
+    obj.edit15:setTop(60);
+    obj.edit15:setWidth(40);
+    obj.edit15:setHeight(20);
+    obj.edit15:setField("Velis");
+    obj.edit15:setName("edit15");
 
-    obj.edit14 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit14:setParent(obj.scrollBox1);
-    obj.edit14:setLeft(490);
-    obj.edit14:setTop(60);
-    obj.edit14:setWidth(40);
-    obj.edit14:setVisible(false);
-    obj.edit14:setHeight(20);
-    obj.edit14:setField("PHPRacial");
-    obj.edit14:setName("edit14");
+    obj.edit16 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit16:setParent(obj.scrollBox1);
+    obj.edit16:setLeft(490);
+    obj.edit16:setTop(60);
+    obj.edit16:setWidth(40);
+    obj.edit16:setVisible(false);
+    obj.edit16:setHeight(20);
+    obj.edit16:setField("PHPRacial");
+    obj.edit16:setName("edit16");
 
     obj.comboBox2 = GUI.fromHandle(_obj_newObject("comboBox"));
     obj.comboBox2:setParent(obj.scrollBox1);
@@ -254,16 +276,16 @@ local function constructNew_frmvelen()
     obj.button2:setText("+");
     obj.button2:setName("button2");
 
-    obj.edit15 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit15:setParent(obj.scrollBox1);
-    obj.edit15:setLeft(170);
-    obj.edit15:setTop(265);
-    obj.edit15:setWidth(35);
-    obj.edit15:setHeight(20);
-    obj.edit15:setEnabled(false);
-    obj.edit15:setType("number");
-    obj.edit15:setField("Forca");
-    obj.edit15:setName("edit15");
+    obj.edit17 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit17:setParent(obj.scrollBox1);
+    obj.edit17:setLeft(170);
+    obj.edit17:setTop(265);
+    obj.edit17:setWidth(35);
+    obj.edit17:setHeight(20);
+    obj.edit17:setEnabled(false);
+    obj.edit17:setType("number");
+    obj.edit17:setField("Forca");
+    obj.edit17:setName("edit17");
 
     obj.rectangle1 = GUI.fromHandle(_obj_newObject("rectangle"));
     obj.rectangle1:setParent(obj.scrollBox1);
@@ -302,16 +324,16 @@ local function constructNew_frmvelen()
     obj.button4:setText("+");
     obj.button4:setName("button4");
 
-    obj.edit16 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit16:setParent(obj.scrollBox1);
-    obj.edit16:setLeft(170);
-    obj.edit16:setTop(327);
-    obj.edit16:setWidth(35);
-    obj.edit16:setHeight(20);
-    obj.edit16:setEnabled(false);
-    obj.edit16:setType("number");
-    obj.edit16:setField("Inteligencia");
-    obj.edit16:setName("edit16");
+    obj.edit18 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit18:setParent(obj.scrollBox1);
+    obj.edit18:setLeft(170);
+    obj.edit18:setTop(327);
+    obj.edit18:setWidth(35);
+    obj.edit18:setHeight(20);
+    obj.edit18:setEnabled(false);
+    obj.edit18:setType("number");
+    obj.edit18:setField("Inteligencia");
+    obj.edit18:setName("edit18");
 
     obj.rectangle2 = GUI.fromHandle(_obj_newObject("rectangle"));
     obj.rectangle2:setParent(obj.scrollBox1);
@@ -350,16 +372,16 @@ local function constructNew_frmvelen()
     obj.button6:setText("+");
     obj.button6:setName("button6");
 
-    obj.edit17 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit17:setParent(obj.scrollBox1);
-    obj.edit17:setLeft(170);
-    obj.edit17:setTop(388);
-    obj.edit17:setWidth(35);
-    obj.edit17:setHeight(20);
-    obj.edit17:setEnabled(false);
-    obj.edit17:setType("number");
-    obj.edit17:setField("Destreza");
-    obj.edit17:setName("edit17");
+    obj.edit19 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit19:setParent(obj.scrollBox1);
+    obj.edit19:setLeft(170);
+    obj.edit19:setTop(388);
+    obj.edit19:setWidth(35);
+    obj.edit19:setHeight(20);
+    obj.edit19:setEnabled(false);
+    obj.edit19:setType("number");
+    obj.edit19:setField("Destreza");
+    obj.edit19:setName("edit19");
 
     obj.rectangle3 = GUI.fromHandle(_obj_newObject("rectangle"));
     obj.rectangle3:setParent(obj.scrollBox1);
@@ -398,16 +420,16 @@ local function constructNew_frmvelen()
     obj.button8:setText("+");
     obj.button8:setName("button8");
 
-    obj.edit18 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit18:setParent(obj.scrollBox1);
-    obj.edit18:setLeft(170);
-    obj.edit18:setTop(449);
-    obj.edit18:setWidth(35);
-    obj.edit18:setHeight(20);
-    obj.edit18:setEnabled(false);
-    obj.edit18:setType("number");
-    obj.edit18:setField("Agilidade");
-    obj.edit18:setName("edit18");
+    obj.edit20 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit20:setParent(obj.scrollBox1);
+    obj.edit20:setLeft(170);
+    obj.edit20:setTop(449);
+    obj.edit20:setWidth(35);
+    obj.edit20:setHeight(20);
+    obj.edit20:setEnabled(false);
+    obj.edit20:setType("number");
+    obj.edit20:setField("Agilidade");
+    obj.edit20:setName("edit20");
 
     obj.rectangle4 = GUI.fromHandle(_obj_newObject("rectangle"));
     obj.rectangle4:setParent(obj.scrollBox1);
@@ -446,16 +468,16 @@ local function constructNew_frmvelen()
     obj.button10:setText("+");
     obj.button10:setName("button10");
 
-    obj.edit19 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit19:setParent(obj.scrollBox1);
-    obj.edit19:setLeft(170);
-    obj.edit19:setTop(510);
-    obj.edit19:setWidth(35);
-    obj.edit19:setHeight(20);
-    obj.edit19:setEnabled(false);
-    obj.edit19:setType("number");
-    obj.edit19:setField("Vitalidade");
-    obj.edit19:setName("edit19");
+    obj.edit21 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit21:setParent(obj.scrollBox1);
+    obj.edit21:setLeft(170);
+    obj.edit21:setTop(510);
+    obj.edit21:setWidth(35);
+    obj.edit21:setHeight(20);
+    obj.edit21:setEnabled(false);
+    obj.edit21:setType("number");
+    obj.edit21:setField("Vitalidade");
+    obj.edit21:setName("edit21");
 
     obj.rectangle5 = GUI.fromHandle(_obj_newObject("rectangle"));
     obj.rectangle5:setParent(obj.scrollBox1);
@@ -780,34 +802,34 @@ local function constructNew_frmvelen()
     obj.label22:setField("CMagico");
     obj.label22:setName("label22");
 
-    obj.edit20 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit20:setParent(obj.scrollBox1);
-    obj.edit20:setLeft(295);
-    obj.edit20:setTop(807);
-    obj.edit20:setFontColor("#00008B");
-    obj.edit20:setScale(2.0);
-    obj.edit20:setWidth(21);
-    obj.edit20:setHeight(50);
-    obj.edit20:setType("number");
-    obj.edit20:setTextPrompt("0");
-    obj.edit20:setEnabled(true);
-    obj.edit20:setMax(30);
-    obj.edit20:setField("Level");
-    obj.edit20:setTransparent(true);
-    obj.edit20:setName("edit20");
+    obj.edit22 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit22:setParent(obj.scrollBox1);
+    obj.edit22:setLeft(295);
+    obj.edit22:setTop(807);
+    obj.edit22:setFontColor("#00008B");
+    obj.edit22:setScale(2.0);
+    obj.edit22:setWidth(21);
+    obj.edit22:setHeight(50);
+    obj.edit22:setType("number");
+    obj.edit22:setTextPrompt("0");
+    obj.edit22:setEnabled(true);
+    obj.edit22:setMax(30);
+    obj.edit22:setField("Level");
+    obj.edit22:setTransparent(true);
+    obj.edit22:setName("edit22");
 
-    obj.edit21 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit21:setParent(obj.scrollBox1);
-    obj.edit21:setLeft(295);
-    obj.edit21:setTop(700);
-    obj.edit21:setFontColor("#00008B");
-    obj.edit21:setScale(2.0);
-    obj.edit21:setWidth(21);
-    obj.edit21:setVisible(false);
-    obj.edit21:setHeight(50);
-    obj.edit21:setField("Elevel");
-    obj.edit21:setTransparent(true);
-    obj.edit21:setName("edit21");
+    obj.edit23 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit23:setParent(obj.scrollBox1);
+    obj.edit23:setLeft(295);
+    obj.edit23:setTop(700);
+    obj.edit23:setFontColor("#00008B");
+    obj.edit23:setScale(2.0);
+    obj.edit23:setWidth(21);
+    obj.edit23:setVisible(false);
+    obj.edit23:setHeight(50);
+    obj.edit23:setField("Elevel");
+    obj.edit23:setTransparent(true);
+    obj.edit23:setName("edit23");
 
     obj.button11 = GUI.fromHandle(_obj_newObject("button"));
     obj.button11:setParent(obj.scrollBox1);
@@ -1004,48 +1026,26 @@ local function constructNew_frmvelen()
     obj.button21:setText("Ataque Basico");
     obj.button21:setName("button21");
 
-    obj.edit22 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit22:setParent(obj.scrollBox1);
-    obj.edit22:setLeft(270);
-    obj.edit22:setTop(670);
-    obj.edit22:setWidth(90);
-    obj.edit22:setType("number");
-    obj.edit22:setHeight(30);
-    obj.edit22:setVisible(false);
-    obj.edit22:setField("ClasseAcerto");
-    obj.edit22:setName("edit22");
-
-    obj.edit23 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit23:setParent(obj.scrollBox1);
-    obj.edit23:setLeft(270);
-    obj.edit23:setTop(720);
-    obj.edit23:setWidth(90);
-    obj.edit23:setType("number");
-    obj.edit23:setHeight(30);
-    obj.edit23:setVisible(false);
-    obj.edit23:setField("DestrezaAcerto");
-    obj.edit23:setName("edit23");
-
     obj.edit24 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit24:setParent(obj.scrollBox1);
     obj.edit24:setLeft(270);
-    obj.edit24:setTop(770);
+    obj.edit24:setTop(670);
     obj.edit24:setWidth(90);
     obj.edit24:setType("number");
     obj.edit24:setHeight(30);
     obj.edit24:setVisible(false);
-    obj.edit24:setField("EspecAcerto");
+    obj.edit24:setField("ClasseAcerto");
     obj.edit24:setName("edit24");
 
     obj.edit25 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit25:setParent(obj.scrollBox1);
     obj.edit25:setLeft(270);
-    obj.edit25:setTop(670);
+    obj.edit25:setTop(720);
     obj.edit25:setWidth(90);
     obj.edit25:setType("number");
     obj.edit25:setHeight(30);
     obj.edit25:setVisible(false);
-    obj.edit25:setField("ClasseAM");
+    obj.edit25:setField("DestrezaAcerto");
     obj.edit25:setName("edit25");
 
     obj.edit26 = GUI.fromHandle(_obj_newObject("edit"));
@@ -1056,7 +1056,7 @@ local function constructNew_frmvelen()
     obj.edit26:setType("number");
     obj.edit26:setHeight(30);
     obj.edit26:setVisible(false);
-    obj.edit26:setField("EspecAM");
+    obj.edit26:setField("EspecAcerto");
     obj.edit26:setName("edit26");
 
     obj.edit27 = GUI.fromHandle(_obj_newObject("edit"));
@@ -1067,7 +1067,7 @@ local function constructNew_frmvelen()
     obj.edit27:setType("number");
     obj.edit27:setHeight(30);
     obj.edit27:setVisible(false);
-    obj.edit27:setField("ClasseCR");
+    obj.edit27:setField("ClasseAM");
     obj.edit27:setName("edit27");
 
     obj.edit28 = GUI.fromHandle(_obj_newObject("edit"));
@@ -1078,7 +1078,7 @@ local function constructNew_frmvelen()
     obj.edit28:setType("number");
     obj.edit28:setHeight(30);
     obj.edit28:setVisible(false);
-    obj.edit28:setField("EspecCR");
+    obj.edit28:setField("EspecAM");
     obj.edit28:setName("edit28");
 
     obj.edit29 = GUI.fromHandle(_obj_newObject("edit"));
@@ -1089,7 +1089,7 @@ local function constructNew_frmvelen()
     obj.edit29:setType("number");
     obj.edit29:setHeight(30);
     obj.edit29:setVisible(false);
-    obj.edit29:setField("ClasseCM");
+    obj.edit29:setField("ClasseCR");
     obj.edit29:setName("edit29");
 
     obj.edit30 = GUI.fromHandle(_obj_newObject("edit"));
@@ -1100,7 +1100,7 @@ local function constructNew_frmvelen()
     obj.edit30:setType("number");
     obj.edit30:setHeight(30);
     obj.edit30:setVisible(false);
-    obj.edit30:setField("EspecCM");
+    obj.edit30:setField("EspecCR");
     obj.edit30:setName("edit30");
 
     obj.edit31 = GUI.fromHandle(_obj_newObject("edit"));
@@ -1111,7 +1111,7 @@ local function constructNew_frmvelen()
     obj.edit31:setType("number");
     obj.edit31:setHeight(30);
     obj.edit31:setVisible(false);
-    obj.edit31:setField("ClasseEsquiva");
+    obj.edit31:setField("ClasseCM");
     obj.edit31:setName("edit31");
 
     obj.edit32 = GUI.fromHandle(_obj_newObject("edit"));
@@ -1122,7 +1122,7 @@ local function constructNew_frmvelen()
     obj.edit32:setType("number");
     obj.edit32:setHeight(30);
     obj.edit32:setVisible(false);
-    obj.edit32:setField("EspecEsquiva");
+    obj.edit32:setField("EspecCM");
     obj.edit32:setName("edit32");
 
     obj.edit33 = GUI.fromHandle(_obj_newObject("edit"));
@@ -1133,7 +1133,7 @@ local function constructNew_frmvelen()
     obj.edit33:setType("number");
     obj.edit33:setHeight(30);
     obj.edit33:setVisible(false);
-    obj.edit33:setField("ClassePer");
+    obj.edit33:setField("ClasseEsquiva");
     obj.edit33:setName("edit33");
 
     obj.edit34 = GUI.fromHandle(_obj_newObject("edit"));
@@ -1144,18 +1144,18 @@ local function constructNew_frmvelen()
     obj.edit34:setType("number");
     obj.edit34:setHeight(30);
     obj.edit34:setVisible(false);
-    obj.edit34:setField("EspecPer");
+    obj.edit34:setField("EspecEsquiva");
     obj.edit34:setName("edit34");
 
     obj.edit35 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit35:setParent(obj.scrollBox1);
     obj.edit35:setLeft(270);
-    obj.edit35:setTop(770);
+    obj.edit35:setTop(670);
     obj.edit35:setWidth(90);
     obj.edit35:setType("number");
     obj.edit35:setHeight(30);
     obj.edit35:setVisible(false);
-    obj.edit35:setField("AgilidadeESQ");
+    obj.edit35:setField("ClassePer");
     obj.edit35:setName("edit35");
 
     obj.edit36 = GUI.fromHandle(_obj_newObject("edit"));
@@ -1166,59 +1166,81 @@ local function constructNew_frmvelen()
     obj.edit36:setType("number");
     obj.edit36:setHeight(30);
     obj.edit36:setVisible(false);
-    obj.edit36:setField("ForcaPer");
+    obj.edit36:setField("EspecPer");
     obj.edit36:setName("edit36");
 
     obj.edit37 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit37:setParent(obj.scrollBox1);
-    obj.edit37:setTop(440);
-    obj.edit37:setLeft(292);
-    obj.edit37:setWidth(50);
-    obj.edit37:setHeight(30);
-    obj.edit37:setMax(160);
-    obj.edit37:setMin(0);
-    obj.edit37:setHorzTextAlign("center");
+    obj.edit37:setLeft(270);
+    obj.edit37:setTop(770);
+    obj.edit37:setWidth(90);
     obj.edit37:setType("number");
-    obj.edit37:setText("120");
-    obj.edit37:setTransparent(true);
-    obj.edit37:setFontColor("Black");
-    obj.edit37:setFontSize(22);
-    obj.edit37:setEnabled(false);
-    obj.edit37:setField("ControladorAtributos");
+    obj.edit37:setHeight(30);
+    obj.edit37:setVisible(false);
+    obj.edit37:setField("AgilidadeESQ");
     obj.edit37:setName("edit37");
 
     obj.edit38 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit38:setParent(obj.scrollBox1);
-    obj.edit38:setTop(530);
-    obj.edit38:setLeft(292);
-    obj.edit38:setWidth(50);
-    obj.edit38:setHeight(30);
-    obj.edit38:setMax(160);
-    obj.edit38:setMin(0);
-    obj.edit38:setHorzTextAlign("center");
+    obj.edit38:setLeft(270);
+    obj.edit38:setTop(770);
+    obj.edit38:setWidth(90);
     obj.edit38:setType("number");
-    obj.edit38:setText("120");
+    obj.edit38:setHeight(30);
     obj.edit38:setVisible(false);
-    obj.edit38:setFontSize(22);
-    obj.edit38:setEnabled(true);
-    obj.edit38:setField("LiberarRolagemUp");
+    obj.edit38:setField("ForcaPer");
     obj.edit38:setName("edit38");
 
     obj.edit39 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit39:setParent(obj.scrollBox1);
-    obj.edit39:setTop(530);
+    obj.edit39:setTop(440);
     obj.edit39:setLeft(292);
     obj.edit39:setWidth(50);
     obj.edit39:setHeight(30);
-    obj.edit39:setMax(20);
+    obj.edit39:setMax(160);
     obj.edit39:setMin(0);
     obj.edit39:setHorzTextAlign("center");
     obj.edit39:setType("number");
-    obj.edit39:setVisible(false);
+    obj.edit39:setText("120");
+    obj.edit39:setTransparent(true);
+    obj.edit39:setFontColor("Black");
     obj.edit39:setFontSize(22);
-    obj.edit39:setEnabled(true);
-    obj.edit39:setField("CLevel");
+    obj.edit39:setEnabled(false);
+    obj.edit39:setField("ControladorAtributos");
     obj.edit39:setName("edit39");
+
+    obj.edit40 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit40:setParent(obj.scrollBox1);
+    obj.edit40:setTop(530);
+    obj.edit40:setLeft(292);
+    obj.edit40:setWidth(50);
+    obj.edit40:setHeight(30);
+    obj.edit40:setMax(160);
+    obj.edit40:setMin(0);
+    obj.edit40:setHorzTextAlign("center");
+    obj.edit40:setType("number");
+    obj.edit40:setText("120");
+    obj.edit40:setVisible(false);
+    obj.edit40:setFontSize(22);
+    obj.edit40:setEnabled(true);
+    obj.edit40:setField("LiberarRolagemUp");
+    obj.edit40:setName("edit40");
+
+    obj.edit41 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit41:setParent(obj.scrollBox1);
+    obj.edit41:setTop(530);
+    obj.edit41:setLeft(292);
+    obj.edit41:setWidth(50);
+    obj.edit41:setHeight(30);
+    obj.edit41:setMax(20);
+    obj.edit41:setMin(0);
+    obj.edit41:setHorzTextAlign("center");
+    obj.edit41:setType("number");
+    obj.edit41:setVisible(false);
+    obj.edit41:setFontSize(22);
+    obj.edit41:setEnabled(true);
+    obj.edit41:setField("CLevel");
+    obj.edit41:setName("edit41");
 
 
 			function DiminuirPontosForca()
@@ -1362,18 +1384,18 @@ local function constructNew_frmvelen()
     obj.BarraXP:setPosition(50);
     obj.BarraXP:setMax(100);
 
-    obj.edit40 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit40:setParent(obj.scrollBox1);
-    obj.edit40:setWidth(35);
-    obj.edit40:setHeight(20);
-    obj.edit40:setTop(675);
-    obj.edit40:setLeft(157);
-    obj.edit40:setType("number");
-    obj.edit40:setMax(9999);
-    obj.edit40:setTransparent(true);
-    obj.edit40:setHorzTextAlign("center");
-    obj.edit40:setField("XPAtual");
-    obj.edit40:setName("edit40");
+    obj.edit42 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit42:setParent(obj.scrollBox1);
+    obj.edit42:setWidth(35);
+    obj.edit42:setHeight(20);
+    obj.edit42:setTop(675);
+    obj.edit42:setLeft(157);
+    obj.edit42:setType("number");
+    obj.edit42:setMax(9999);
+    obj.edit42:setTransparent(true);
+    obj.edit42:setHorzTextAlign("center");
+    obj.edit42:setField("XPAtual");
+    obj.edit42:setName("edit42");
 
     obj.label23 = GUI.fromHandle(_obj_newObject("label"));
     obj.label23:setParent(obj.scrollBox1);
@@ -1530,7 +1552,7 @@ local function constructNew_frmvelen()
 				sheet.HPRACAATE30 = (tonumber(sheet.RHPNivelAte30) or 0) * 24;				
 			end;
 			
-			if sheet.Raca == 'Orc' then						
+			if sheet.Raca == 'Orc' then
 				sheet.HPRACAATE30 = (tonumber(sheet.RHPNivelAte30) or 0) * 22;						
 			end;
 			
@@ -2099,241 +2121,187 @@ local function constructNew_frmvelen()
 	
 
 
+ 
+		function self.ControlaClasseMPP()
+			
+			sheet.RHPNivelAte20 = sheet.Level;
+			
+			if sheet.RHPNivelAte20 > 20 then
+				sheet.RHPNivelAte20 = 20;
+			end;
+			
+			sheet.CMPNivel = 0;
+			
+			if sheet.Classe == 'Animago' then
+				sheet.CMPNivel = (tonumber(sheet.RHPNivelAte20) or 0) * 4 + 100;
+			end;
+			
+			if sheet.Classe == 'Arqueiro' then
+				sheet.CMPNivel = (tonumber(sheet.RHPNivelAte20) or 0) * 3 + 100;
+			end;
+			
+			if sheet.Classe == 'Bardo' then
+				sheet.CMPNivel = (tonumber(sheet.RHPNivelAte20) or 0) * 4 + 100;
+			end;
+			
+			if sheet.Classe == 'Bispo' then
+				sheet.CMPNivel = (tonumber(sheet.RHPNivelAte20) or 0) * 4 + 100;
+			end;
+			
+			if sheet.Classe == 'Caçador de Almas' then
+				sheet.CMPNivel = (tonumber(sheet.RHPNivelAte20) or 0) * 4 + 100;
+			end;
+			
+			if sheet.Classe == 'Guerreiro' then
+				sheet.CMPNivel = (tonumber(sheet.RHPNivelAte20) or 0) * 2 + 100;
+			end;
+			
+			if sheet.Classe == 'Ladino' then
+				sheet.CMPNivel = (tonumber(sheet.RHPNivelAte20) or 0) * 2 + 100;
+			end;
+			
+			if sheet.Classe == 'Mago' then
+				sheet.CMPNivel = (tonumber(sheet.RHPNivelAte20) or 0) * 4 + 100;
+			end;
+			
+			if sheet.Classe == 'Mercenario' then
+				sheet.CMPNivel = (tonumber(sheet.RHPNivelAte20) or 0) * 3 + 100;
+			end;
+			
+			if sheet.Classe == 'Monge' then
+				sheet.CMPNivel = (tonumber(sheet.RHPNivelAte20) or 0) * 3 + 100;
+			end;
+			
+			if sheet.Classe == 'Paladino' then
+				sheet.CMPNivel = (tonumber(sheet.RHPNivelAte20 	) or 0) * 3 + 100;
+			end;
+		end;					
+	
+
+
 
 	-------------------------- Controle de MP por Classe ------------------------
-		
+	
 
 
  
-			function self.ControlaClasseMP()
-				sheet.Elevel = math.floor((sheet.Level) - 20);
-				
-				if sheet.level < 21 then
-					if sheet.Classe == 'Animago' then
-						sheet.RMPNivel = (tonumber(sheet.Level) or 0) * 4 + 100;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.MPMont) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Classe == 'Arqueiro' then
-						sheet.RMPNivel = (tonumber(sheet.Level) or 0) * 3 + 100;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.MPMont) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Classe == 'Bardo' then
-						sheet.RMPNivel = (tonumber(sheet.Level) or 0) * 4 + 100;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.MPMont) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Classe == 'Bispo' then
-						sheet.RMPNivel = (tonumber(sheet.Level) or 0) * 4 + 100;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.MPMont) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Classe == 'Caçador de Almas' then
-						sheet.RMPNivel = (tonumber(sheet.Level) or 0) * 4 + 100;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.MPMont) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Classe == 'Guerreiro' then
-						sheet.RMPNivel = (tonumber(sheet.Level) or 0) * 2	+ 100;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.MPMont) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Classe == 'Ladino' then
-						sheet.RMPNivel = (tonumber(sheet.Level) or 0) * 2 + 100;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.MPMont) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Classe == 'Mago' then
-						sheet.RMPNivel = (tonumber(sheet.Level) or 0) * 4 + 100;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.MPMont) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Classe == 'Mercenario' then
-						sheet.RMPNivel = (tonumber(sheet.Level) or 0) * 3 + 100;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.MPMont) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Classe == 'Monge' then
-						sheet.RMPNivel = (tonumber(sheet.Level) or 0) * 3 + 100;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.MPMont) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Classe == 'Paladino' then
-						sheet.RMPNivel = (tonumber(sheet.Level) or 0) * 3 + 100;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.MPMont) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-				end;					
-
-				if sheet.level > 19 then
-					if sheet.Espec == 'Druida' then
-						sheet.EMPNivel = (tonumber(sheet.Elevel) or 0) * 3;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Shaman' then
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 2;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Caçador' then
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 3;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Sentinela Lunar' then
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 4;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Encantador de Almas' then
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 3;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Necromance' then
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 3;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Sacerdote' then
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 4;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Juiz' then
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 3;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Barbaro' then
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 3;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Tanker' then
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 2;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Acrobata' then
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 3;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Assassino' then
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 2;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Arcanista' then
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 3;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Feiticeiro' then
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 3;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Summoner' then
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 4;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Duelista' then
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 3;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Pirata' then
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 2;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Guardião Espiritual' then
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 2;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Cavaleiro das Trevas' then
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 2;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Templario' then
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 3;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-				end;
-
-				if sheet.Level < 21 then
-					sheet.EMPNivel = 0;
-				end;
-			end;
+		function self.ControlaEspecMP()
 		
+			if sheet.Level < 21 then
+				sheet.EMPNivel = 0;
+			end;	
+		
+			sheet.HPRACAATE30 = 0;        
+			sheet.RHPNivelAte30 = math.floor((sheet.Level) - 20);
+			
+			if sheet.RHPNivelAte30 > 10 then
+				sheet.RHPNivelAte30 = 10;
+			end;
+
+			if sheet.RHPNivelAte30 < 0 then
+				sheet.RHPNivelAte30 = 0;
+			end;
+
+			if sheet.Espec == 'Druida' then
+				sheet.EMPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 3;
+			end;
+			
+			if sheet.Espec == 'Shaman' then
+				sheet.EMPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 2;
+			end;
+			
+			if sheet.Espec == 'Caçador' then
+				sheet.EMPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 3;
+			end;
+			
+			if sheet.Espec == 'Sentinela Lunar' then
+				sheet.EMPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 4;
+			end;
+			
+			if sheet.Espec == 'Encantador de Almas' then
+				sheet.EMPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 3;
+			end;
+			
+			if sheet.Espec == 'Necromance' then
+				sheet.EMPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 3;
+			end;
+			
+			if sheet.Espec == 'Sacerdote' then
+				sheet.EMPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 4;
+			end;
+			
+			if sheet.Espec == 'Juiz' then
+				sheet.EMPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 3;
+			end;
+			
+			if sheet.Espec == 'Barbaro' then
+				sheet.EMPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 3;
+			end;
+			
+			if sheet.Espec == 'Tanker' then
+				sheet.EMPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 2;
+			end;
+			
+			if sheet.Espec == 'Acrobata' then
+				sheet.EMPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 3;
+			end;
+			
+			if sheet.Espec == 'Assassino' then
+				sheet.EMPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 2;
+			end;
+			
+			if sheet.Espec == 'Arcanista' then
+				sheet.EMPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 3;
+			end;
+			
+			if sheet.Espec == 'Feiticeiro' then
+				sheet.EMPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 3;
+			end;
+			
+			if sheet.Espec == 'Summoner' then
+				sheet.EMPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 4;
+			end;
+			
+			if sheet.Espec == 'Duelista' then
+				sheet.EMPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 3;
+			end;
+			
+			if sheet.Espec == 'Pirata' then
+				sheet.EMPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 2;
+			end;
+			
+			if sheet.Espec == 'Guardião Espiritual' then
+				sheet.EMPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 2;
+			end;
+			
+			if sheet.Espec == 'Cavaleiro das Trevas' then
+				sheet.EMPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 2;
+			end;
+			
+			if sheet.Espec == 'Templario' then
+				sheet.EMPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 3;
+			end;
+		end;
+	
+
+
+
+	-------------------------- Controle de MP por Classe ------------------------
+	
+
+
+ 
+		function self.CalculaMP()
+			if sheet.Level < 21 then
+				sheet.EMPNivel = 0;
+			end;
+
+			sheet.MPTotal = (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
+			(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
+			(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.CMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
+			
+		end;
+	
 
 
  
@@ -3026,7 +2994,10 @@ local function constructNew_frmvelen()
             				self.ControlaClasseEspecialHPAte20();
             				self.StatusClasseEspecialAteLevel30();
             				self.ControlaClasseEspecialHPAte30();
-            				self.CalculaHP();				
+            				self.ControlaClasseMPP();
+            				self.ControlaEspecMP();
+            				self.CalculaHP();
+            				self.CalculaMP();				
             			end;
         end, obj);
 
@@ -3046,7 +3017,6 @@ local function constructNew_frmvelen()
             				end;	
             				
             				self.ChecaCavaleiroDraconicoMP();
-            				self.ControlaClasseMP();
             				self.ChecaLevel20();				
             			end;
         end, obj);
@@ -3155,6 +3125,7 @@ local function constructNew_frmvelen()
         if self.rectangle11 ~= nil then self.rectangle11:destroy(); self.rectangle11 = nil; end;
         if self.label14 ~= nil then self.label14:destroy(); self.label14 = nil; end;
         if self.button15 ~= nil then self.button15:destroy(); self.button15 = nil; end;
+        if self.edit41 ~= nil then self.edit41:destroy(); self.edit41 = nil; end;
         if self.rectangle9 ~= nil then self.rectangle9:destroy(); self.rectangle9 = nil; end;
         if self.edit36 ~= nil then self.edit36:destroy(); self.edit36 = nil; end;
         if self.edit9 ~= nil then self.edit9:destroy(); self.edit9 = nil; end;
@@ -3190,9 +3161,9 @@ local function constructNew_frmvelen()
         if self.BarraXP ~= nil then self.BarraXP:destroy(); self.BarraXP = nil; end;
         if self.edit34 ~= nil then self.edit34:destroy(); self.edit34 = nil; end;
         if self.edit11 ~= nil then self.edit11:destroy(); self.edit11 = nil; end;
-        if self.label4 ~= nil then self.label4:destroy(); self.label4 = nil; end;
-        if self.image1 ~= nil then self.image1:destroy(); self.image1 = nil; end;
         if self.edit19 ~= nil then self.edit19:destroy(); self.edit19 = nil; end;
+        if self.image1 ~= nil then self.image1:destroy(); self.image1 = nil; end;
+        if self.label4 ~= nil then self.label4:destroy(); self.label4 = nil; end;
         if self.label6 ~= nil then self.label6:destroy(); self.label6 = nil; end;
         if self.rectangle17 ~= nil then self.rectangle17:destroy(); self.rectangle17 = nil; end;
         if self.edit5 ~= nil then self.edit5:destroy(); self.edit5 = nil; end;
@@ -3265,6 +3236,7 @@ local function constructNew_frmvelen()
         if self.label2 ~= nil then self.label2:destroy(); self.label2 = nil; end;
         if self.edit22 ~= nil then self.edit22:destroy(); self.edit22 = nil; end;
         if self.edit3 ~= nil then self.edit3:destroy(); self.edit3 = nil; end;
+        if self.edit42 ~= nil then self.edit42:destroy(); self.edit42 = nil; end;
         if self.label5 ~= nil then self.label5:destroy(); self.label5 = nil; end;
         if self.rectangle4 ~= nil then self.rectangle4:destroy(); self.rectangle4 = nil; end;
         if self.rectangle13 ~= nil then self.rectangle13:destroy(); self.rectangle13 = nil; end;

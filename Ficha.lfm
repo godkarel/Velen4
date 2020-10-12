@@ -223,6 +223,10 @@
 		<edit left="20" top="160" width="75" type="number" height="20" field="EHPNivel" />
 		<edit left="20" top="200" width="75" type="number" height="20" field="MHPNivel" />
 		
+		<edit left="20" top="240" width="75" type="number" fontColor="blue" height="20" field="CMPNivel" />
+		
+		<edit left="20" top="280" width="75" type="number" fontColor="Cyan" height="20" field="EMPNivel" />
+		
 		</tab>
 		
 		 <tab title="Segunda Aba">
@@ -697,7 +701,10 @@
 				self.ControlaClasseEspecialHPAte20();
 				self.StatusClasseEspecialAteLevel30();
 				self.ControlaClasseEspecialHPAte30();
-				self.CalculaHP();				
+				self.ControlaClasseMPP();
+				self.ControlaEspecMP();
+				self.CalculaHP();
+				self.CalculaMP();				
 			end;
 		</event>
     </dataLink>	
@@ -719,7 +726,6 @@
 				end;	
 				
 				self.ChecaCavaleiroDraconicoMP();
-				self.ControlaClasseMP();
 				self.ChecaLevel20();				
 			end;	
 		</event>
@@ -1093,7 +1099,7 @@
 				sheet.HPRACAATE30 = (tonumber(sheet.RHPNivelAte30) or 0) * 24;				
 			end;
 			
-			if sheet.Raca == 'Orc' then						
+			if sheet.Raca == 'Orc' then
 				sheet.HPRACAATE30 = (tonumber(sheet.RHPNivelAte30) or 0) * 22;						
 			end;
 			
@@ -1692,240 +1698,185 @@
 	]]>		
     </script> 	
 	
-
+	-------------------------- Controle de MP por Classe ------------------------
+	<script>
+	<![CDATA[ 
+		function self.ControlaClasseMPP()
+			
+			sheet.RHPNivelAte20 = sheet.Level;
+			
+			if sheet.RHPNivelAte20 > 20 then
+				sheet.RHPNivelAte20 = 20;
+			end;
+			
+			sheet.CMPNivel = 0;
+			
+			if sheet.Classe == 'Animago' then
+				sheet.CMPNivel = (tonumber(sheet.RHPNivelAte20) or 0) * 4 + 100;
+			end;
+			
+			if sheet.Classe == 'Arqueiro' then
+				sheet.CMPNivel = (tonumber(sheet.RHPNivelAte20) or 0) * 3 + 100;
+			end;
+			
+			if sheet.Classe == 'Bardo' then
+				sheet.CMPNivel = (tonumber(sheet.RHPNivelAte20) or 0) * 4 + 100;
+			end;
+			
+			if sheet.Classe == 'Bispo' then
+				sheet.CMPNivel = (tonumber(sheet.RHPNivelAte20) or 0) * 4 + 100;
+			end;
+			
+			if sheet.Classe == 'Caçador de Almas' then
+				sheet.CMPNivel = (tonumber(sheet.RHPNivelAte20) or 0) * 4 + 100;
+			end;
+			
+			if sheet.Classe == 'Guerreiro' then
+				sheet.CMPNivel = (tonumber(sheet.RHPNivelAte20) or 0) * 2 + 100;
+			end;
+			
+			if sheet.Classe == 'Ladino' then
+				sheet.CMPNivel = (tonumber(sheet.RHPNivelAte20) or 0) * 2 + 100;
+			end;
+			
+			if sheet.Classe == 'Mago' then
+				sheet.CMPNivel = (tonumber(sheet.RHPNivelAte20) or 0) * 4 + 100;
+			end;
+			
+			if sheet.Classe == 'Mercenario' then
+				sheet.CMPNivel = (tonumber(sheet.RHPNivelAte20) or 0) * 3 + 100;
+			end;
+			
+			if sheet.Classe == 'Monge' then
+				sheet.CMPNivel = (tonumber(sheet.RHPNivelAte20) or 0) * 3 + 100;
+			end;
+			
+			if sheet.Classe == 'Paladino' then
+				sheet.CMPNivel = (tonumber(sheet.RHPNivelAte20 	) or 0) * 3 + 100;
+			end;
+		end;					
+	]]>	
+    </script>
+	
 	<script>
 	-------------------------- Controle de MP por Classe ------------------------
-		<![CDATA[ 
-			function self.ControlaClasseMP()
-				sheet.Elevel = math.floor((sheet.Level) - 20);
-				
-				if sheet.level < 21 then
-					if sheet.Classe == 'Animago' then
-						sheet.RMPNivel = (tonumber(sheet.Level) or 0) * 4 + 100;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.MPMont) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Classe == 'Arqueiro' then
-						sheet.RMPNivel = (tonumber(sheet.Level) or 0) * 3 + 100;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.MPMont) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Classe == 'Bardo' then
-						sheet.RMPNivel = (tonumber(sheet.Level) or 0) * 4 + 100;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.MPMont) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Classe == 'Bispo' then
-						sheet.RMPNivel = (tonumber(sheet.Level) or 0) * 4 + 100;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.MPMont) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Classe == 'Caçador de Almas' then
-						sheet.RMPNivel = (tonumber(sheet.Level) or 0) * 4 + 100;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.MPMont) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Classe == 'Guerreiro' then
-						sheet.RMPNivel = (tonumber(sheet.Level) or 0) * 2	+ 100;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.MPMont) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Classe == 'Ladino' then
-						sheet.RMPNivel = (tonumber(sheet.Level) or 0) * 2 + 100;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.MPMont) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Classe == 'Mago' then
-						sheet.RMPNivel = (tonumber(sheet.Level) or 0) * 4 + 100;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.MPMont) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Classe == 'Mercenario' then
-						sheet.RMPNivel = (tonumber(sheet.Level) or 0) * 3 + 100;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.MPMont) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Classe == 'Monge' then
-						sheet.RMPNivel = (tonumber(sheet.Level) or 0) * 3 + 100;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.MPMont) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Classe == 'Paladino' then
-						sheet.RMPNivel = (tonumber(sheet.Level) or 0) * 3 + 100;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.MPMont) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-				end;					
-
-				if sheet.level > 19 then
-					if sheet.Espec == 'Druida' then
-						sheet.EMPNivel = (tonumber(sheet.Elevel) or 0) * 3;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Shaman' then
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 2;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Caçador' then
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 3;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Sentinela Lunar' then
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 4;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Encantador de Almas' then
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 3;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Necromance' then
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 3;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Sacerdote' then
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 4;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Juiz' then
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 3;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Barbaro' then
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 3;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Tanker' then
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 2;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Acrobata' then
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 3;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Assassino' then
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 2;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Arcanista' then
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 3;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Feiticeiro' then
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 3;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Summoner' then
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 4;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Duelista' then
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 3;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Pirata' then
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 2;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Guardião Espiritual' then
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 2;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Cavaleiro das Trevas' then
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 2;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-					
-					if sheet.Espec == 'Templario' then
-						sheet.EMPNivel = (tonumber(sheet.ELevel) or 0) * 3;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-				end;
-
-				if sheet.Level < 21 then
-					sheet.EMPNivel = 0;
-				end;
+	<![CDATA[ 
+		function self.ControlaEspecMP()
+		
+			if sheet.Level < 21 then
+				sheet.EMPNivel = 0;
+			end;	
+		
+			sheet.HPRACAATE30 = 0;        
+			sheet.RHPNivelAte30 = math.floor((sheet.Level) - 20);
+			
+			if sheet.RHPNivelAte30 > 10 then
+				sheet.RHPNivelAte30 = 10;
 			end;
-		]]>	
+
+			if sheet.RHPNivelAte30 < 0 then
+				sheet.RHPNivelAte30 = 0;
+			end;
+
+			if sheet.Espec == 'Druida' then
+				sheet.EMPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 3;
+			end;
+			
+			if sheet.Espec == 'Shaman' then
+				sheet.EMPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 2;
+			end;
+			
+			if sheet.Espec == 'Caçador' then
+				sheet.EMPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 3;
+			end;
+			
+			if sheet.Espec == 'Sentinela Lunar' then
+				sheet.EMPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 4;
+			end;
+			
+			if sheet.Espec == 'Encantador de Almas' then
+				sheet.EMPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 3;
+			end;
+			
+			if sheet.Espec == 'Necromance' then
+				sheet.EMPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 3;
+			end;
+			
+			if sheet.Espec == 'Sacerdote' then
+				sheet.EMPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 4;
+			end;
+			
+			if sheet.Espec == 'Juiz' then
+				sheet.EMPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 3;
+			end;
+			
+			if sheet.Espec == 'Barbaro' then
+				sheet.EMPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 3;
+			end;
+			
+			if sheet.Espec == 'Tanker' then
+				sheet.EMPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 2;
+			end;
+			
+			if sheet.Espec == 'Acrobata' then
+				sheet.EMPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 3;
+			end;
+			
+			if sheet.Espec == 'Assassino' then
+				sheet.EMPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 2;
+			end;
+			
+			if sheet.Espec == 'Arcanista' then
+				sheet.EMPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 3;
+			end;
+			
+			if sheet.Espec == 'Feiticeiro' then
+				sheet.EMPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 3;
+			end;
+			
+			if sheet.Espec == 'Summoner' then
+				sheet.EMPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 4;
+			end;
+			
+			if sheet.Espec == 'Duelista' then
+				sheet.EMPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 3;
+			end;
+			
+			if sheet.Espec == 'Pirata' then
+				sheet.EMPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 2;
+			end;
+			
+			if sheet.Espec == 'Guardião Espiritual' then
+				sheet.EMPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 2;
+			end;
+			
+			if sheet.Espec == 'Cavaleiro das Trevas' then
+				sheet.EMPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 2;
+			end;
+			
+			if sheet.Espec == 'Templario' then
+				sheet.EMPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 3;
+			end;
+		end;
+	]]>	
     </script>
+	
+	<script>
+	-------------------------- Controle de MP por Classe ------------------------
+	<![CDATA[ 
+		function self.CalculaMP()
+			if sheet.Level < 21 then
+				sheet.EMPNivel = 0;
+			end;
+
+			sheet.MPTotal = (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
+			(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
+			(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.CMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
+			
+		end;
+	]]>	
+    </script>
+	
 	
 	<script>
 		<![CDATA[ 
