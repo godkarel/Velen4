@@ -79,7 +79,7 @@ local function constructNew_frmpersonagem()
     obj.label1:setTop(435);
     obj.label1:setWidth(150);
     obj.label1:setHeight(30);
-    obj.label1:setField("RHPNivel");
+    obj.label1:setField("HPRACAATE20");
     obj.label1:setName("label1");
 
     obj.rectangle2 = GUI.fromHandle(_obj_newObject("rectangle"));
@@ -133,7 +133,7 @@ local function constructNew_frmpersonagem()
     obj.label4:setTop(510);
     obj.label4:setWidth(230);
     obj.label4:setHeight(30);
-    obj.label4:setField("R20HPNivel");
+    obj.label4:setField("HPRACAATE30");
     obj.label4:setName("label4");
 
     obj.rectangle5 = GUI.fromHandle(_obj_newObject("rectangle"));
@@ -151,7 +151,7 @@ local function constructNew_frmpersonagem()
     obj.label5:setTop(535);
     obj.label5:setWidth(270);
     obj.label5:setHeight(30);
-    obj.label5:setField("RMPNivel");
+    obj.label5:setField("CMPNivel");
     obj.label5:setName("label5");
 
     obj.rectangle6 = GUI.fromHandle(_obj_newObject("rectangle"));
@@ -187,7 +187,7 @@ local function constructNew_frmpersonagem()
     obj.label7:setTop(435);
     obj.label7:setWidth(150);
     obj.label7:setHeight(30);
-    obj.label7:setField("R30HPNivel");
+    obj.label7:setField("HPRACAATE40");
     obj.label7:setName("label7");
 
     obj.rectangle8 = GUI.fromHandle(_obj_newObject("rectangle"));

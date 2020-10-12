@@ -148,6 +148,8 @@
 		sheet.MHPNivel = (tonumber(sheet.MHPNivel) or 0); 
 		sheet.MMPNivel = (tonumber(sheet.MMPNivel) or 0); 
 		
+		sheet.HPRACAATE40 = (tonumber(sheet.HPRACAATE40) or 0);
+		
 		sheet.DForca = (tonumber(sheet.DForca) or 0); 	
 		sheet.DAgilidade = (tonumber(sheet.DAgilidade) or 0); 
 		sheet.DInteligencia = (tonumber(sheet.DInteligencia) or 0); 
@@ -204,35 +206,8 @@
 				sheet.jaRecebeu = true;
 			end; 
 		sheet.SequenciaInicial = sheet.SequenciaInicial or true;
+		self.ChecaLevel20();
 	</event>	
-	
-	<tabControl left="10" top="10" width="2000" height="1000">
-		<tab title="Primeira Aba">
-	   
-		<edit left="20" top="10" width="75" height="20" field="HPRACAATE20" />
-		<edit left="20" top="40" width="75" height="20" field="HPRACAATE30" />
-		<edit left="20" top="70" width="75" height="20" field="HPRACAATE40" />
-	   
-		<edit left="100" top="10" width="75" type="number" min="0" max="20" height="20" field="RHPNivelAte20" />
-		<edit left="100" top="40" width="75" type="number" min="0" max="20" height="20" field="RHPNivelAte30" />
-		<edit left="100" top="70" width="75" type="number" min="0" max="20" height="20" field="RHPNivelAte40" />
-		
-		<edit left="200" top="10" width="75" type="number" height="20" field="Level" />		
-		
-		<edit left="20" top="120" width="75" type="number" height="20" field="CHPNivel" />
-		<edit left="20" top="160" width="75" type="number" height="20" field="EHPNivel" />
-		<edit left="20" top="200" width="75" type="number" height="20" field="MHPNivel" />
-		
-		<edit left="20" top="240" width="75" type="number" fontColor="blue" height="20" field="CMPNivel" />
-		
-		<edit left="20" top="280" width="75" type="number" fontColor="Cyan" height="20" field="EMPNivel" />
-		
-		</tab>
-		
-		 <tab title="Segunda Aba">
-	
-	
-
 	<scrollBox align="client">
 		
  ----------- Inicio da Ficha -----------------
@@ -685,59 +660,47 @@
 	<button left="388" top="493" width="60"  height="55" opacity="0.1" onClick="showMessage('RES = Resistencia Magica que é Metade da Força + Metade da Vitalidade + Metade da Defesa');"/>
 	
 	
-	-------------- CONTROLADOR DE STATUS GERAL POR RAÇA INCLUNDI HP ---------
+	-------------- CONTROLADOR DE STATUS GERAL POR RAÇA Classe e Espec ---------
 
-	<dataLink fields="{'Vitalidade', 'VitalidadeTotal', 'Level', 'ArmaHP', 'OutraHP', 'ArmaduraHP', 'AcessorioHP', 'PHPBasica', 'PHPRacial', 'Raca'}">
+	<dataLink fields="{'Raca', 'Classe', 'Espec', 'Level'}">
         <event name="onChange"> 		
 			if sheet.SequenciaInicial == true then
 				self.StatusPorRaca(); 
+				self.StatusClasseAte20();				
+				self.StatusEspecAteLevel30();				
+				self.StatusClasseEspecialAteLevel20();				
+				self.StatusClasseEspecialAteLevel30();			
+			end;
+		</event>
+    </dataLink>	
+	
+	<dataLink fields="{'VitalidadeTotal', 'ArmaHP', 'OutraHP', 'ArmaduraHP', 'AcessorioHP', 'PHPBasica', 'PHPRacial', 'Classe', 'Espec', 'RACA', 'Level'}">
+        <event name="onChange"> 
+			if sheet.SequenciaInicial == true then
 				self.ControlaRacaHPAte20();
 				self.ControlaRacaHPAte30();
-				self.StatusClasseAte20();
 				self.ControlaClasseHPAte20();
-				self.StatusEspecAteLevel30();
 				self.ControlaEspecHPAte30();
-				self.StatusClasseEspecialAteLevel20();
 				self.ControlaClasseEspecialHPAte20();
-				self.StatusClasseEspecialAteLevel30();
 				self.ControlaClasseEspecialHPAte30();
-				self.ControlaClasseMPP();
-				self.ControlaEspecMP();
 				self.CalculaHP();
-				self.CalculaMP();				
+				self.ChecaLevel20();
 			end;
 		</event>
     </dataLink>	
-
-	-------------- CONTROLADOR DE MP POR RAÇA E ESPECIALIZAÇÃO ---------
-	<dataLink fields="{'Inteligencia', 'InteligenciaTotal', 'Level', 'ArmaMP', 'OutraMP', 'ArmaduraMP', 'AcessorioMP', 'PMPBasica', 'PMPRacial', 'DMP', 'MPMont', 'Classe', 'Espec'}">
+	
+	<dataLink fields="{'InteligenciaTotal', 'ArmaMP', 'OutraMP', 'ArmaduraMP', 'AcessorioMP', 'PMPBasica', 'PMPRacial', 'Classe', 'Espec', 'Level'}">
         <event name="onChange"> 
-			if sheet.SequenciaInicial == true then			
-				
-				sheet.CLevel = (tonumber(sheet.Level) or 0);
-				if sheet.CLevel > 20 then
-					sheet.CLevel = 20;
-				end;	
-				
-				if sheet.classe == 'Cavaleiro Draconico' then
-					self.cmbEspecializa.enabled = false;
-				else	
-					self.cmbEspecializa.enabled = true;
-				end;	
-				
-				self.ChecaCavaleiroDraconicoMP();
+			if sheet.SequenciaInicial == true then
+				self.ControlaClasseMP();
+				self.ControlaEspecMP();			
+				self.ControlaClasseEspecialMPAte20();	
+				self.CalculaMP();
 				self.ChecaLevel20();				
-			end;	
-		</event>
-    </dataLink>	
-	-------------- CONTROLADOR DE STATUS DE HP POR ESPECIALIZAÇÃO ---------
-	<dataLink fields="{'Vitalidade', 'VitalidadeTotal', 'Level', 'ArmaHP', 'OutraHP', 'ArmaduraHP', 'AcessorioHP', 'PHPBasica', 'PHPRacial', 'Raca', 'Classe', 'Espec', 'Raca'}">
-        <event name="onChange"> 		
-			if sheet.SequenciaInicial == true then			
-
 			end;
 		</event>
     </dataLink>	
+
 	-------------- CONTROLADOR DE CHANCES DAS CLASSES E ESPECIALIZAÇÃO ---------
 	<dataLink fields="{'ClasseCR', 'DestrezaTotal', 'AgilidadeTotal', 'ClasseAM', 'AcertoBasica', 'AcertoRacial', 'ESQBasica', 'EspecAM', 'EspecCR', 'ClasseCM', 'EspecCM', 'ClasseEsquiva', 'EspecEsquiva',
 						'ClassePer', 'EspecPer', 'ESQRacial', 'CritBasica', 'CritRacial', 'AMRacial', 'AMBasica', 'CMBasica', 'CMRacial', 'PersistBasica', 'PersistRacial', 'VitalidadeTotal', 
@@ -750,6 +713,8 @@
 		</event>
 	</dataLink>	
 		
+	
+---------------------------- BOTAO ATAQUE BASICO ---------------------------	
         <script>
 			local function AtaqueBasico()      
 				-- obter a mesa do personagem
@@ -1288,16 +1253,9 @@
 		end;
 	]]>	
 	</script>
-		------------------ FIM DO CALCULO DE HP DE CLASSE ---------------------
-		
-		
+	------------------ FIM DO CALCULO DE HP DE CLASSE ---------------------
+			
 	
-	------------------------------------------------------------
-	------------------------------------------------------------
-	------------------------------------------------------------
-	
-	------------------------------------------------------------
-	------------------------------------------------------------
 	--------------- INICIO DE CALCULOS DA ESPECIALIZAÇÃO -----------------
 	<script>
 	<![CDATA[
@@ -1499,8 +1457,7 @@
 	<script>
 	<![CDATA[
 		function self.ControlaEspecHPAte30()
-			if sheet.Level > 20 then 
-				sheet.HPRACAATE30 = 0;        
+			if sheet.Level > 20 then        
 				sheet.RHPNivelAte30 = math.floor((sheet.Level) - 20);
 				sheet.EHPNivel = 0;	
 				
@@ -1680,8 +1637,9 @@
 		end;
 	]]>		
     </script> 
-	------------------- TERMINO DE CALCU DO CAVALEIRO DRACONICO -----------------------------
+	------------------- TERMINO DE CALCULO HP DO CAVALEIRO DRACONICO -----------------------------
 	
+	------------------------ CALCULA TOTAL HP ----------------------------------------
 	<script>		
 	<![CDATA[ 
 		function self.CalculaHP()
@@ -1701,16 +1659,14 @@
 	-------------------------- Controle de MP por Classe ------------------------
 	<script>
 	<![CDATA[ 
-		function self.ControlaClasseMPP()
+		function self.ControlaClasseMP()
 			
 			sheet.RHPNivelAte20 = sheet.Level;
 			
 			if sheet.RHPNivelAte20 > 20 then
 				sheet.RHPNivelAte20 = 20;
 			end;
-			
-			sheet.CMPNivel = 0;
-			
+						
 			if sheet.Classe == 'Animago' then
 				sheet.CMPNivel = (tonumber(sheet.RHPNivelAte20) or 0) * 4 + 100;
 			end;
@@ -1759,15 +1715,14 @@
     </script>
 	
 	<script>
-	-------------------------- Controle de MP por Classe ------------------------
+	-------------------------- Controle de MP por Especialização ------------------------
 	<![CDATA[ 
 		function self.ControlaEspecMP()
 		
 			if sheet.Level < 21 then
 				sheet.EMPNivel = 0;
 			end;	
-		
-			sheet.HPRACAATE30 = 0;        
+		     
 			sheet.RHPNivelAte30 = math.floor((sheet.Level) - 20);
 			
 			if sheet.RHPNivelAte30 > 10 then
@@ -1861,8 +1816,44 @@
 	]]>	
     </script>
 	
+	----------------------------- CONTROLA MP DA CLASSE ESPECIAL EM TOTAL ---------------------
+	
 	<script>
-	-------------------------- Controle de MP por Classe ------------------------
+	<![CDATA[ 
+		function self.ControlaClasseEspecialMPAte20()			
+			if sheet.Classe == 'Cavaleiro Draconico' then
+				sheet.RHPNivelAte20 = sheet.Level;
+				
+				if sheet.RHPNivelAte20 > 20 then
+					sheet.RHPNivelAte20 = 20;
+				end;
+						
+				sheet.CMPNivel = (tonumber(sheet.RHPNivelAte20) or 0) * 4 + 100;
+				
+				if sheet.Level < 21 then
+					sheet.EMPNivel = 0;
+				end;	
+			 
+				sheet.RHPNivelAte30 = math.floor((sheet.Level) - 20);
+				
+				if sheet.RHPNivelAte30 > 10 then
+					sheet.RHPNivelAte30 = 10;
+				end;
+
+				if sheet.RHPNivelAte30 < 0 then
+					sheet.RHPNivelAte30 = 0;
+				end;	
+					
+				sheet.EMPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 3;
+				
+			end;			
+		end;
+	]]>		
+    </script> 
+
+	
+	<script>
+	-------------------------- CALCULO TOTAL DE MP ------------------------
 	<![CDATA[ 
 		function self.CalculaMP()
 			if sheet.Level < 21 then
@@ -1871,12 +1862,13 @@
 
 			sheet.MPTotal = (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
 			(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-			(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.CMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-			
+			(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.CMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);	
 		end;
 	]]>	
     </script>
 	
+	
+	----------------------------- STATUS GERAL DE CHANCE DE ACERTOS E CRITICAL DOS PERSONAGENS --------------------
 	
 	<script>
 		<![CDATA[ 
@@ -1934,33 +1926,8 @@
 		]]>
 		
     </script> 	
-
-	<script>
-		<![CDATA[ 
-			function self.ChecaCavaleiroDraconicoMP()			
-				if sheet.Classe == 'Cavaleiro Draconico' then
-					if sheet.level < 21 then
-						sheet.RMPNivel = (tonumber(sheet.Level) or 0) * 4 + 100;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + 
-						(tonumber(sheet.MPMont) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-				end;
-
-					if sheet.Classe == 'Cavaleiro Draconico' then
-					if sheet.level > 19 then
-						sheet.EMPNivel = (tonumber(sheet.Elevel) or 0) * 3;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + 
-						(tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-				end;				
-			end;
-		]]>
-		
-    </script> 
+	
+	--------------------------- CHEGA LEVEL 20 E CAVALEIRO DRACONICO -----------------------------
 	
 	<script>
 		<![CDATA[ 
@@ -1969,12 +1936,17 @@
 					self.cmbEspecializa.enabled = true;
 				else	
 					self.cmbEspecializa.enabled = false;
-				end;					
+				end;
+
+				if sheet.classe == 'Cavaleiro Draconico' then
+					self.cmbEspecializa.enabled = false;
+				else	
+					self.cmbEspecializa.enabled = true;
+				end;	
 			end;
 		]]>
 		
     </script> 	
-	</tab>
-	</tabControl>
+
 	
 </form>

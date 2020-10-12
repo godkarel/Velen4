@@ -6,7 +6,7 @@
 	    <image top="-40" left="230"  width="410" height="500" center="true"  src="/imagens/99.png"/>		
 
 	    <rectangle left="117" top="440" color="black"  width="35" height="20"  />
-	    <label left="120" top="435" width="150" height="30" field="RHPNivel" />
+	    <label left="120" top="435" width="150" height="30" field="HPRACAATE20" />
 	  
 	    <rectangle left="117" top="465" color="black"  width="35" height="20"  />
 	    <label left="120" top="460" width="230" height="30" field="CHPNivel" />
@@ -15,16 +15,16 @@
 	    <label left="120" top="485" width="230" height="30" field="EHPNivel" />
 	  
 	    <rectangle left="117" top="515" color="black"  width="35" height="20"  />
-	    <label left="120" top="510" width="230" height="30" field="R20HPNivel" />
+	    <label left="120" top="510" width="230" height="30" field="HPRACAATE30" />
 	  
 	    <rectangle left="117" top="540" color="black"  width="35" height="20"  />
-	    <label left="120" top="535" width="270" height="30" field="RMPNivel" />
+	    <label left="120" top="535" width="270" height="30" field="CMPNivel" />
 	  
 	    <rectangle left="117" top="565" color="black"  width="35" height="20"  />
 	    <label left="120" top="560" width="270" height="30" field="EMPNivel" />
 	  
 	    <rectangle left="233" top="440" color="black"  width="35" height="20"  />
-	    <label left="235" top="435" width="150" height="30" field="R30HPNivel" />
+	    <label left="235" top="435" width="150" height="30" field="HPRACAATE40" />
 	  
 	    <rectangle left="233" top="465" color="black"  width="35" height="20"  />
 	    <label left="235" top="460" width="230" height="30" field="MHPNivel" />

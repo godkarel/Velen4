@@ -31,151 +31,8 @@ local function constructNew_frmvelen()
     obj:setTitle("Velen 4");
     obj:setName("frmvelen");
 
-    obj.tabControl1 = GUI.fromHandle(_obj_newObject("tabControl"));
-    obj.tabControl1:setParent(obj);
-    obj.tabControl1:setLeft(10);
-    obj.tabControl1:setTop(10);
-    obj.tabControl1:setWidth(2000);
-    obj.tabControl1:setHeight(1000);
-    obj.tabControl1:setName("tabControl1");
-
-    obj.tab1 = GUI.fromHandle(_obj_newObject("tab"));
-    obj.tab1:setParent(obj.tabControl1);
-    obj.tab1:setTitle("Primeira Aba");
-    obj.tab1:setName("tab1");
-
-    obj.edit1 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit1:setParent(obj.tab1);
-    obj.edit1:setLeft(20);
-    obj.edit1:setTop(10);
-    obj.edit1:setWidth(75);
-    obj.edit1:setHeight(20);
-    obj.edit1:setField("HPRACAATE20");
-    obj.edit1:setName("edit1");
-
-    obj.edit2 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit2:setParent(obj.tab1);
-    obj.edit2:setLeft(20);
-    obj.edit2:setTop(40);
-    obj.edit2:setWidth(75);
-    obj.edit2:setHeight(20);
-    obj.edit2:setField("HPRACAATE30");
-    obj.edit2:setName("edit2");
-
-    obj.edit3 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit3:setParent(obj.tab1);
-    obj.edit3:setLeft(20);
-    obj.edit3:setTop(70);
-    obj.edit3:setWidth(75);
-    obj.edit3:setHeight(20);
-    obj.edit3:setField("HPRACAATE40");
-    obj.edit3:setName("edit3");
-
-    obj.edit4 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit4:setParent(obj.tab1);
-    obj.edit4:setLeft(100);
-    obj.edit4:setTop(10);
-    obj.edit4:setWidth(75);
-    obj.edit4:setType("number");
-    obj.edit4:setMin(0);
-    obj.edit4:setMax(20);
-    obj.edit4:setHeight(20);
-    obj.edit4:setField("RHPNivelAte20");
-    obj.edit4:setName("edit4");
-
-    obj.edit5 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit5:setParent(obj.tab1);
-    obj.edit5:setLeft(100);
-    obj.edit5:setTop(40);
-    obj.edit5:setWidth(75);
-    obj.edit5:setType("number");
-    obj.edit5:setMin(0);
-    obj.edit5:setMax(20);
-    obj.edit5:setHeight(20);
-    obj.edit5:setField("RHPNivelAte30");
-    obj.edit5:setName("edit5");
-
-    obj.edit6 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit6:setParent(obj.tab1);
-    obj.edit6:setLeft(100);
-    obj.edit6:setTop(70);
-    obj.edit6:setWidth(75);
-    obj.edit6:setType("number");
-    obj.edit6:setMin(0);
-    obj.edit6:setMax(20);
-    obj.edit6:setHeight(20);
-    obj.edit6:setField("RHPNivelAte40");
-    obj.edit6:setName("edit6");
-
-    obj.edit7 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit7:setParent(obj.tab1);
-    obj.edit7:setLeft(200);
-    obj.edit7:setTop(10);
-    obj.edit7:setWidth(75);
-    obj.edit7:setType("number");
-    obj.edit7:setHeight(20);
-    obj.edit7:setField("Level");
-    obj.edit7:setName("edit7");
-
-    obj.edit8 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit8:setParent(obj.tab1);
-    obj.edit8:setLeft(20);
-    obj.edit8:setTop(120);
-    obj.edit8:setWidth(75);
-    obj.edit8:setType("number");
-    obj.edit8:setHeight(20);
-    obj.edit8:setField("CHPNivel");
-    obj.edit8:setName("edit8");
-
-    obj.edit9 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit9:setParent(obj.tab1);
-    obj.edit9:setLeft(20);
-    obj.edit9:setTop(160);
-    obj.edit9:setWidth(75);
-    obj.edit9:setType("number");
-    obj.edit9:setHeight(20);
-    obj.edit9:setField("EHPNivel");
-    obj.edit9:setName("edit9");
-
-    obj.edit10 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit10:setParent(obj.tab1);
-    obj.edit10:setLeft(20);
-    obj.edit10:setTop(200);
-    obj.edit10:setWidth(75);
-    obj.edit10:setType("number");
-    obj.edit10:setHeight(20);
-    obj.edit10:setField("MHPNivel");
-    obj.edit10:setName("edit10");
-
-    obj.edit11 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit11:setParent(obj.tab1);
-    obj.edit11:setLeft(20);
-    obj.edit11:setTop(240);
-    obj.edit11:setWidth(75);
-    obj.edit11:setType("number");
-    obj.edit11:setFontColor("blue");
-    obj.edit11:setHeight(20);
-    obj.edit11:setField("CMPNivel");
-    obj.edit11:setName("edit11");
-
-    obj.edit12 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit12:setParent(obj.tab1);
-    obj.edit12:setLeft(20);
-    obj.edit12:setTop(280);
-    obj.edit12:setWidth(75);
-    obj.edit12:setType("number");
-    obj.edit12:setFontColor("Cyan");
-    obj.edit12:setHeight(20);
-    obj.edit12:setField("EMPNivel");
-    obj.edit12:setName("edit12");
-
-    obj.tab2 = GUI.fromHandle(_obj_newObject("tab"));
-    obj.tab2:setParent(obj.tabControl1);
-    obj.tab2:setTitle("Segunda Aba");
-    obj.tab2:setName("tab2");
-
     obj.scrollBox1 = GUI.fromHandle(_obj_newObject("scrollBox"));
-    obj.scrollBox1:setParent(obj.tab2);
+    obj.scrollBox1:setParent(obj);
     obj.scrollBox1:setAlign("client");
     obj.scrollBox1:setName("scrollBox1");
 
@@ -188,23 +45,23 @@ local function constructNew_frmvelen()
     obj.image1:setSRC("/imagens/1.png");
     obj.image1:setName("image1");
 
-    obj.edit13 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit13:setParent(obj.scrollBox1);
-    obj.edit13:setLeft(160);
-    obj.edit13:setTop(60);
-    obj.edit13:setWidth(75);
-    obj.edit13:setHeight(20);
-    obj.edit13:setField("Nome");
-    obj.edit13:setName("edit13");
+    obj.edit1 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit1:setParent(obj.scrollBox1);
+    obj.edit1:setLeft(160);
+    obj.edit1:setTop(60);
+    obj.edit1:setWidth(75);
+    obj.edit1:setHeight(20);
+    obj.edit1:setField("Nome");
+    obj.edit1:setName("edit1");
 
-    obj.edit14 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit14:setParent(obj.scrollBox1);
-    obj.edit14:setLeft(160);
-    obj.edit14:setTop(92);
-    obj.edit14:setWidth(75);
-    obj.edit14:setHeight(20);
-    obj.edit14:setField("idade");
-    obj.edit14:setName("edit14");
+    obj.edit2 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit2:setParent(obj.scrollBox1);
+    obj.edit2:setLeft(160);
+    obj.edit2:setTop(92);
+    obj.edit2:setWidth(75);
+    obj.edit2:setHeight(20);
+    obj.edit2:setField("idade");
+    obj.edit2:setName("edit2");
 
     obj.comboBox1 = GUI.fromHandle(_obj_newObject("comboBox"));
     obj.comboBox1:setParent(obj.scrollBox1);
@@ -230,24 +87,24 @@ local function constructNew_frmvelen()
 		'Necromance', 'Sacerdote', 'Juiz', 'Barbaro', 'Tanker', 'Acrobata', 'Assassino', 'Arcanista', 'Feiticeiro', 'Summoner', 'Duelista', 'Pirata', 'Guardião Espiritual', 
 		'Cavaleiro das Trevas', 'Templario' });
 
-    obj.edit15 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit15:setParent(obj.scrollBox1);
-    obj.edit15:setLeft(490);
-    obj.edit15:setTop(60);
-    obj.edit15:setWidth(40);
-    obj.edit15:setHeight(20);
-    obj.edit15:setField("Velis");
-    obj.edit15:setName("edit15");
+    obj.edit3 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit3:setParent(obj.scrollBox1);
+    obj.edit3:setLeft(490);
+    obj.edit3:setTop(60);
+    obj.edit3:setWidth(40);
+    obj.edit3:setHeight(20);
+    obj.edit3:setField("Velis");
+    obj.edit3:setName("edit3");
 
-    obj.edit16 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit16:setParent(obj.scrollBox1);
-    obj.edit16:setLeft(490);
-    obj.edit16:setTop(60);
-    obj.edit16:setWidth(40);
-    obj.edit16:setVisible(false);
-    obj.edit16:setHeight(20);
-    obj.edit16:setField("PHPRacial");
-    obj.edit16:setName("edit16");
+    obj.edit4 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit4:setParent(obj.scrollBox1);
+    obj.edit4:setLeft(490);
+    obj.edit4:setTop(60);
+    obj.edit4:setWidth(40);
+    obj.edit4:setVisible(false);
+    obj.edit4:setHeight(20);
+    obj.edit4:setField("PHPRacial");
+    obj.edit4:setName("edit4");
 
     obj.comboBox2 = GUI.fromHandle(_obj_newObject("comboBox"));
     obj.comboBox2:setParent(obj.scrollBox1);
@@ -276,16 +133,16 @@ local function constructNew_frmvelen()
     obj.button2:setText("+");
     obj.button2:setName("button2");
 
-    obj.edit17 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit17:setParent(obj.scrollBox1);
-    obj.edit17:setLeft(170);
-    obj.edit17:setTop(265);
-    obj.edit17:setWidth(35);
-    obj.edit17:setHeight(20);
-    obj.edit17:setEnabled(false);
-    obj.edit17:setType("number");
-    obj.edit17:setField("Forca");
-    obj.edit17:setName("edit17");
+    obj.edit5 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit5:setParent(obj.scrollBox1);
+    obj.edit5:setLeft(170);
+    obj.edit5:setTop(265);
+    obj.edit5:setWidth(35);
+    obj.edit5:setHeight(20);
+    obj.edit5:setEnabled(false);
+    obj.edit5:setType("number");
+    obj.edit5:setField("Forca");
+    obj.edit5:setName("edit5");
 
     obj.rectangle1 = GUI.fromHandle(_obj_newObject("rectangle"));
     obj.rectangle1:setParent(obj.scrollBox1);
@@ -324,16 +181,16 @@ local function constructNew_frmvelen()
     obj.button4:setText("+");
     obj.button4:setName("button4");
 
-    obj.edit18 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit18:setParent(obj.scrollBox1);
-    obj.edit18:setLeft(170);
-    obj.edit18:setTop(327);
-    obj.edit18:setWidth(35);
-    obj.edit18:setHeight(20);
-    obj.edit18:setEnabled(false);
-    obj.edit18:setType("number");
-    obj.edit18:setField("Inteligencia");
-    obj.edit18:setName("edit18");
+    obj.edit6 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit6:setParent(obj.scrollBox1);
+    obj.edit6:setLeft(170);
+    obj.edit6:setTop(327);
+    obj.edit6:setWidth(35);
+    obj.edit6:setHeight(20);
+    obj.edit6:setEnabled(false);
+    obj.edit6:setType("number");
+    obj.edit6:setField("Inteligencia");
+    obj.edit6:setName("edit6");
 
     obj.rectangle2 = GUI.fromHandle(_obj_newObject("rectangle"));
     obj.rectangle2:setParent(obj.scrollBox1);
@@ -372,16 +229,16 @@ local function constructNew_frmvelen()
     obj.button6:setText("+");
     obj.button6:setName("button6");
 
-    obj.edit19 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit19:setParent(obj.scrollBox1);
-    obj.edit19:setLeft(170);
-    obj.edit19:setTop(388);
-    obj.edit19:setWidth(35);
-    obj.edit19:setHeight(20);
-    obj.edit19:setEnabled(false);
-    obj.edit19:setType("number");
-    obj.edit19:setField("Destreza");
-    obj.edit19:setName("edit19");
+    obj.edit7 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit7:setParent(obj.scrollBox1);
+    obj.edit7:setLeft(170);
+    obj.edit7:setTop(388);
+    obj.edit7:setWidth(35);
+    obj.edit7:setHeight(20);
+    obj.edit7:setEnabled(false);
+    obj.edit7:setType("number");
+    obj.edit7:setField("Destreza");
+    obj.edit7:setName("edit7");
 
     obj.rectangle3 = GUI.fromHandle(_obj_newObject("rectangle"));
     obj.rectangle3:setParent(obj.scrollBox1);
@@ -420,16 +277,16 @@ local function constructNew_frmvelen()
     obj.button8:setText("+");
     obj.button8:setName("button8");
 
-    obj.edit20 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit20:setParent(obj.scrollBox1);
-    obj.edit20:setLeft(170);
-    obj.edit20:setTop(449);
-    obj.edit20:setWidth(35);
-    obj.edit20:setHeight(20);
-    obj.edit20:setEnabled(false);
-    obj.edit20:setType("number");
-    obj.edit20:setField("Agilidade");
-    obj.edit20:setName("edit20");
+    obj.edit8 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit8:setParent(obj.scrollBox1);
+    obj.edit8:setLeft(170);
+    obj.edit8:setTop(449);
+    obj.edit8:setWidth(35);
+    obj.edit8:setHeight(20);
+    obj.edit8:setEnabled(false);
+    obj.edit8:setType("number");
+    obj.edit8:setField("Agilidade");
+    obj.edit8:setName("edit8");
 
     obj.rectangle4 = GUI.fromHandle(_obj_newObject("rectangle"));
     obj.rectangle4:setParent(obj.scrollBox1);
@@ -468,16 +325,16 @@ local function constructNew_frmvelen()
     obj.button10:setText("+");
     obj.button10:setName("button10");
 
-    obj.edit21 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit21:setParent(obj.scrollBox1);
-    obj.edit21:setLeft(170);
-    obj.edit21:setTop(510);
-    obj.edit21:setWidth(35);
-    obj.edit21:setHeight(20);
-    obj.edit21:setEnabled(false);
-    obj.edit21:setType("number");
-    obj.edit21:setField("Vitalidade");
-    obj.edit21:setName("edit21");
+    obj.edit9 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit9:setParent(obj.scrollBox1);
+    obj.edit9:setLeft(170);
+    obj.edit9:setTop(510);
+    obj.edit9:setWidth(35);
+    obj.edit9:setHeight(20);
+    obj.edit9:setEnabled(false);
+    obj.edit9:setType("number");
+    obj.edit9:setField("Vitalidade");
+    obj.edit9:setName("edit9");
 
     obj.rectangle5 = GUI.fromHandle(_obj_newObject("rectangle"));
     obj.rectangle5:setParent(obj.scrollBox1);
@@ -802,34 +659,34 @@ local function constructNew_frmvelen()
     obj.label22:setField("CMagico");
     obj.label22:setName("label22");
 
-    obj.edit22 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit22:setParent(obj.scrollBox1);
-    obj.edit22:setLeft(295);
-    obj.edit22:setTop(807);
-    obj.edit22:setFontColor("#00008B");
-    obj.edit22:setScale(2.0);
-    obj.edit22:setWidth(21);
-    obj.edit22:setHeight(50);
-    obj.edit22:setType("number");
-    obj.edit22:setTextPrompt("0");
-    obj.edit22:setEnabled(true);
-    obj.edit22:setMax(30);
-    obj.edit22:setField("Level");
-    obj.edit22:setTransparent(true);
-    obj.edit22:setName("edit22");
+    obj.edit10 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit10:setParent(obj.scrollBox1);
+    obj.edit10:setLeft(295);
+    obj.edit10:setTop(807);
+    obj.edit10:setFontColor("#00008B");
+    obj.edit10:setScale(2.0);
+    obj.edit10:setWidth(21);
+    obj.edit10:setHeight(50);
+    obj.edit10:setType("number");
+    obj.edit10:setTextPrompt("0");
+    obj.edit10:setEnabled(true);
+    obj.edit10:setMax(30);
+    obj.edit10:setField("Level");
+    obj.edit10:setTransparent(true);
+    obj.edit10:setName("edit10");
 
-    obj.edit23 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit23:setParent(obj.scrollBox1);
-    obj.edit23:setLeft(295);
-    obj.edit23:setTop(700);
-    obj.edit23:setFontColor("#00008B");
-    obj.edit23:setScale(2.0);
-    obj.edit23:setWidth(21);
-    obj.edit23:setVisible(false);
-    obj.edit23:setHeight(50);
-    obj.edit23:setField("Elevel");
-    obj.edit23:setTransparent(true);
-    obj.edit23:setName("edit23");
+    obj.edit11 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit11:setParent(obj.scrollBox1);
+    obj.edit11:setLeft(295);
+    obj.edit11:setTop(700);
+    obj.edit11:setFontColor("#00008B");
+    obj.edit11:setScale(2.0);
+    obj.edit11:setWidth(21);
+    obj.edit11:setVisible(false);
+    obj.edit11:setHeight(50);
+    obj.edit11:setField("Elevel");
+    obj.edit11:setTransparent(true);
+    obj.edit11:setName("edit11");
 
     obj.button11 = GUI.fromHandle(_obj_newObject("button"));
     obj.button11:setParent(obj.scrollBox1);
@@ -952,17 +809,17 @@ local function constructNew_frmvelen()
 
     obj.dataLink6 = GUI.fromHandle(_obj_newObject("dataLink"));
     obj.dataLink6:setParent(obj.scrollBox1);
-    obj.dataLink6:setFields({'Vitalidade', 'VitalidadeTotal', 'Level', 'ArmaHP', 'OutraHP', 'ArmaduraHP', 'AcessorioHP', 'PHPBasica', 'PHPRacial', 'Raca'});
+    obj.dataLink6:setFields({'Raca', 'Classe', 'Espec', 'Level'});
     obj.dataLink6:setName("dataLink6");
 
     obj.dataLink7 = GUI.fromHandle(_obj_newObject("dataLink"));
     obj.dataLink7:setParent(obj.scrollBox1);
-    obj.dataLink7:setFields({'Inteligencia', 'InteligenciaTotal', 'Level', 'ArmaMP', 'OutraMP', 'ArmaduraMP', 'AcessorioMP', 'PMPBasica', 'PMPRacial', 'DMP', 'MPMont', 'Classe', 'Espec'});
+    obj.dataLink7:setFields({'VitalidadeTotal', 'ArmaHP', 'OutraHP', 'ArmaduraHP', 'AcessorioHP', 'PHPBasica', 'PHPRacial', 'Classe', 'Espec', 'RACA', 'Level'});
     obj.dataLink7:setName("dataLink7");
 
     obj.dataLink8 = GUI.fromHandle(_obj_newObject("dataLink"));
     obj.dataLink8:setParent(obj.scrollBox1);
-    obj.dataLink8:setFields({'Vitalidade', 'VitalidadeTotal', 'Level', 'ArmaHP', 'OutraHP', 'ArmaduraHP', 'AcessorioHP', 'PHPBasica', 'PHPRacial', 'Raca', 'Classe', 'Espec', 'Raca'});
+    obj.dataLink8:setFields({'InteligenciaTotal', 'ArmaMP', 'OutraMP', 'ArmaduraMP', 'AcessorioMP', 'PMPBasica', 'PMPRacial', 'Classe', 'Espec', 'Level'});
     obj.dataLink8:setName("dataLink8");
 
     obj.dataLink9 = GUI.fromHandle(_obj_newObject("dataLink"));
@@ -1026,26 +883,158 @@ local function constructNew_frmvelen()
     obj.button21:setText("Ataque Basico");
     obj.button21:setName("button21");
 
+    obj.edit12 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit12:setParent(obj.scrollBox1);
+    obj.edit12:setLeft(270);
+    obj.edit12:setTop(670);
+    obj.edit12:setWidth(90);
+    obj.edit12:setType("number");
+    obj.edit12:setHeight(30);
+    obj.edit12:setVisible(false);
+    obj.edit12:setField("ClasseAcerto");
+    obj.edit12:setName("edit12");
+
+    obj.edit13 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit13:setParent(obj.scrollBox1);
+    obj.edit13:setLeft(270);
+    obj.edit13:setTop(720);
+    obj.edit13:setWidth(90);
+    obj.edit13:setType("number");
+    obj.edit13:setHeight(30);
+    obj.edit13:setVisible(false);
+    obj.edit13:setField("DestrezaAcerto");
+    obj.edit13:setName("edit13");
+
+    obj.edit14 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit14:setParent(obj.scrollBox1);
+    obj.edit14:setLeft(270);
+    obj.edit14:setTop(770);
+    obj.edit14:setWidth(90);
+    obj.edit14:setType("number");
+    obj.edit14:setHeight(30);
+    obj.edit14:setVisible(false);
+    obj.edit14:setField("EspecAcerto");
+    obj.edit14:setName("edit14");
+
+    obj.edit15 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit15:setParent(obj.scrollBox1);
+    obj.edit15:setLeft(270);
+    obj.edit15:setTop(670);
+    obj.edit15:setWidth(90);
+    obj.edit15:setType("number");
+    obj.edit15:setHeight(30);
+    obj.edit15:setVisible(false);
+    obj.edit15:setField("ClasseAM");
+    obj.edit15:setName("edit15");
+
+    obj.edit16 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit16:setParent(obj.scrollBox1);
+    obj.edit16:setLeft(270);
+    obj.edit16:setTop(770);
+    obj.edit16:setWidth(90);
+    obj.edit16:setType("number");
+    obj.edit16:setHeight(30);
+    obj.edit16:setVisible(false);
+    obj.edit16:setField("EspecAM");
+    obj.edit16:setName("edit16");
+
+    obj.edit17 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit17:setParent(obj.scrollBox1);
+    obj.edit17:setLeft(270);
+    obj.edit17:setTop(670);
+    obj.edit17:setWidth(90);
+    obj.edit17:setType("number");
+    obj.edit17:setHeight(30);
+    obj.edit17:setVisible(false);
+    obj.edit17:setField("ClasseCR");
+    obj.edit17:setName("edit17");
+
+    obj.edit18 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit18:setParent(obj.scrollBox1);
+    obj.edit18:setLeft(270);
+    obj.edit18:setTop(770);
+    obj.edit18:setWidth(90);
+    obj.edit18:setType("number");
+    obj.edit18:setHeight(30);
+    obj.edit18:setVisible(false);
+    obj.edit18:setField("EspecCR");
+    obj.edit18:setName("edit18");
+
+    obj.edit19 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit19:setParent(obj.scrollBox1);
+    obj.edit19:setLeft(270);
+    obj.edit19:setTop(670);
+    obj.edit19:setWidth(90);
+    obj.edit19:setType("number");
+    obj.edit19:setHeight(30);
+    obj.edit19:setVisible(false);
+    obj.edit19:setField("ClasseCM");
+    obj.edit19:setName("edit19");
+
+    obj.edit20 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit20:setParent(obj.scrollBox1);
+    obj.edit20:setLeft(270);
+    obj.edit20:setTop(770);
+    obj.edit20:setWidth(90);
+    obj.edit20:setType("number");
+    obj.edit20:setHeight(30);
+    obj.edit20:setVisible(false);
+    obj.edit20:setField("EspecCM");
+    obj.edit20:setName("edit20");
+
+    obj.edit21 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit21:setParent(obj.scrollBox1);
+    obj.edit21:setLeft(270);
+    obj.edit21:setTop(670);
+    obj.edit21:setWidth(90);
+    obj.edit21:setType("number");
+    obj.edit21:setHeight(30);
+    obj.edit21:setVisible(false);
+    obj.edit21:setField("ClasseEsquiva");
+    obj.edit21:setName("edit21");
+
+    obj.edit22 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit22:setParent(obj.scrollBox1);
+    obj.edit22:setLeft(270);
+    obj.edit22:setTop(770);
+    obj.edit22:setWidth(90);
+    obj.edit22:setType("number");
+    obj.edit22:setHeight(30);
+    obj.edit22:setVisible(false);
+    obj.edit22:setField("EspecEsquiva");
+    obj.edit22:setName("edit22");
+
+    obj.edit23 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit23:setParent(obj.scrollBox1);
+    obj.edit23:setLeft(270);
+    obj.edit23:setTop(670);
+    obj.edit23:setWidth(90);
+    obj.edit23:setType("number");
+    obj.edit23:setHeight(30);
+    obj.edit23:setVisible(false);
+    obj.edit23:setField("ClassePer");
+    obj.edit23:setName("edit23");
+
     obj.edit24 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit24:setParent(obj.scrollBox1);
     obj.edit24:setLeft(270);
-    obj.edit24:setTop(670);
+    obj.edit24:setTop(770);
     obj.edit24:setWidth(90);
     obj.edit24:setType("number");
     obj.edit24:setHeight(30);
     obj.edit24:setVisible(false);
-    obj.edit24:setField("ClasseAcerto");
+    obj.edit24:setField("EspecPer");
     obj.edit24:setName("edit24");
 
     obj.edit25 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit25:setParent(obj.scrollBox1);
     obj.edit25:setLeft(270);
-    obj.edit25:setTop(720);
+    obj.edit25:setTop(770);
     obj.edit25:setWidth(90);
     obj.edit25:setType("number");
     obj.edit25:setHeight(30);
     obj.edit25:setVisible(false);
-    obj.edit25:setField("DestrezaAcerto");
+    obj.edit25:setField("AgilidadeESQ");
     obj.edit25:setName("edit25");
 
     obj.edit26 = GUI.fromHandle(_obj_newObject("edit"));
@@ -1056,191 +1045,59 @@ local function constructNew_frmvelen()
     obj.edit26:setType("number");
     obj.edit26:setHeight(30);
     obj.edit26:setVisible(false);
-    obj.edit26:setField("EspecAcerto");
+    obj.edit26:setField("ForcaPer");
     obj.edit26:setName("edit26");
 
     obj.edit27 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit27:setParent(obj.scrollBox1);
-    obj.edit27:setLeft(270);
-    obj.edit27:setTop(670);
-    obj.edit27:setWidth(90);
-    obj.edit27:setType("number");
+    obj.edit27:setTop(440);
+    obj.edit27:setLeft(292);
+    obj.edit27:setWidth(50);
     obj.edit27:setHeight(30);
-    obj.edit27:setVisible(false);
-    obj.edit27:setField("ClasseAM");
+    obj.edit27:setMax(160);
+    obj.edit27:setMin(0);
+    obj.edit27:setHorzTextAlign("center");
+    obj.edit27:setType("number");
+    obj.edit27:setText("120");
+    obj.edit27:setTransparent(true);
+    obj.edit27:setFontColor("Black");
+    obj.edit27:setFontSize(22);
+    obj.edit27:setEnabled(false);
+    obj.edit27:setField("ControladorAtributos");
     obj.edit27:setName("edit27");
 
     obj.edit28 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit28:setParent(obj.scrollBox1);
-    obj.edit28:setLeft(270);
-    obj.edit28:setTop(770);
-    obj.edit28:setWidth(90);
-    obj.edit28:setType("number");
+    obj.edit28:setTop(530);
+    obj.edit28:setLeft(292);
+    obj.edit28:setWidth(50);
     obj.edit28:setHeight(30);
+    obj.edit28:setMax(160);
+    obj.edit28:setMin(0);
+    obj.edit28:setHorzTextAlign("center");
+    obj.edit28:setType("number");
+    obj.edit28:setText("120");
     obj.edit28:setVisible(false);
-    obj.edit28:setField("EspecAM");
+    obj.edit28:setFontSize(22);
+    obj.edit28:setEnabled(true);
+    obj.edit28:setField("LiberarRolagemUp");
     obj.edit28:setName("edit28");
 
     obj.edit29 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit29:setParent(obj.scrollBox1);
-    obj.edit29:setLeft(270);
-    obj.edit29:setTop(670);
-    obj.edit29:setWidth(90);
-    obj.edit29:setType("number");
+    obj.edit29:setTop(530);
+    obj.edit29:setLeft(292);
+    obj.edit29:setWidth(50);
     obj.edit29:setHeight(30);
+    obj.edit29:setMax(20);
+    obj.edit29:setMin(0);
+    obj.edit29:setHorzTextAlign("center");
+    obj.edit29:setType("number");
     obj.edit29:setVisible(false);
-    obj.edit29:setField("ClasseCR");
+    obj.edit29:setFontSize(22);
+    obj.edit29:setEnabled(true);
+    obj.edit29:setField("CLevel");
     obj.edit29:setName("edit29");
-
-    obj.edit30 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit30:setParent(obj.scrollBox1);
-    obj.edit30:setLeft(270);
-    obj.edit30:setTop(770);
-    obj.edit30:setWidth(90);
-    obj.edit30:setType("number");
-    obj.edit30:setHeight(30);
-    obj.edit30:setVisible(false);
-    obj.edit30:setField("EspecCR");
-    obj.edit30:setName("edit30");
-
-    obj.edit31 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit31:setParent(obj.scrollBox1);
-    obj.edit31:setLeft(270);
-    obj.edit31:setTop(670);
-    obj.edit31:setWidth(90);
-    obj.edit31:setType("number");
-    obj.edit31:setHeight(30);
-    obj.edit31:setVisible(false);
-    obj.edit31:setField("ClasseCM");
-    obj.edit31:setName("edit31");
-
-    obj.edit32 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit32:setParent(obj.scrollBox1);
-    obj.edit32:setLeft(270);
-    obj.edit32:setTop(770);
-    obj.edit32:setWidth(90);
-    obj.edit32:setType("number");
-    obj.edit32:setHeight(30);
-    obj.edit32:setVisible(false);
-    obj.edit32:setField("EspecCM");
-    obj.edit32:setName("edit32");
-
-    obj.edit33 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit33:setParent(obj.scrollBox1);
-    obj.edit33:setLeft(270);
-    obj.edit33:setTop(670);
-    obj.edit33:setWidth(90);
-    obj.edit33:setType("number");
-    obj.edit33:setHeight(30);
-    obj.edit33:setVisible(false);
-    obj.edit33:setField("ClasseEsquiva");
-    obj.edit33:setName("edit33");
-
-    obj.edit34 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit34:setParent(obj.scrollBox1);
-    obj.edit34:setLeft(270);
-    obj.edit34:setTop(770);
-    obj.edit34:setWidth(90);
-    obj.edit34:setType("number");
-    obj.edit34:setHeight(30);
-    obj.edit34:setVisible(false);
-    obj.edit34:setField("EspecEsquiva");
-    obj.edit34:setName("edit34");
-
-    obj.edit35 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit35:setParent(obj.scrollBox1);
-    obj.edit35:setLeft(270);
-    obj.edit35:setTop(670);
-    obj.edit35:setWidth(90);
-    obj.edit35:setType("number");
-    obj.edit35:setHeight(30);
-    obj.edit35:setVisible(false);
-    obj.edit35:setField("ClassePer");
-    obj.edit35:setName("edit35");
-
-    obj.edit36 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit36:setParent(obj.scrollBox1);
-    obj.edit36:setLeft(270);
-    obj.edit36:setTop(770);
-    obj.edit36:setWidth(90);
-    obj.edit36:setType("number");
-    obj.edit36:setHeight(30);
-    obj.edit36:setVisible(false);
-    obj.edit36:setField("EspecPer");
-    obj.edit36:setName("edit36");
-
-    obj.edit37 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit37:setParent(obj.scrollBox1);
-    obj.edit37:setLeft(270);
-    obj.edit37:setTop(770);
-    obj.edit37:setWidth(90);
-    obj.edit37:setType("number");
-    obj.edit37:setHeight(30);
-    obj.edit37:setVisible(false);
-    obj.edit37:setField("AgilidadeESQ");
-    obj.edit37:setName("edit37");
-
-    obj.edit38 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit38:setParent(obj.scrollBox1);
-    obj.edit38:setLeft(270);
-    obj.edit38:setTop(770);
-    obj.edit38:setWidth(90);
-    obj.edit38:setType("number");
-    obj.edit38:setHeight(30);
-    obj.edit38:setVisible(false);
-    obj.edit38:setField("ForcaPer");
-    obj.edit38:setName("edit38");
-
-    obj.edit39 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit39:setParent(obj.scrollBox1);
-    obj.edit39:setTop(440);
-    obj.edit39:setLeft(292);
-    obj.edit39:setWidth(50);
-    obj.edit39:setHeight(30);
-    obj.edit39:setMax(160);
-    obj.edit39:setMin(0);
-    obj.edit39:setHorzTextAlign("center");
-    obj.edit39:setType("number");
-    obj.edit39:setText("120");
-    obj.edit39:setTransparent(true);
-    obj.edit39:setFontColor("Black");
-    obj.edit39:setFontSize(22);
-    obj.edit39:setEnabled(false);
-    obj.edit39:setField("ControladorAtributos");
-    obj.edit39:setName("edit39");
-
-    obj.edit40 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit40:setParent(obj.scrollBox1);
-    obj.edit40:setTop(530);
-    obj.edit40:setLeft(292);
-    obj.edit40:setWidth(50);
-    obj.edit40:setHeight(30);
-    obj.edit40:setMax(160);
-    obj.edit40:setMin(0);
-    obj.edit40:setHorzTextAlign("center");
-    obj.edit40:setType("number");
-    obj.edit40:setText("120");
-    obj.edit40:setVisible(false);
-    obj.edit40:setFontSize(22);
-    obj.edit40:setEnabled(true);
-    obj.edit40:setField("LiberarRolagemUp");
-    obj.edit40:setName("edit40");
-
-    obj.edit41 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit41:setParent(obj.scrollBox1);
-    obj.edit41:setTop(530);
-    obj.edit41:setLeft(292);
-    obj.edit41:setWidth(50);
-    obj.edit41:setHeight(30);
-    obj.edit41:setMax(20);
-    obj.edit41:setMin(0);
-    obj.edit41:setHorzTextAlign("center");
-    obj.edit41:setType("number");
-    obj.edit41:setVisible(false);
-    obj.edit41:setFontSize(22);
-    obj.edit41:setEnabled(true);
-    obj.edit41:setField("CLevel");
-    obj.edit41:setName("edit41");
 
 
 			function DiminuirPontosForca()
@@ -1384,18 +1241,18 @@ local function constructNew_frmvelen()
     obj.BarraXP:setPosition(50);
     obj.BarraXP:setMax(100);
 
-    obj.edit42 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit42:setParent(obj.scrollBox1);
-    obj.edit42:setWidth(35);
-    obj.edit42:setHeight(20);
-    obj.edit42:setTop(675);
-    obj.edit42:setLeft(157);
-    obj.edit42:setType("number");
-    obj.edit42:setMax(9999);
-    obj.edit42:setTransparent(true);
-    obj.edit42:setHorzTextAlign("center");
-    obj.edit42:setField("XPAtual");
-    obj.edit42:setName("edit42");
+    obj.edit30 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit30:setParent(obj.scrollBox1);
+    obj.edit30:setWidth(35);
+    obj.edit30:setHeight(20);
+    obj.edit30:setTop(675);
+    obj.edit30:setLeft(157);
+    obj.edit30:setType("number");
+    obj.edit30:setMax(9999);
+    obj.edit30:setTransparent(true);
+    obj.edit30:setHorzTextAlign("center");
+    obj.edit30:setField("XPAtual");
+    obj.edit30:setName("edit30");
 
     obj.label23 = GUI.fromHandle(_obj_newObject("label"));
     obj.label23:setParent(obj.scrollBox1);
@@ -1931,8 +1788,7 @@ local function constructNew_frmvelen()
 
 
 		function self.ControlaEspecHPAte30()
-			if sheet.Level > 20 then 
-				sheet.HPRACAATE30 = 0;        
+			if sheet.Level > 20 then        
 				sheet.RHPNivelAte30 = math.floor((sheet.Level) - 20);
 				sheet.EHPNivel = 0;	
 				
@@ -2122,16 +1978,14 @@ local function constructNew_frmvelen()
 
 
  
-		function self.ControlaClasseMPP()
+		function self.ControlaClasseMP()
 			
 			sheet.RHPNivelAte20 = sheet.Level;
 			
 			if sheet.RHPNivelAte20 > 20 then
 				sheet.RHPNivelAte20 = 20;
 			end;
-			
-			sheet.CMPNivel = 0;
-			
+						
 			if sheet.Classe == 'Animago' then
 				sheet.CMPNivel = (tonumber(sheet.RHPNivelAte20) or 0) * 4 + 100;
 			end;
@@ -2180,7 +2034,7 @@ local function constructNew_frmvelen()
 
 
 
-	-------------------------- Controle de MP por Classe ------------------------
+	-------------------------- Controle de MP por Especialização ------------------------
 	
 
 
@@ -2190,8 +2044,7 @@ local function constructNew_frmvelen()
 			if sheet.Level < 21 then
 				sheet.EMPNivel = 0;
 			end;	
-		
-			sheet.HPRACAATE30 = 0;        
+		     
 			sheet.RHPNivelAte30 = math.floor((sheet.Level) - 20);
 			
 			if sheet.RHPNivelAte30 > 10 then
@@ -2285,8 +2138,40 @@ local function constructNew_frmvelen()
 	
 
 
+ 
+		function self.ControlaClasseEspecialMPAte20()			
+			if sheet.Classe == 'Cavaleiro Draconico' then
+				sheet.RHPNivelAte20 = sheet.Level;
+				
+				if sheet.RHPNivelAte20 > 20 then
+					sheet.RHPNivelAte20 = 20;
+				end;
+						
+				sheet.CMPNivel = (tonumber(sheet.RHPNivelAte20) or 0) * 4 + 100;
+				
+				if sheet.Level < 21 then
+					sheet.EMPNivel = 0;
+				end;	
+			 
+				sheet.RHPNivelAte30 = math.floor((sheet.Level) - 20);
+				
+				if sheet.RHPNivelAte30 > 10 then
+					sheet.RHPNivelAte30 = 10;
+				end;
 
-	-------------------------- Controle de MP por Classe ------------------------
+				if sheet.RHPNivelAte30 < 0 then
+					sheet.RHPNivelAte30 = 0;
+				end;	
+					
+				sheet.EMPNivel = (tonumber(sheet.RHPNivelAte30) or 0) * 3;
+				
+			end;			
+		end;
+	
+
+
+
+	-------------------------- CALCULO TOTAL DE MP ------------------------
 	
 
 
@@ -2298,8 +2183,7 @@ local function constructNew_frmvelen()
 
 			sheet.MPTotal = (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
 			(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-			(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.CMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-			
+			(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.CMPNivel) or 0) + (tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);	
 		end;
 	
 
@@ -2360,37 +2244,18 @@ local function constructNew_frmvelen()
 
 
  
-			function self.ChecaCavaleiroDraconicoMP()			
-				if sheet.Classe == 'Cavaleiro Draconico' then
-					if sheet.level < 21 then
-						sheet.RMPNivel = (tonumber(sheet.Level) or 0) * 4 + 100;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + 
-						(tonumber(sheet.MPMont) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-				end;
-
-					if sheet.Classe == 'Cavaleiro Draconico' then
-					if sheet.level > 19 then
-						sheet.EMPNivel = (tonumber(sheet.Elevel) or 0) * 3;
-						sheet.MPTotal =  (tonumber(sheet.MP) or 0) + (tonumber(sheet.InteligenciaTotal) or 0) + (tonumber(sheet.ArmaMP) or 0) + 
-						(tonumber(sheet.OutraMP) or 0) + (tonumber(sheet.ArmaduraMP) or 0) + (tonumber(sheet.AcessorioMP) or 0) + (tonumber(sheet.MPMont) or 0) +
-						(tonumber(sheet.PMPRacial) or 0) + (tonumber(sheet.PMPBasica) or 0) + (tonumber(sheet.RMPNivel) or 0) + 
-						(tonumber(sheet.EMPNivel) or 0) + (tonumber(sheet.DMP) or 0);
-					end;
-				end;				
-			end;
-		
-
-
- 
 			function self.ChecaLevel20()			
 				if sheet.Level >= 20 then
 					self.cmbEspecializa.enabled = true;
 				else	
 					self.cmbEspecializa.enabled = false;
-				end;					
+				end;
+
+				if sheet.classe == 'Cavaleiro Draconico' then
+					self.cmbEspecializa.enabled = false;
+				else	
+					self.cmbEspecializa.enabled = true;
+				end;	
 			end;
 		
 
@@ -2541,6 +2406,8 @@ local function constructNew_frmvelen()
             		sheet.MHPNivel = (tonumber(sheet.MHPNivel) or 0); 
             		sheet.MMPNivel = (tonumber(sheet.MMPNivel) or 0); 
             		
+            		sheet.HPRACAATE40 = (tonumber(sheet.HPRACAATE40) or 0);
+            		
             		sheet.DForca = (tonumber(sheet.DForca) or 0); 	
             		sheet.DAgilidade = (tonumber(sheet.DAgilidade) or 0); 
             		sheet.DInteligencia = (tonumber(sheet.DInteligencia) or 0); 
@@ -2597,6 +2464,7 @@ local function constructNew_frmvelen()
             				sheet.jaRecebeu = true;
             			end; 
             		sheet.SequenciaInicial = sheet.SequenciaInicial or true;
+            		self.ChecaLevel20();
         end, obj);
 
     obj._e_event1 = obj.button1:addEventListener("onClick",
@@ -2984,47 +2852,35 @@ local function constructNew_frmvelen()
         function (_, field, oldValue, newValue)
             if sheet.SequenciaInicial == true then
             				self.StatusPorRaca(); 
-            				self.ControlaRacaHPAte20();
-            				self.ControlaRacaHPAte30();
-            				self.StatusClasseAte20();
-            				self.ControlaClasseHPAte20();
-            				self.StatusEspecAteLevel30();
-            				self.ControlaEspecHPAte30();
-            				self.StatusClasseEspecialAteLevel20();
-            				self.ControlaClasseEspecialHPAte20();
-            				self.StatusClasseEspecialAteLevel30();
-            				self.ControlaClasseEspecialHPAte30();
-            				self.ControlaClasseMPP();
-            				self.ControlaEspecMP();
-            				self.CalculaHP();
-            				self.CalculaMP();				
+            				self.StatusClasseAte20();				
+            				self.StatusEspecAteLevel30();				
+            				self.StatusClasseEspecialAteLevel20();				
+            				self.StatusClasseEspecialAteLevel30();			
             			end;
         end, obj);
 
     obj._e_event27 = obj.dataLink7:addEventListener("onChange",
         function (_, field, oldValue, newValue)
-            if sheet.SequenciaInicial == true then			
-            				
-            				sheet.CLevel = (tonumber(sheet.Level) or 0);
-            				if sheet.CLevel > 20 then
-            					sheet.CLevel = 20;
-            				end;	
-            				
-            				if sheet.classe == 'Cavaleiro Draconico' then
-            					self.cmbEspecializa.enabled = false;
-            				else	
-            					self.cmbEspecializa.enabled = true;
-            				end;	
-            				
-            				self.ChecaCavaleiroDraconicoMP();
-            				self.ChecaLevel20();				
+            if sheet.SequenciaInicial == true then
+            				self.ControlaRacaHPAte20();
+            				self.ControlaRacaHPAte30();
+            				self.ControlaClasseHPAte20();
+            				self.ControlaEspecHPAte30();
+            				self.ControlaClasseEspecialHPAte20();
+            				self.ControlaClasseEspecialHPAte30();
+            				self.CalculaHP();
+            				self.ChecaLevel20();
             			end;
         end, obj);
 
     obj._e_event28 = obj.dataLink8:addEventListener("onChange",
         function (_, field, oldValue, newValue)
-            if sheet.SequenciaInicial == true then			
-            
+            if sheet.SequenciaInicial == true then
+            				self.ControlaClasseMP();
+            				self.ControlaEspecMP();			
+            				self.ControlaClasseEspecialMPAte20();	
+            				self.CalculaMP();
+            				self.ChecaLevel20();				
             			end;
         end, obj);
 
@@ -3125,17 +2981,13 @@ local function constructNew_frmvelen()
         if self.rectangle11 ~= nil then self.rectangle11:destroy(); self.rectangle11 = nil; end;
         if self.label14 ~= nil then self.label14:destroy(); self.label14 = nil; end;
         if self.button15 ~= nil then self.button15:destroy(); self.button15 = nil; end;
-        if self.edit41 ~= nil then self.edit41:destroy(); self.edit41 = nil; end;
         if self.rectangle9 ~= nil then self.rectangle9:destroy(); self.rectangle9 = nil; end;
-        if self.edit36 ~= nil then self.edit36:destroy(); self.edit36 = nil; end;
         if self.edit9 ~= nil then self.edit9:destroy(); self.edit9 = nil; end;
-        if self.edit33 ~= nil then self.edit33:destroy(); self.edit33 = nil; end;
         if self.dataLink4 ~= nil then self.dataLink4:destroy(); self.dataLink4 = nil; end;
         if self.edit29 ~= nil then self.edit29:destroy(); self.edit29 = nil; end;
         if self.edit28 ~= nil then self.edit28:destroy(); self.edit28 = nil; end;
         if self.edit7 ~= nil then self.edit7:destroy(); self.edit7 = nil; end;
         if self.edit12 ~= nil then self.edit12:destroy(); self.edit12 = nil; end;
-        if self.edit35 ~= nil then self.edit35:destroy(); self.edit35 = nil; end;
         if self.rectangle16 ~= nil then self.rectangle16:destroy(); self.rectangle16 = nil; end;
         if self.button16 ~= nil then self.button16:destroy(); self.button16 = nil; end;
         if self.label23 ~= nil then self.label23:destroy(); self.label23 = nil; end;
@@ -3146,7 +2998,6 @@ local function constructNew_frmvelen()
         if self.dataLink5 ~= nil then self.dataLink5:destroy(); self.dataLink5 = nil; end;
         if self.label13 ~= nil then self.label13:destroy(); self.label13 = nil; end;
         if self.rectangle10 ~= nil then self.rectangle10:destroy(); self.rectangle10 = nil; end;
-        if self.tab2 ~= nil then self.tab2:destroy(); self.tab2 = nil; end;
         if self.button20 ~= nil then self.button20:destroy(); self.button20 = nil; end;
         if self.rectangle1 ~= nil then self.rectangle1:destroy(); self.rectangle1 = nil; end;
         if self.edit24 ~= nil then self.edit24:destroy(); self.edit24 = nil; end;
@@ -3159,12 +3010,11 @@ local function constructNew_frmvelen()
         if self.label8 ~= nil then self.label8:destroy(); self.label8 = nil; end;
         if self.edit26 ~= nil then self.edit26:destroy(); self.edit26 = nil; end;
         if self.BarraXP ~= nil then self.BarraXP:destroy(); self.BarraXP = nil; end;
-        if self.edit34 ~= nil then self.edit34:destroy(); self.edit34 = nil; end;
-        if self.edit11 ~= nil then self.edit11:destroy(); self.edit11 = nil; end;
-        if self.edit19 ~= nil then self.edit19:destroy(); self.edit19 = nil; end;
-        if self.image1 ~= nil then self.image1:destroy(); self.image1 = nil; end;
         if self.label4 ~= nil then self.label4:destroy(); self.label4 = nil; end;
         if self.label6 ~= nil then self.label6:destroy(); self.label6 = nil; end;
+        if self.image1 ~= nil then self.image1:destroy(); self.image1 = nil; end;
+        if self.edit11 ~= nil then self.edit11:destroy(); self.edit11 = nil; end;
+        if self.edit19 ~= nil then self.edit19:destroy(); self.edit19 = nil; end;
         if self.rectangle17 ~= nil then self.rectangle17:destroy(); self.rectangle17 = nil; end;
         if self.edit5 ~= nil then self.edit5:destroy(); self.edit5 = nil; end;
         if self.button13 ~= nil then self.button13:destroy(); self.button13 = nil; end;
@@ -3176,12 +3026,11 @@ local function constructNew_frmvelen()
         if self.label16 ~= nil then self.label16:destroy(); self.label16 = nil; end;
         if self.button21 ~= nil then self.button21:destroy(); self.button21 = nil; end;
         if self.edit2 ~= nil then self.edit2:destroy(); self.edit2 = nil; end;
-        if self.edit10 ~= nil then self.edit10:destroy(); self.edit10 = nil; end;
-        if self.edit16 ~= nil then self.edit16:destroy(); self.edit16 = nil; end;
         if self.rectangle8 ~= nil then self.rectangle8:destroy(); self.rectangle8 = nil; end;
         if self.label9 ~= nil then self.label9:destroy(); self.label9 = nil; end;
+        if self.edit10 ~= nil then self.edit10:destroy(); self.edit10 = nil; end;
+        if self.edit16 ~= nil then self.edit16:destroy(); self.edit16 = nil; end;
         if self.edit1 ~= nil then self.edit1:destroy(); self.edit1 = nil; end;
-        if self.edit31 ~= nil then self.edit31:destroy(); self.edit31 = nil; end;
         if self.comboBox2 ~= nil then self.comboBox2:destroy(); self.comboBox2 = nil; end;
         if self.button4 ~= nil then self.button4:destroy(); self.button4 = nil; end;
         if self.edit21 ~= nil then self.edit21:destroy(); self.edit21 = nil; end;
@@ -3194,7 +3043,6 @@ local function constructNew_frmvelen()
         if self.label17 ~= nil then self.label17:destroy(); self.label17 = nil; end;
         if self.comboBox1 ~= nil then self.comboBox1:destroy(); self.comboBox1 = nil; end;
         if self.edit13 ~= nil then self.edit13:destroy(); self.edit13 = nil; end;
-        if self.edit39 ~= nil then self.edit39:destroy(); self.edit39 = nil; end;
         if self.edit23 ~= nil then self.edit23:destroy(); self.edit23 = nil; end;
         if self.dataLink1 ~= nil then self.dataLink1:destroy(); self.dataLink1 = nil; end;
         if self.button11 ~= nil then self.button11:destroy(); self.button11 = nil; end;
@@ -3207,21 +3055,17 @@ local function constructNew_frmvelen()
         if self.rectangle3 ~= nil then self.rectangle3:destroy(); self.rectangle3 = nil; end;
         if self.rectangle6 ~= nil then self.rectangle6:destroy(); self.rectangle6 = nil; end;
         if self.label21 ~= nil then self.label21:destroy(); self.label21 = nil; end;
-        if self.edit37 ~= nil then self.edit37:destroy(); self.edit37 = nil; end;
-        if self.edit40 ~= nil then self.edit40:destroy(); self.edit40 = nil; end;
         if self.dataLink6 ~= nil then self.dataLink6:destroy(); self.dataLink6 = nil; end;
-        if self.tabControl1 ~= nil then self.tabControl1:destroy(); self.tabControl1 = nil; end;
         if self.btnUpaLevel ~= nil then self.btnUpaLevel:destroy(); self.btnUpaLevel = nil; end;
         if self.dataLink2 ~= nil then self.dataLink2:destroy(); self.dataLink2 = nil; end;
         if self.label10 ~= nil then self.label10:destroy(); self.label10 = nil; end;
-        if self.edit17 ~= nil then self.edit17:destroy(); self.edit17 = nil; end;
-        if self.button10 ~= nil then self.button10:destroy(); self.button10 = nil; end;
         if self.label19 ~= nil then self.label19:destroy(); self.label19 = nil; end;
+        if self.button10 ~= nil then self.button10:destroy(); self.button10 = nil; end;
+        if self.edit17 ~= nil then self.edit17:destroy(); self.edit17 = nil; end;
         if self.button17 ~= nil then self.button17:destroy(); self.button17 = nil; end;
-        if self.edit38 ~= nil then self.edit38:destroy(); self.edit38 = nil; end;
         if self.rectangle12 ~= nil then self.rectangle12:destroy(); self.rectangle12 = nil; end;
-        if self.edit15 ~= nil then self.edit15:destroy(); self.edit15 = nil; end;
         if self.label11 ~= nil then self.label11:destroy(); self.label11 = nil; end;
+        if self.edit15 ~= nil then self.edit15:destroy(); self.edit15 = nil; end;
         if self.label3 ~= nil then self.label3:destroy(); self.label3 = nil; end;
         if self.label20 ~= nil then self.label20:destroy(); self.label20 = nil; end;
         if self.button9 ~= nil then self.button9:destroy(); self.button9 = nil; end;
@@ -3236,7 +3080,6 @@ local function constructNew_frmvelen()
         if self.label2 ~= nil then self.label2:destroy(); self.label2 = nil; end;
         if self.edit22 ~= nil then self.edit22:destroy(); self.edit22 = nil; end;
         if self.edit3 ~= nil then self.edit3:destroy(); self.edit3 = nil; end;
-        if self.edit42 ~= nil then self.edit42:destroy(); self.edit42 = nil; end;
         if self.label5 ~= nil then self.label5:destroy(); self.label5 = nil; end;
         if self.rectangle4 ~= nil then self.rectangle4:destroy(); self.rectangle4 = nil; end;
         if self.rectangle13 ~= nil then self.rectangle13:destroy(); self.rectangle13 = nil; end;
@@ -3244,8 +3087,6 @@ local function constructNew_frmvelen()
         if self.edit27 ~= nil then self.edit27:destroy(); self.edit27 = nil; end;
         if self.button19 ~= nil then self.button19:destroy(); self.button19 = nil; end;
         if self.button14 ~= nil then self.button14:destroy(); self.button14 = nil; end;
-        if self.tab1 ~= nil then self.tab1:destroy(); self.tab1 = nil; end;
-        if self.edit32 ~= nil then self.edit32:destroy(); self.edit32 = nil; end;
         if self.edit18 ~= nil then self.edit18:destroy(); self.edit18 = nil; end;
         if self.edit25 ~= nil then self.edit25:destroy(); self.edit25 = nil; end;
         if self.scrollBox1 ~= nil then self.scrollBox1:destroy(); self.scrollBox1 = nil; end;
