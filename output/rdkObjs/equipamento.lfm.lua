@@ -940,14 +940,14 @@ local function constructNew_frmequip()
     obj.rectangle1:setColor("black");
     obj.rectangle1:setXradius(10);
     obj.rectangle1:setYradius(10);
-    obj.rectangle1:setHeight(250);
+    obj.rectangle1:setHeight(280);
     obj.rectangle1:setPadding({top=3, left=3, right=3, bottom=3});
     obj.rectangle1:setName("rectangle1");
 
     obj.layout2 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout2:setParent(obj.rectangle1);
     obj.layout2:setAlign("top");
-    obj.layout2:setHeight(30);
+    obj.layout2:setHeight(35);
     obj.layout2:setMargins({bottom=4});
     obj.layout2:setName("layout2");
 
@@ -962,15 +962,16 @@ local function constructNew_frmequip()
     obj.edit38 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit38:setParent(obj.layout2);
     obj.edit38:setLeft(132);
-    obj.edit38:setTop(5);
+    obj.edit38:setTop(10);
     obj.edit38:setWidth(250);
+    obj.edit38:setHeight(25);
     obj.edit38:setField("campoTitulo");
     obj.edit38:setName("edit38");
 
     obj.layout3 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout3:setParent(obj.rectangle1);
     obj.layout3:setAlign("top");
-    obj.layout3:setHeight(200);
+    obj.layout3:setHeight(230);
     obj.layout3:setName("layout3");
 
     obj.image2 = GUI.fromHandle(_obj_newObject("image"));
@@ -991,10 +992,19 @@ local function constructNew_frmequip()
     obj.textEditor1:setParent(obj.layout4);
     obj.textEditor1:setTop(5);
     obj.textEditor1:setLeft(1);
-    obj.textEditor1:setWidth(250);
+    obj.textEditor1:setWidth(240);
     obj.textEditor1:setHeight(180);
     obj.textEditor1:setField("campoTextoGrande");
     obj.textEditor1:setName("textEditor1");
+
+    obj.button6 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button6:setParent(obj.layout4);
+    obj.button6:setTop(200);
+    obj.button6:setLeft(50);
+    obj.button6:setText("Apagar!");
+    obj.button6:setMargins({left=4, right=4, top=2, bottom=2});
+    obj.button6:setWidth(150);
+    obj.button6:setName("button6");
 
     obj._e_event0 = obj.button1:addEventListener("onClick",
         function (_)
@@ -1035,7 +1045,25 @@ local function constructNew_frmequip()
                                       self.boxDetalhesDoItem.visible = (node ~= nil);
         end, obj);
 
+    obj._e_event6 = obj.rclListaDosItens:addEventListener("onEndEnumeration",
+        function (_)
+            if self.rclListaDosItens.selectedNode == nil and sheet ~= nil then
+            							local nodes = ndb.getChildNodes(sheet.campoDosItens);               
+            
+            							if #nodes > 0 then
+            									self.rclListaDosItens.selectedNode = nodes[1];
+            							end;
+            					end;
+        end, obj);
+
+    obj._e_event7 = obj.button6:addEventListener("onClick",
+        function (_)
+            NDB.deleteNode(self.boxDetalhesDoItem.node);
+        end, obj);
+
     function obj:_releaseEvents()
+        __o_rrpgObjs.removeEventListenerById(self._e_event7);
+        __o_rrpgObjs.removeEventListenerById(self._e_event6);
         __o_rrpgObjs.removeEventListenerById(self._e_event5);
         __o_rrpgObjs.removeEventListenerById(self._e_event4);
         __o_rrpgObjs.removeEventListenerById(self._e_event3);
@@ -1119,6 +1147,7 @@ local function constructNew_frmequip()
         if self.edit13 ~= nil then self.edit13:destroy(); self.edit13 = nil; end;
         if self.edit23 ~= nil then self.edit23:destroy(); self.edit23 = nil; end;
         if self.label29 ~= nil then self.label29:destroy(); self.label29 = nil; end;
+        if self.button6 ~= nil then self.button6:destroy(); self.button6 = nil; end;
         if self.label36 ~= nil then self.label36:destroy(); self.label36 = nil; end;
         if self.button5 ~= nil then self.button5:destroy(); self.button5 = nil; end;
         if self.edit37 ~= nil then self.edit37:destroy(); self.edit37 = nil; end;

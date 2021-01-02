@@ -1062,7 +1062,7 @@ local function constructNew_frmvelen()
     obj.edit27:setTransparent(true);
     obj.edit27:setFontColor("Black");
     obj.edit27:setFontSize(22);
-    obj.edit27:setEnabled(false);
+    obj.edit27:setEnabled(true);
     obj.edit27:setField("ControladorAtributos");
     obj.edit27:setName("edit27");
 
@@ -2798,28 +2798,28 @@ local function constructNew_frmvelen()
             			end;
             			
             			if sheet.level == 5 then 
+            				sheet.DEFRED = math.floor((tonumber(sheet.Defesa) or 0) /0.6);
+            				sheet.RESRED = math.floor((tonumber(sheet.Resistencia) or 0) /0.6);
+            			end;
+            			
+            			if sheet.level == 4 then 
             				sheet.DEFRED = math.floor((tonumber(sheet.Defesa) or 0) /0.5);
             				sheet.RESRED = math.floor((tonumber(sheet.Resistencia) or 0) /0.5);
             			end;
             			
-            			if sheet.level == 4 then 
+            			if sheet.level == 3 then 
             				sheet.DEFRED = math.floor((tonumber(sheet.Defesa) or 0) /0.4);
             				sheet.RESRED = math.floor((tonumber(sheet.Resistencia) or 0) /0.4);
             			end;
             			
-            			if sheet.level == 3 then 
+            			if sheet.level == 2 then 
             				sheet.DEFRED = math.floor((tonumber(sheet.Defesa) or 0) /0.3);
             				sheet.RESRED = math.floor((tonumber(sheet.Resistencia) or 0) /0.3);
             			end;
             			
-            			if sheet.level == 2 then 
+            			if sheet.level == 1 then 
             				sheet.DEFRED = math.floor((tonumber(sheet.Defesa) or 0) /0.2);
             				sheet.RESRED = math.floor((tonumber(sheet.Resistencia) or 0) /0.2);
-            			end;
-            			
-            			if sheet.level == 1 then 
-            				sheet.DEFRED = math.floor((tonumber(sheet.Defesa) or 0) /0.15);
-            				sheet.RESRED = math.floor((tonumber(sheet.Resistencia) or 0) /0.15);
             			end;
         end, obj);
 

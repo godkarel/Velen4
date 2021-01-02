@@ -217,30 +217,40 @@ local function constructNew_frmsummon()
                                       self.FichaSummon.visible = (node ~= nil);
         end, obj);
 
-    obj._e_event2 = obj.button2:addEventListener("onClick",
+    obj._e_event2 = obj.rclSummon:addEventListener("onEndEnumeration",
+        function (_)
+            if self.rclSummon.selectedNode == nil and sheet ~= nil then
+            								local nodes = ndb.getChildNodes(sheet.CampoSummon);           
+            								if #nodes > 0 then
+            										self.rclSummon.selectedNode = nodes[1];
+            								end;
+            						end;
+        end, obj);
+
+    obj._e_event3 = obj.button2:addEventListener("onClick",
         function (_)
             NDB.deleteNode(self.FichaSummon.node);
         end, obj);
 
-    obj._e_event3 = obj.button3:addEventListener("onClick",
+    obj._e_event4 = obj.button3:addEventListener("onClick",
         function (_)
             local node = self.FichaSummon.node;
             
-                                    local rolagem = Firecast.interpretarRolagem(sheet.ataqueDoPersonagem); 
+            							local rolagem = Firecast.interpretarRolagem(sheet.ataqueDoPersonagem); 
             
-                                    if not rolagem.possuiAlgumDado then
-                                            rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
-                                    end; 
+            							if not rolagem.possuiAlgumDado then
+            									rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+            							end; 
             
-                                    local mesaDoPersonagem = Firecast.getMesaDe(sheet);					
+            							local mesaDoPersonagem = Firecast.getMesaDe(sheet);					
             
-                                   if mesaDoPersonagem ~= nil then
-                                           mesaDoPersonagem.chat:rolarDados(rolagem, node.HabilidadeSummon1);
-            							   
-                                   end;
+            							   if mesaDoPersonagem ~= nil then
+            									   mesaDoPersonagem.chat:rolarDados(rolagem, node.HabilidadeSummon1);
+            									   
+            							   end;
         end, obj);
 
-    obj._e_event4 = obj.button4:addEventListener("onClick",
+    obj._e_event5 = obj.button4:addEventListener("onClick",
         function (_)
             local node = self.FichaSummon.node;
             
@@ -260,6 +270,7 @@ local function constructNew_frmsummon()
         end, obj);
 
     function obj:_releaseEvents()
+        __o_rrpgObjs.removeEventListenerById(self._e_event5);
         __o_rrpgObjs.removeEventListenerById(self._e_event4);
         __o_rrpgObjs.removeEventListenerById(self._e_event3);
         __o_rrpgObjs.removeEventListenerById(self._e_event2);

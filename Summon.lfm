@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<popupForm	 name="frmsummon" width="650" height="920" >
-
-
-		
+<popupForm	 name="frmsummon" width="650" height="920" >		
         <layout align="top" height="30" margins="{bottom=4}">
                 <button text="Nova Summon" width="150" align="left">
                         <event name="onClick">
@@ -25,6 +22,16 @@
                   -- a caixa de detalhe só ficará visível se houver item selecionado
                           self.FichaSummon.visible = (node ~= nil);
                </event>
+			   
+			   <event name="onEndEnumeration">
+						if self.rclSummon.selectedNode == nil and sheet ~= nil then
+								local nodes = ndb.getChildNodes(sheet.CampoSummon);           
+								if #nodes > 0 then
+										self.rclSummon.selectedNode = nodes[1];
+								end;
+						end;
+				</event>
+
         </recordList>            
         
 
@@ -53,25 +60,25 @@
 						 <textEditor left="25" top="720" width="500" height="150" field="HabilidadeSummon2" />
 						 
 						 <button left="130" top="480" fontSize="20" height="30" width="70" text="Usar" fontColor="White">
-								<event name="onClick"> 
+							<event name="onClick"> 
 
-						local node = self.FichaSummon.node;
+							local node = self.FichaSummon.node;
 
-                        local rolagem = Firecast.interpretarRolagem(sheet.ataqueDoPersonagem); 
+							local rolagem = Firecast.interpretarRolagem(sheet.ataqueDoPersonagem); 
 
-                        if not rolagem.possuiAlgumDado then
-                                rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
-                        end; 
+							if not rolagem.possuiAlgumDado then
+									rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+							end; 
 
-                        local mesaDoPersonagem = Firecast.getMesaDe(sheet);					
+							local mesaDoPersonagem = Firecast.getMesaDe(sheet);					
 
-                       if mesaDoPersonagem ~= nil then
-                               mesaDoPersonagem.chat:rolarDados(rolagem, node.HabilidadeSummon1);
-							   
-                       end;
+							   if mesaDoPersonagem ~= nil then
+									   mesaDoPersonagem.chat:rolarDados(rolagem, node.HabilidadeSummon1);
+									   
+							   end;
 
-								       </event>
-								</button>
+							</event>
+						</button>
 								
 								
 								
