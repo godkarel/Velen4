@@ -2920,6 +2920,10 @@ local function constructNew_frmvelen()
             				else
             					self.btnUpaLevel.visible = false
             				end;
+            				
+            				if sheet.Level > 30 then
+            					sheet.Level = 30;
+            				end;
             			end;
         end, obj);
 

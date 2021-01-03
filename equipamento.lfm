@@ -164,8 +164,9 @@
                                 <label left="15" top="10" text="Nome do Item" autoSize="true"/>
                                 <edit left="132" top="10" width="250" height="25" field="campoTitulo"/>
                         </layout>                       
-                        <layout align="top" height="230">              
-                                <image align="left" editable="true" field="campoURLImagem" width="130"/>                               
+                        <layout align="top" height="230"> 
+								<label left="20" top="80" text="Foto do Item"/> 
+                                <image align="left" editable="true" field="campoURLImagem" width="130"/>
                                 <layout align="client" margins="{left=2}">
 										
                                         <textEditor top="5" left="1" width="240" height="180" field="campoTextoGrande" />

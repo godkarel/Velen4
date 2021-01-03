@@ -267,6 +267,16 @@ local function constructNew_frmhabilidade()
     obj.image2:setSRC("/imagens/magia.png");
     obj.image2:setName("image2");
 
+    obj.button2 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button2:setParent(obj.rectangle1);
+    obj.button2:setLeft(250);
+    obj.button2:setTop(510);
+    obj.button2:setFontColor("red");
+    obj.button2:setText("Apagar!");
+    obj.button2:setMargins({left=4, right=4, top=2, bottom=2});
+    obj.button2:setWidth(150);
+    obj.button2:setName("button2");
+
     obj.edit8 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit8:setParent(obj.rectangle1);
     obj.edit8:setWidth(120);
@@ -274,17 +284,17 @@ local function constructNew_frmhabilidade()
     obj.edit8:setField("naoEBuff");
     obj.edit8:setName("edit8");
 
-    obj.button2 = GUI.fromHandle(_obj_newObject("button"));
-    obj.button2:setParent(obj.rectangle1);
-    obj.button2:setLeft(60);
-    obj.button2:setTop(450);
-    obj.button2:setFontSize(20);
-    obj.button2:setOpacity(0.1);
-    obj.button2:setHeight(90);
-    obj.button2:setWidth(150);
-    obj.button2:setText("Usar");
-    obj.button2:setFontColor("White");
-    obj.button2:setName("button2");
+    obj.button3 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button3:setParent(obj.rectangle1);
+    obj.button3:setLeft(60);
+    obj.button3:setTop(450);
+    obj.button3:setFontSize(20);
+    obj.button3:setOpacity(0.1);
+    obj.button3:setHeight(90);
+    obj.button3:setWidth(150);
+    obj.button3:setText("Usar");
+    obj.button3:setFontColor("White");
+    obj.button3:setName("button3");
 
 					
 					local function ExecutarH1() 
@@ -407,12 +417,30 @@ local function constructNew_frmhabilidade()
             				self.ListaJutsus3.visible = (node ~= nil);
         end, obj);
 
-    obj._e_event2 = obj.button2:addEventListener("onClick",
+    obj._e_event2 = obj.rclListaDosItens3:addEventListener("onEndEnumeration",
+        function (_)
+            if self.rclListaDosItens3.selectedNode == nil and sheet ~= nil then
+            							local nodes = ndb.getChildNodes(sheet.ListaDeHabilidades);               
+            
+            							if #nodes > 0 then
+            									self.rclListaDosItens3.selectedNode = nodes[1];
+            							end;
+            					end;
+        end, obj);
+
+    obj._e_event3 = obj.button2:addEventListener("onClick",
+        function (_)
+            NDB.deleteNode(self.ListaJutsus3.node);
+        end, obj);
+
+    obj._e_event4 = obj.button3:addEventListener("onClick",
         function (_)
             ExecutarH1()
         end, obj);
 
     function obj:_releaseEvents()
+        __o_rrpgObjs.removeEventListenerById(self._e_event4);
+        __o_rrpgObjs.removeEventListenerById(self._e_event3);
         __o_rrpgObjs.removeEventListenerById(self._e_event2);
         __o_rrpgObjs.removeEventListenerById(self._e_event1);
         __o_rrpgObjs.removeEventListenerById(self._e_event0);
@@ -428,6 +456,7 @@ local function constructNew_frmhabilidade()
         end;
 
         if self.button1 ~= nil then self.button1:destroy(); self.button1 = nil; end;
+        if self.button3 ~= nil then self.button3:destroy(); self.button3 = nil; end;
         if self.label1 ~= nil then self.label1:destroy(); self.label1 = nil; end;
         if self.edit4 ~= nil then self.edit4:destroy(); self.edit4 = nil; end;
         if self.label3 ~= nil then self.label3:destroy(); self.label3 = nil; end;

@@ -9,6 +9,8 @@
 					-- Vamos inserir um novo item no nosso recordList                              
 					self.rclListaDosItens3:append();
 			</event>
+			
+			
 		</button>
 		<!-- recordList, representando a lista -->
 		<recordList name="rclListaDosItens3" field="ListaDeHabilidades" templateForm="frmItemDaLista3"
@@ -23,6 +25,16 @@
 				-- a caixa de detalhe só ficará visível se houver item selecionado
 				self.ListaJutsus3.visible = (node ~= nil);
 			</event>
+			
+			<event name="onEndEnumeration">
+					if self.rclListaDosItens3.selectedNode == nil and sheet ~= nil then
+							local nodes = ndb.getChildNodes(sheet.ListaDeHabilidades);               
+
+							if #nodes > 0 then
+									self.rclListaDosItens3.selectedNode = nodes[1];
+							end;
+					end;
+				</event>
 		</recordList>       
 		<!-- dataScopeBox representando a nossa caixa de detalhes -->  
 		<dataScopeBox name="ListaJutsus3" visible="false" width="480" height="580" left="540" top="60" >
@@ -46,6 +58,7 @@
 				<edit left="330" top="455" width="80" height="30" enabled="false" fontColor="Red" type="number" field="Hintensidade1"/>
 				
 				<image left="60" top="420" width="150" height="150" src="/imagens/magia.png"/>
+				<button left="250" top="510" fontColor="red" text="Apagar!" margins="{left=4, right=4, top=2, bottom=2}" width="150" onClick="NDB.deleteNode(self.ListaJutsus3.node);" />
 				<edit width="120" visible="false" field="naoEBuff"/>				
 				<button left="60" top="450" fontSize="20" opacity="0.1" height="90" width="150" text="Usar" fontColor="White" onClick="ExecutarH1()"/>								
 				<script>					

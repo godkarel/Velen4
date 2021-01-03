@@ -974,6 +974,13 @@ local function constructNew_frmequip()
     obj.layout3:setHeight(230);
     obj.layout3:setName("layout3");
 
+    obj.label42 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label42:setParent(obj.layout3);
+    obj.label42:setLeft(20);
+    obj.label42:setTop(80);
+    obj.label42:setText("Foto do Item");
+    obj.label42:setName("label42");
+
     obj.image2 = GUI.fromHandle(_obj_newObject("image"));
     obj.image2:setParent(obj.layout3);
     obj.image2:setAlign("left");
@@ -1142,6 +1149,7 @@ local function constructNew_frmequip()
         if self.edit30 ~= nil then self.edit30:destroy(); self.edit30 = nil; end;
         if self.button3 ~= nil then self.button3:destroy(); self.button3 = nil; end;
         if self.label1 ~= nil then self.label1:destroy(); self.label1 = nil; end;
+        if self.label42 ~= nil then self.label42:destroy(); self.label42 = nil; end;
         if self.layout4 ~= nil then self.layout4:destroy(); self.layout4 = nil; end;
         if self.label17 ~= nil then self.label17:destroy(); self.label17 = nil; end;
         if self.edit13 ~= nil then self.edit13:destroy(); self.edit13 = nil; end;

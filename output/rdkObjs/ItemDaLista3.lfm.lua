@@ -36,13 +36,6 @@ local function constructNew_frmItemDaLista3()
     obj.layout1:setMargins({left=4, right=4, top=4, bottom=4});
     obj.layout1:setName("layout1");
 
-    obj.button1 = GUI.fromHandle(_obj_newObject("button"));
-    obj.button1:setParent(obj.layout1);
-    obj.button1:setAlign("left");
-    obj.button1:setWidth(32);
-    obj.button1:setText("X");
-    obj.button1:setName("button1");
-
     obj.label1 = GUI.fromHandle(_obj_newObject("label"));
     obj.label1:setParent(obj.layout1);
     obj.label1:setAlign("client");
@@ -52,13 +45,7 @@ local function constructNew_frmItemDaLista3()
     obj.label1:setMargins({left=4});
     obj.label1:setName("label1");
 
-    obj._e_event0 = obj.button1:addEventListener("onClick",
-        function (_)
-            ndb.deleteNode(sheet);
-        end, obj);
-
     function obj:_releaseEvents()
-        __o_rrpgObjs.removeEventListenerById(self._e_event0);
     end;
 
     obj._oldLFMDestroy = obj.destroy;
@@ -71,7 +58,6 @@ local function constructNew_frmItemDaLista3()
         end;
 
         if self.layout1 ~= nil then self.layout1:destroy(); self.layout1 = nil; end;
-        if self.button1 ~= nil then self.button1:destroy(); self.button1 = nil; end;
         if self.label1 ~= nil then self.label1:destroy(); self.label1 = nil; end;
         self:_oldLFMDestroy();
     end;
