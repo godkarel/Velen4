@@ -1436,7 +1436,7 @@ local function constructNew_frmvelen()
 					
 			if sheet.Classe == 'Animago' then					
 				sheet.ClasseAcerto = 1
-				sheet.ClasseAM = 14
+				sheet.ClasseAM = 15
 				sheet.ClasseCR = 20
 				sheet.ClasseCM = 1
 				sheet.ClasseEsquiva = 11
@@ -1445,7 +1445,7 @@ local function constructNew_frmvelen()
 				
 			if sheet.Classe == 'Arqueiro' then
 				sheet.ClasseAcerto = 2;
-				sheet.ClasseAM = 14;
+				sheet.ClasseAM = 15;
 				sheet.ClasseCR = 20;
 				sheet.ClasseCM = 1;
 				sheet.ClasseEsquiva = 11;
@@ -1454,7 +1454,7 @@ local function constructNew_frmvelen()
 				
 			if sheet.Classe == 'Bardo' then
 				sheet.ClasseAcerto = 1;
-				sheet.ClasseAM = 15;
+				sheet.ClasseAM = 16;
 				sheet.ClasseCR = 20;
 				sheet.ClasseCM = 1;
 				sheet.ClasseEsquiva = 11;
@@ -1463,7 +1463,7 @@ local function constructNew_frmvelen()
 				
 			if sheet.Classe == 'Bispo' then
 				sheet.ClasseAcerto = 1;
-				sheet.ClasseAM = 15;
+				sheet.ClasseAM = 16;
 				sheet.ClasseCR = 20;
 				sheet.ClasseCM = 1;
 				sheet.ClasseEsquiva = 11;
@@ -1472,7 +1472,7 @@ local function constructNew_frmvelen()
 				
 			if sheet.Classe == 'Caçador de Almas' then
 				sheet.ClasseAcerto = 1;
-				sheet.ClasseAM = 14;
+				sheet.ClasseAM = 15;
 				sheet.ClasseCR = 20;
 				sheet.ClasseCM = 2;
 				sheet.ClasseEsquiva = 11;
@@ -1481,7 +1481,7 @@ local function constructNew_frmvelen()
 				
 			if sheet.Classe == 'Guerreiro' then
 				sheet.ClasseAcerto = 1;
-				sheet.ClasseAM = 13;
+				sheet.ClasseAM = 14;
 				sheet.ClasseCR = 19;
 				sheet.ClasseCM = 1;
 				sheet.ClasseEsquiva = 11;
@@ -1490,7 +1490,7 @@ local function constructNew_frmvelen()
 				
 			if sheet.Classe == 'Ladino' then
 				sheet.ClasseAcerto = 1;
-				sheet.ClasseAM = 14;
+				sheet.ClasseAM = 15;
 				sheet.ClasseCR = 20;
 				sheet.ClasseCM = 1;
 				sheet.ClasseEsquiva = 12;
@@ -1499,7 +1499,7 @@ local function constructNew_frmvelen()
 				
 			if sheet.Classe == 'Mago' then
 				sheet.ClasseAcerto = 1;
-				sheet.ClasseAM = 15;
+				sheet.ClasseAM = 16;
 				sheet.ClasseCR = 20;
 				sheet.ClasseCM = 1;
 				sheet.ClasseEsquiva = 11;
@@ -1509,7 +1509,7 @@ local function constructNew_frmvelen()
 				
 			if sheet.Classe == 'Mercenario' then
 				sheet.ClasseAcerto = 1;
-				sheet.ClasseAM = 14;
+				sheet.ClasseAM = 15;
 				sheet.ClasseCR = 19;
 				sheet.ClasseCM = 2;
 				sheet.ClasseEsquiva = 11;
@@ -1518,7 +1518,7 @@ local function constructNew_frmvelen()
 				
 			if sheet.Classe == 'Monge' then
 				sheet.ClasseAcerto = 1;
-				sheet.ClasseAM = 14;
+				sheet.ClasseAM = 15;
 				sheet.ClasseCR = 20;
 				sheet.ClasseCM = 1;
 				sheet.ClasseEsquiva = 12;
@@ -1527,7 +1527,7 @@ local function constructNew_frmvelen()
 				
 			if sheet.Classe == 'Paladino' then
 				sheet.ClasseAcerto = 1;
-				sheet.ClasseAM = 14;
+				sheet.ClasseAM = 15;
 				sheet.ClasseCR= 20;
 				sheet.ClasseCM = 1;
 				sheet.ClasseEsquiva = 11;
@@ -1616,7 +1616,7 @@ local function constructNew_frmvelen()
 				sheet.EspecAcerto = 0;
 				sheet.EspecAM = 0;
 				sheet.EspecCR = 0;
-				sheet.EspecCM = 1;
+				sheet.EspecCM = 0;
 				sheet.EspecEsquiva = 0;
 				sheet.EspecPer = 1;
 			end;
@@ -1624,7 +1624,7 @@ local function constructNew_frmvelen()
 			if sheet.Espec == 'Caçador' then
 				sheet.EspecAcerto = 0;
 				sheet.EspecAM = 0;
-				sheet.EspecCR = 1;
+				sheet.EspecCR = 0;
 				sheet.EspecCM = 0;
 				sheet.EspecEsquiva = 1;
 				sheet.EspecPer = 0;
@@ -1632,7 +1632,7 @@ local function constructNew_frmvelen()
 			
 			if sheet.Espec == 'Sentinela Lunar' then
 				sheet.EspecAcerto = 0;
-				sheet.EspecAM = 1;
+				sheet.EspecAM = 0;
 				sheet.EspecCR = 0;
 				sheet.EspecCM = 1;
 				sheet.EspecEsquiva = 0;
@@ -1668,9 +1668,9 @@ local function constructNew_frmvelen()
 			
 			if sheet.Espec == 'Juiz' then
 				sheet.EspecAcerto = 0;
-				sheet.EspecAM = 1;
-				sheet.EspecCR = 0;
-				sheet.EspecCM = 0;
+				sheet.EspecAM = 0;
+				sheet.EspecCR = 1;
+				sheet.EspecCM = 1;
 				sheet.EspecEsquiva = 0;
 				sheet.EspecPer = 0;
 			end;
@@ -1697,7 +1697,7 @@ local function constructNew_frmvelen()
 				sheet.EspecAcerto = 0;
 				sheet.EspecAM = 1;
 				sheet.EspecCR = 0;
-				sheet.EspecCM = 1;
+				sheet.EspecCM = 0;
 				sheet.EspecEsquiva = 0;
 				sheet.EspecPer = 0;
 			end;
@@ -1706,7 +1706,7 @@ local function constructNew_frmvelen()
 				sheet.EspecAcerto = 0;
 				sheet.EspecAM = 0;
 				sheet.EspecCR = 1;
-				sheet.EspecCM = 1;
+				sheet.EspecCM = 0;
 				sheet.EspecEsquiva = 0;
 				sheet.EspecPer = 0;
 			end;
@@ -1768,7 +1768,7 @@ local function constructNew_frmvelen()
 			if sheet.Espec == 'Cavaleiro das Trevas' then
 				sheet.EspecAcerto = 0;
 				sheet.EspecAM = 0;
-				sheet.EspecCR = 1;
+				sheet.EspecCR = 0;
 				sheet.EspecCM = 1;
 				sheet.EspecEsquiva = 0;
 				sheet.EspecPer = 0;
@@ -1780,7 +1780,7 @@ local function constructNew_frmvelen()
 				sheet.EspecCR = 0;
 				sheet.EspecCM = 0;
 				sheet.EspecEsquiva = 0;
-				sheet.EspecPer = 1;
+				sheet.EspecPer = 0;
 			end;
 		end;	
 	
