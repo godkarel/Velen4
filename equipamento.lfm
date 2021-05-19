@@ -2,10 +2,25 @@
 <popupForm	 name="frmequip" width="650" height="920" >
 
 
-	<scrollBox align="client">
+	<scrollBox align="client">								
+    <image width="620" height="920" center="true"  src="/imagens/2.png"/>
+	
+	----------- Flechas --------------
+	<progressBar name="BarraFlecha" left="400" top="420" width="90" value="100" max="100" color="green"/>	
+	<edit left="405" top="420" width="35" height="20" horzTextAlign="center" transparent="true" type="number" field="AtualFlecha" />
+	<label left="440" top="420" width="12" height="20" horzTextAlign="center" text="/" />
+    <edit left="447" top="420" width="35" height="20" horzTextAlign="center" transparent="true" type="number" field="MaxFlecha" />
+
+	 <dataLink fields="{'AtualFlecha', 'MaxFlecha'}">
+		<event name="onChange">                
+			self.BarraFlecha.max = sheet.MaxFlecha;
+			self.BarraFlecha.value = sheet.AtualFlecha
 			
-     <image width="620" height="920" center="true"  src="/imagens/2.png"/>
-          
+			if sheet.AtualFlecha > sheet.MaxFlecha then
+				sheet.AtualFlecha = (tonumber(sheet.MaxFlecha) or 0);
+			end;
+		</event>
+	</dataLink>
 		  ----------Arma---------------
 	           <button left="70" top="158" width="80" height="80" opacity="0.1" text="" onClick="self.DBArma:show();"/>
 			   
@@ -177,7 +192,9 @@
         </dataScopeBox>
 
 
-		        </scrollBox>
+	
+
+	</scrollBox>
 
 
 </popupForm>

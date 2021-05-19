@@ -508,14 +508,25 @@ local function constructNew_frmvelen()
     obj.label14:setText("Redução");
     obj.label14:setName("label14");
 
-    obj.rectangle13 = GUI.fromHandle(_obj_newObject("rectangle"));
-    obj.rectangle13:setParent(obj.scrollBox1);
-    obj.rectangle13:setLeft(148);
-    obj.rectangle13:setTop(603);
-    obj.rectangle13:setColor("black");
-    obj.rectangle13:setWidth(100);
-    obj.rectangle13:setHeight(30);
-    obj.rectangle13:setName("rectangle13");
+    obj.button11 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button11:setParent(obj.scrollBox1);
+    obj.button11:setLeft(80);
+    obj.button11:setTop(603);
+    obj.button11:setWidth(38);
+    obj.button11:setOpacity(0.1);
+    obj.button11:setHeight(32);
+    obj.button11:setName("button11");
+
+    obj.progressBar1 = GUI.fromHandle(_obj_newObject("progressBar"));
+    obj.progressBar1:setParent(obj.scrollBox1);
+    obj.progressBar1:setLeft(148);
+    obj.progressBar1:setTop(603);
+    obj.progressBar1:setColor("red");
+    obj.progressBar1:setWidth(100);
+    obj.progressBar1:setPosition(100);
+    obj.progressBar1:setMax(100);
+    obj.progressBar1:setHeight(30);
+    obj.progressBar1:setName("progressBar1");
 
     obj.label15 = GUI.fromHandle(_obj_newObject("label"));
     obj.label15:setParent(obj.scrollBox1);
@@ -523,20 +534,32 @@ local function constructNew_frmvelen()
     obj.label15:setFontSize(20);
     obj.label15:setTop(603);
     obj.label15:setWidth(100);
-    obj.label15:setFontColor("red");
+    obj.label15:setFontColor("white");
+    obj.label15:setHorzTextAlign("center");
     obj.label15:setHeight(30);
     lfm_setPropAsString(obj.label15, "format",  "%d");
     obj.label15:setField("HPTotal");
     obj.label15:setName("label15");
 
-    obj.rectangle14 = GUI.fromHandle(_obj_newObject("rectangle"));
-    obj.rectangle14:setParent(obj.scrollBox1);
-    obj.rectangle14:setLeft(148);
-    obj.rectangle14:setTop(640);
-    obj.rectangle14:setColor("black");
-    obj.rectangle14:setWidth(100);
-    obj.rectangle14:setHeight(30);
-    obj.rectangle14:setName("rectangle14");
+    obj.button12 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button12:setParent(obj.scrollBox1);
+    obj.button12:setLeft(80);
+    obj.button12:setTop(637);
+    obj.button12:setWidth(38);
+    obj.button12:setOpacity(0.1);
+    obj.button12:setHeight(32);
+    obj.button12:setName("button12");
+
+    obj.progressBar2 = GUI.fromHandle(_obj_newObject("progressBar"));
+    obj.progressBar2:setParent(obj.scrollBox1);
+    obj.progressBar2:setLeft(148);
+    obj.progressBar2:setTop(640);
+    obj.progressBar2:setColor("blue");
+    obj.progressBar2:setWidth(100);
+    obj.progressBar2:setPosition(100);
+    obj.progressBar2:setMax(100);
+    obj.progressBar2:setHeight(30);
+    obj.progressBar2:setName("progressBar2");
 
     obj.label16 = GUI.fromHandle(_obj_newObject("label"));
     obj.label16:setParent(obj.scrollBox1);
@@ -544,20 +567,21 @@ local function constructNew_frmvelen()
     obj.label16:setFontSize(20);
     obj.label16:setTop(640);
     obj.label16:setWidth(100);
-    obj.label16:setFontColor("blue");
+    obj.label16:setFontColor("white");
+    obj.label16:setHorzTextAlign("center");
     obj.label16:setHeight(30);
     lfm_setPropAsString(obj.label16, "format",  "%d");
     obj.label16:setField("MPTotal");
     obj.label16:setName("label16");
 
-    obj.rectangle15 = GUI.fromHandle(_obj_newObject("rectangle"));
-    obj.rectangle15:setParent(obj.scrollBox1);
-    obj.rectangle15:setLeft(168);
-    obj.rectangle15:setTop(702);
-    obj.rectangle15:setColor("black");
-    obj.rectangle15:setWidth(75);
-    obj.rectangle15:setHeight(20);
-    obj.rectangle15:setName("rectangle15");
+    obj.rectangle13 = GUI.fromHandle(_obj_newObject("rectangle"));
+    obj.rectangle13:setParent(obj.scrollBox1);
+    obj.rectangle13:setLeft(168);
+    obj.rectangle13:setTop(702);
+    obj.rectangle13:setColor("black");
+    obj.rectangle13:setWidth(75);
+    obj.rectangle13:setHeight(20);
+    obj.rectangle13:setName("rectangle13");
 
     obj.label17 = GUI.fromHandle(_obj_newObject("label"));
     obj.label17:setParent(obj.scrollBox1);
@@ -568,14 +592,14 @@ local function constructNew_frmvelen()
     obj.label17:setField("Esquiva");
     obj.label17:setName("label17");
 
-    obj.rectangle16 = GUI.fromHandle(_obj_newObject("rectangle"));
-    obj.rectangle16:setParent(obj.scrollBox1);
-    obj.rectangle16:setLeft(168);
-    obj.rectangle16:setTop(732);
-    obj.rectangle16:setColor("black");
-    obj.rectangle16:setWidth(75);
-    obj.rectangle16:setHeight(20);
-    obj.rectangle16:setName("rectangle16");
+    obj.rectangle14 = GUI.fromHandle(_obj_newObject("rectangle"));
+    obj.rectangle14:setParent(obj.scrollBox1);
+    obj.rectangle14:setLeft(168);
+    obj.rectangle14:setTop(732);
+    obj.rectangle14:setColor("black");
+    obj.rectangle14:setWidth(75);
+    obj.rectangle14:setHeight(20);
+    obj.rectangle14:setName("rectangle14");
 
     obj.label18 = GUI.fromHandle(_obj_newObject("label"));
     obj.label18:setParent(obj.scrollBox1);
@@ -587,14 +611,14 @@ local function constructNew_frmvelen()
     obj.label18:setField("Persistencia");
     obj.label18:setName("label18");
 
-    obj.rectangle17 = GUI.fromHandle(_obj_newObject("rectangle"));
-    obj.rectangle17:setParent(obj.scrollBox1);
-    obj.rectangle17:setLeft(498);
-    obj.rectangle17:setTop(610);
-    obj.rectangle17:setColor("black");
-    obj.rectangle17:setWidth(75);
-    obj.rectangle17:setHeight(20);
-    obj.rectangle17:setName("rectangle17");
+    obj.rectangle15 = GUI.fromHandle(_obj_newObject("rectangle"));
+    obj.rectangle15:setParent(obj.scrollBox1);
+    obj.rectangle15:setLeft(498);
+    obj.rectangle15:setTop(610);
+    obj.rectangle15:setColor("black");
+    obj.rectangle15:setWidth(75);
+    obj.rectangle15:setHeight(20);
+    obj.rectangle15:setName("rectangle15");
 
     obj.label19 = GUI.fromHandle(_obj_newObject("label"));
     obj.label19:setParent(obj.scrollBox1);
@@ -605,14 +629,14 @@ local function constructNew_frmvelen()
     obj.label19:setField("Acerto");
     obj.label19:setName("label19");
 
-    obj.rectangle18 = GUI.fromHandle(_obj_newObject("rectangle"));
-    obj.rectangle18:setParent(obj.scrollBox1);
-    obj.rectangle18:setLeft(498);
-    obj.rectangle18:setTop(640);
-    obj.rectangle18:setColor("black");
-    obj.rectangle18:setWidth(75);
-    obj.rectangle18:setHeight(20);
-    obj.rectangle18:setName("rectangle18");
+    obj.rectangle16 = GUI.fromHandle(_obj_newObject("rectangle"));
+    obj.rectangle16:setParent(obj.scrollBox1);
+    obj.rectangle16:setLeft(498);
+    obj.rectangle16:setTop(640);
+    obj.rectangle16:setColor("black");
+    obj.rectangle16:setWidth(75);
+    obj.rectangle16:setHeight(20);
+    obj.rectangle16:setName("rectangle16");
 
     obj.label20 = GUI.fromHandle(_obj_newObject("label"));
     obj.label20:setParent(obj.scrollBox1);
@@ -623,14 +647,14 @@ local function constructNew_frmvelen()
     obj.label20:setField("AcertoMagico");
     obj.label20:setName("label20");
 
-    obj.rectangle19 = GUI.fromHandle(_obj_newObject("rectangle"));
-    obj.rectangle19:setParent(obj.scrollBox1);
-    obj.rectangle19:setLeft(498);
-    obj.rectangle19:setTop(702);
-    obj.rectangle19:setColor("black");
-    obj.rectangle19:setWidth(75);
-    obj.rectangle19:setHeight(20);
-    obj.rectangle19:setName("rectangle19");
+    obj.rectangle17 = GUI.fromHandle(_obj_newObject("rectangle"));
+    obj.rectangle17:setParent(obj.scrollBox1);
+    obj.rectangle17:setLeft(498);
+    obj.rectangle17:setTop(702);
+    obj.rectangle17:setColor("black");
+    obj.rectangle17:setWidth(75);
+    obj.rectangle17:setHeight(20);
+    obj.rectangle17:setName("rectangle17");
 
     obj.label21 = GUI.fromHandle(_obj_newObject("label"));
     obj.label21:setParent(obj.scrollBox1);
@@ -641,14 +665,14 @@ local function constructNew_frmvelen()
     obj.label21:setField("Critical");
     obj.label21:setName("label21");
 
-    obj.rectangle20 = GUI.fromHandle(_obj_newObject("rectangle"));
-    obj.rectangle20:setParent(obj.scrollBox1);
-    obj.rectangle20:setLeft(498);
-    obj.rectangle20:setTop(732);
-    obj.rectangle20:setColor("black");
-    obj.rectangle20:setWidth(75);
-    obj.rectangle20:setHeight(20);
-    obj.rectangle20:setName("rectangle20");
+    obj.rectangle18 = GUI.fromHandle(_obj_newObject("rectangle"));
+    obj.rectangle18:setParent(obj.scrollBox1);
+    obj.rectangle18:setLeft(498);
+    obj.rectangle18:setTop(732);
+    obj.rectangle18:setColor("black");
+    obj.rectangle18:setWidth(75);
+    obj.rectangle18:setHeight(20);
+    obj.rectangle18:setName("rectangle18");
 
     obj.label22 = GUI.fromHandle(_obj_newObject("label"));
     obj.label22:setParent(obj.scrollBox1);
@@ -688,27 +712,9 @@ local function constructNew_frmvelen()
     obj.edit11:setTransparent(true);
     obj.edit11:setName("edit11");
 
-    obj.button11 = GUI.fromHandle(_obj_newObject("button"));
-    obj.button11:setParent(obj.scrollBox1);
-    obj.button11:setLeft(33);
-    obj.button11:setTop(160);
-    obj.button11:setWidth(60);
-    obj.button11:setHeight(60);
-    obj.button11:setOpacity(0.1);
-    obj.button11:setName("button11");
-
-    obj.button12 = GUI.fromHandle(_obj_newObject("button"));
-    obj.button12:setParent(obj.scrollBox1);
-    obj.button12:setLeft(120);
-    obj.button12:setTop(160);
-    obj.button12:setWidth(60);
-    obj.button12:setHeight(60);
-    obj.button12:setOpacity(0.1);
-    obj.button12:setName("button12");
-
     obj.button13 = GUI.fromHandle(_obj_newObject("button"));
     obj.button13:setParent(obj.scrollBox1);
-    obj.button13:setLeft(460);
+    obj.button13:setLeft(33);
     obj.button13:setTop(160);
     obj.button13:setWidth(60);
     obj.button13:setHeight(60);
@@ -717,8 +723,8 @@ local function constructNew_frmvelen()
 
     obj.button14 = GUI.fromHandle(_obj_newObject("button"));
     obj.button14:setParent(obj.scrollBox1);
-    obj.button14:setLeft(287);
-    obj.button14:setTop(290);
+    obj.button14:setLeft(120);
+    obj.button14:setTop(160);
     obj.button14:setWidth(60);
     obj.button14:setHeight(60);
     obj.button14:setOpacity(0.1);
@@ -726,12 +732,30 @@ local function constructNew_frmvelen()
 
     obj.button15 = GUI.fromHandle(_obj_newObject("button"));
     obj.button15:setParent(obj.scrollBox1);
-    obj.button15:setLeft(542);
+    obj.button15:setLeft(460);
     obj.button15:setTop(160);
     obj.button15:setWidth(60);
     obj.button15:setHeight(60);
     obj.button15:setOpacity(0.1);
     obj.button15:setName("button15");
+
+    obj.button16 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button16:setParent(obj.scrollBox1);
+    obj.button16:setLeft(287);
+    obj.button16:setTop(290);
+    obj.button16:setWidth(60);
+    obj.button16:setHeight(60);
+    obj.button16:setOpacity(0.1);
+    obj.button16:setName("button16");
+
+    obj.button17 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button17:setParent(obj.scrollBox1);
+    obj.button17:setLeft(542);
+    obj.button17:setTop(160);
+    obj.button17:setWidth(60);
+    obj.button17:setHeight(60);
+    obj.button17:setOpacity(0.1);
+    obj.button17:setName("button17");
 
     obj.dataLink1 = GUI.fromHandle(_obj_newObject("dataLink"));
     obj.dataLink1:setParent(obj.scrollBox1);
@@ -754,7 +778,7 @@ local function constructNew_frmvelen()
     obj.dataLink4:setParent(obj.scrollBox1);
     obj.dataLink4:setFields({'ForcaTotal', 'InteligenciaTotal', 'DestrezaTotal', 'AgilidadeTotal', 'VitalidadeTotal', 'FNivel', 'FNivel', 'INivel', 'DNivel', 'ANivel', 'VNivel', 'DForca', 'DInteligencia', 'DDestreza',
 						'DAgilidade', 'DVitalidade', 'ArmaPA', 'ArmaDEF', 'ArmaPM', 'ArmaRES', 'ArmaPF', 'ArmaduraPA', 'ArmaduraPF', 'ArmaduraPM', 'ArmaduraRES', 'ArmaduraDEF', 'OutraPA', 'OutraPF', 'OutraPM', 'OutraRES', 'OutraDEF',
-						'AcessorioPA', 'AcessorioPF', 'AcessorioPM', 'AcessorioRES', 'AcessorioDEF', 'PABasica', 'PMBasica', 'PFBasica', 'RESBasica', 'DEFBasica', 'PARacial', 'PMRacial', 'PFRacial', 'DEFRacial', 'RESRacial',});
+						'AcessorioPA', 'AcessorioPF', 'AcessorioPM', 'AcessorioRES', 'AcessorioDEF', 'PABasica', 'PMBasica', 'PFBasica', 'RESBasica', 'DEFBasica', 'PARacial', 'PMRacial', 'PFRacial', 'DEFRacial', 'RESRacial', 'Classe', 'ORCRacial'});
     obj.dataLink4:setName("dataLink4");
 
     obj.dataLink5 = GUI.fromHandle(_obj_newObject("dataLink"));
@@ -762,28 +786,10 @@ local function constructNew_frmvelen()
     obj.dataLink5:setFields({'Defesa', 'Resistencia', 'Vitalidade', 'Agilidade', 'VitalidadeTotal', 'AgilidadeTotal', 'ArmaduraDEF', 'ArmaDEF', 'OutraDEF', 'AcessorioDEF', 'DEFBasica', 'level'});
     obj.dataLink5:setName("dataLink5");
 
-    obj.button16 = GUI.fromHandle(_obj_newObject("button"));
-    obj.button16:setParent(obj.scrollBox1);
-    obj.button16:setLeft(388);
-    obj.button16:setTop(255);
-    obj.button16:setWidth(60);
-    obj.button16:setHeight(55);
-    obj.button16:setOpacity(0.1);
-    obj.button16:setName("button16");
-
-    obj.button17 = GUI.fromHandle(_obj_newObject("button"));
-    obj.button17:setParent(obj.scrollBox1);
-    obj.button17:setLeft(388);
-    obj.button17:setTop(317);
-    obj.button17:setWidth(60);
-    obj.button17:setHeight(55);
-    obj.button17:setOpacity(0.1);
-    obj.button17:setName("button17");
-
     obj.button18 = GUI.fromHandle(_obj_newObject("button"));
     obj.button18:setParent(obj.scrollBox1);
     obj.button18:setLeft(388);
-    obj.button18:setTop(377);
+    obj.button18:setTop(255);
     obj.button18:setWidth(60);
     obj.button18:setHeight(55);
     obj.button18:setOpacity(0.1);
@@ -792,7 +798,7 @@ local function constructNew_frmvelen()
     obj.button19 = GUI.fromHandle(_obj_newObject("button"));
     obj.button19:setParent(obj.scrollBox1);
     obj.button19:setLeft(388);
-    obj.button19:setTop(435);
+    obj.button19:setTop(317);
     obj.button19:setWidth(60);
     obj.button19:setHeight(55);
     obj.button19:setOpacity(0.1);
@@ -801,11 +807,29 @@ local function constructNew_frmvelen()
     obj.button20 = GUI.fromHandle(_obj_newObject("button"));
     obj.button20:setParent(obj.scrollBox1);
     obj.button20:setLeft(388);
-    obj.button20:setTop(493);
+    obj.button20:setTop(377);
     obj.button20:setWidth(60);
     obj.button20:setHeight(55);
     obj.button20:setOpacity(0.1);
     obj.button20:setName("button20");
+
+    obj.button21 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button21:setParent(obj.scrollBox1);
+    obj.button21:setLeft(388);
+    obj.button21:setTop(435);
+    obj.button21:setWidth(60);
+    obj.button21:setHeight(55);
+    obj.button21:setOpacity(0.1);
+    obj.button21:setName("button21");
+
+    obj.button22 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button22:setParent(obj.scrollBox1);
+    obj.button22:setLeft(388);
+    obj.button22:setTop(493);
+    obj.button22:setWidth(60);
+    obj.button22:setHeight(55);
+    obj.button22:setOpacity(0.1);
+    obj.button22:setName("button22");
 
     obj.dataLink6 = GUI.fromHandle(_obj_newObject("dataLink"));
     obj.dataLink6:setParent(obj.scrollBox1);
@@ -846,13 +870,15 @@ local function constructNew_frmvelen()
 								if sheet.EscolheAtaqueBasico == 'PA' then
 									mesaDoPersonagem.chat:enviarMensagem("[§K4,0]CRITICO CORPO A CORPO CARAI  :awyeah: « " .. sheet.PA * 2 .. " »");
 								elseif sheet.EscolheAtaqueBasico == 'PF' then
-									mesaDoPersonagem.chat:enviarMensagem("[§K4,0]CRITICO A DISTANCIA CARAI :awyeah: « " .. sheet.PF * 2 .. " »");								
+									mesaDoPersonagem.chat:enviarMensagem("[§K4,0]CRITICO A DISTANCIA CARAI :awyeah: « " .. sheet.PF * 2 .. " »");		
+									sheet.AtualFlecha = (tonumber(sheet.AtualFlecha) or 0) - 1;
 								end;	
 							else
 								if sheet.EscolheAtaqueBasico == 'PA' then
 									mesaDoPersonagem.chat:enviarMensagem("[§K9,0]Causando como Dano Fisico corpo a corpo « [§K4,0] " .. sheet.PA .. " [§K9,0]»");
 								elseif sheet.EscolheAtaqueBasico == 'PF' then			
 									mesaDoPersonagem.chat:enviarMensagem("[§K9,0]Causando como Dano Fisico a distancia « [§K4,0] " .. sheet.PF .. " [§K9,0]»");
+									sheet.AtualFlecha = (tonumber(sheet.AtualFlecha) or 0) - 1;
 								end;							
 							end;							
 					end); 
@@ -872,16 +898,16 @@ local function constructNew_frmvelen()
     obj.comboBox3:setItems({'PA', 'PF'});
     obj.comboBox3:setName("comboBox3");
 
-    obj.button21 = GUI.fromHandle(_obj_newObject("button"));
-    obj.button21:setParent(obj.scrollBox1);
-    obj.button21:setLeft(273);
-    obj.button21:setTop(380);
-    obj.button21:setWidth(90);
-    obj.button21:setHeight(30);
-    obj.button21:setFontSize(12);
-    obj.button21:setFontColor("#00FFFF");
-    obj.button21:setText("Ataque Basico");
-    obj.button21:setName("button21");
+    obj.button23 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button23:setParent(obj.scrollBox1);
+    obj.button23:setLeft(273);
+    obj.button23:setTop(380);
+    obj.button23:setWidth(90);
+    obj.button23:setHeight(30);
+    obj.button23:setFontSize(12);
+    obj.button23:setFontColor("#00FFFF");
+    obj.button23:setText("Ataque Basico");
+    obj.button23:setName("button23");
 
     obj.edit12 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit12:setParent(obj.scrollBox1);
@@ -2194,7 +2220,7 @@ local function constructNew_frmvelen()
 					
 					sheet.AgilidadeESQ = math.floor((tonumber(sheet.AgilidadeTotal) or 0) /5);
 
-					sheet.ForcaPer =  ((tonumber(sheet.ForcaTotal) or 0) /30);
+					sheet.ForcaPer =  	((tonumber(sheet.ForcaTotal) or 0) /30);
 						
 					sheet.Acerto = math.floor((tonumber(sheet.ClasseAcerto) or 0) + (tonumber(sheet.EspecAcerto) or 0) + (tonumber(sheet.DestrezaAcerto) or 0) + (tonumber(sheet.AcertoBasica) or 0) + (tonumber(sheet.AcertoRacial) or 0));
 
@@ -2256,6 +2282,24 @@ local function constructNew_frmvelen()
 				else	
 					self.cmbEspecializa.enabled = true;
 				end;	
+			end;
+		
+
+
+ 
+			function IgualarHPMesa()			
+				local mesa = Firecast.getMesaDe(sheet); 
+				local HPTotalMesa = (tonumber(sheet.HPTotal) or 0);
+				mesa.meuJogador:requestSetBarValue(1, nil, HPTotalMesa);
+			end;
+		
+
+
+ 
+			function IgualarMPMesa()			
+				local mesa = Firecast.getMesaDe(sheet); 
+				local MPTotalMesa = (tonumber(sheet.MPTotal) or 0);
+				mesa.meuJogador:requestSetBarValue(2, nil, MPTotalMesa);
 			end;
 		
 
@@ -2444,6 +2488,8 @@ local function constructNew_frmvelen()
             		sheet.ClasseAcerto = (tonumber(sheet.ClasseAcerto) or 0);
             		sheet.ClasseEsquiva = (tonumber(sheet.ClasseEsquiva) or 0);
             		sheet.ClassePer = (tonumber(sheet.ClassePer) or 0);
+            		sheet.AtualFlecha = (tonumber(sheet.AtualFlecha) or 0); 
+            		sheet.MaxFlecha = (tonumber(sheet.MaxFlecha) or 0); 
             		
             		sheet.EspecAM = (tonumber(sheet.EspecAM) or 0);
             		sheet.EspecCM = (tonumber(sheet.EspecCM) or 0);
@@ -2453,6 +2499,7 @@ local function constructNew_frmvelen()
             		sheet.EspecPer = (tonumber(sheet.EspecPer) or 0);
             		self.cmbEspecializa.enabled = false;
             		sheet.CLevel = (tonumber(sheet.CLevel) or 0);
+            		sheet.ORCRacial = (tonumber(sheet.ORCRacial) or 0);
             		
             		sheet.ControladorAtributos = (tonumber(sheet.ControladorAtributos) or 8);
             		
@@ -2519,40 +2566,50 @@ local function constructNew_frmvelen()
 
     obj._e_event11 = obj.button11:addEventListener("onClick",
         function (_)
-            local novoForm = GUI.newForm("frmequip");
-            				novoForm:setNodeObject(sheet);
-            				novoForm:show();
+            IgualarHPMesa()
         end, obj);
 
     obj._e_event12 = obj.button12:addEventListener("onClick",
         function (_)
-            local novoForm = GUI.newForm("frmhabilidade");
-            				novoForm:setNodeObject(sheet);
-            				novoForm:show();
+            IgualarMPMesa()
         end, obj);
 
     obj._e_event13 = obj.button13:addEventListener("onClick",
         function (_)
-            local novoForm = GUI.newForm("frmHistoria");
+            local novoForm = GUI.newForm("frmequip");
             				novoForm:setNodeObject(sheet);
             				novoForm:show();
         end, obj);
 
     obj._e_event14 = obj.button14:addEventListener("onClick",
         function (_)
-            local novoForm = GUI.newForm("frmsummon");
+            local novoForm = GUI.newForm("frmhabilidade");
             				novoForm:setNodeObject(sheet);
             				novoForm:show();
         end, obj);
 
     obj._e_event15 = obj.button15:addEventListener("onClick",
         function (_)
+            local novoForm = GUI.newForm("frmHistoria");
+            				novoForm:setNodeObject(sheet);
+            				novoForm:show();
+        end, obj);
+
+    obj._e_event16 = obj.button16:addEventListener("onClick",
+        function (_)
+            local novoForm = GUI.newForm("frmsummon");
+            				novoForm:setNodeObject(sheet);
+            				novoForm:show();
+        end, obj);
+
+    obj._e_event17 = obj.button17:addEventListener("onClick",
+        function (_)
             local novoForm = GUI.newForm("frmpersonagem");
             				novoForm:setNodeObject(sheet);
             				novoForm:show();
         end, obj);
 
-    obj._e_event16 = obj.dataLink1:addEventListener("onChange",
+    obj._e_event18 = obj.dataLink1:addEventListener("onChange",
         function (_, field, oldValue, newValue)
             if sheet.Level ~= nil then	
             				if sheet.level > 0 then
@@ -2622,7 +2679,7 @@ local function constructNew_frmvelen()
             		end;
         end, obj);
 
-    obj._e_event17 = obj.dataLink2:addEventListener("onChange",
+    obj._e_event19 = obj.dataLink2:addEventListener("onChange",
         function (_, field, oldValue, newValue)
             -- Status Total --
             
@@ -2633,7 +2690,7 @@ local function constructNew_frmvelen()
             			sheet.VitalidadeTotal = math.floor((tonumber(sheet.Vitalidade) or 0) + (tonumber(sheet.VNIvel) or 0) + (tonumber(sheet.DVitalidade) or 0));
         end, obj);
 
-    obj._e_event18 = obj.dataLink3:addEventListener("onChange",
+    obj._e_event20 = obj.dataLink3:addEventListener("onChange",
         function (_, field, oldValue, newValue)
             sheet.ADeslocamento = (tonumber(sheet.AgilidadeTotal) or 0) /10;
             			sheet.RealDeslocamento = (tonumber(sheet.ADeslocamento) or 0) + (tonumber(sheet.Deslocamento) or 0) + (tonumber(sheet.DeslocamentoBasica) or 0);			
@@ -2641,16 +2698,34 @@ local function constructNew_frmvelen()
             			sheet.RealVisao = (tonumber(sheet.DVisao) or 0) + (tonumber(sheet.Visao) or 0) + (tonumber(sheet.VisaoBasica) or 0);
         end, obj);
 
-    obj._e_event19 = obj.dataLink4:addEventListener("onChange",
+    obj._e_event21 = obj.dataLink4:addEventListener("onChange",
         function (_, field, oldValue, newValue)
-            --PA, PM , PF, RES e Def --
+            sheet.ORCRacial = 0;
+            											 
+            			--PA, PM , PF, RES e Def --
             			if sheet.SequenciaInicial == true then
             				if sheet.Classe == 'Monge' then
-            					sheet.PA = math.floor((tonumber(sheet.ForcaTotal) or 0) *4 + (tonumber(sheet.ArmaPA) or 0) + (tonumber(sheet.OutraPA) or 0) + (tonumber(sheet.ArmaduraPA) or 0) + (tonumber(sheet.AcessorioPA) or 0) +
-            										 (tonumber(sheet.PARacial) or 0) + (tonumber(sheet.PABasica) or 0));
+            					if sheet.Raca == 'Orc' then
+            						sheet.ORCRacial = (math.floor((tonumber(sheet.ForcaTotal) or 0) *4 + (tonumber(sheet.ArmaPA) or 0) + (tonumber(sheet.OutraPA) or 0) + (tonumber(sheet.ArmaduraPA) or 0) + (tonumber(sheet.AcessorioPA) or 0) +
+            											 (tonumber(sheet.PARacial) or 0) + (tonumber(sheet.PABasica) or 0)) * 0.10);
+            											 
+            						sheet.PA = math.floor((tonumber(sheet.ForcaTotal) or 0) *4 + (tonumber(sheet.ArmaPA) or 0) + (tonumber(sheet.OutraPA) or 0) + (tonumber(sheet.ArmaduraPA) or 0) + (tonumber(sheet.AcessorioPA) or 0) +
+            											 (tonumber(sheet.PARacial) or 0) + (tonumber(sheet.PABasica) or 0) + (tonumber(sheet.ORCRacial) or 0));
+            					else
+            						sheet.PA = math.floor((tonumber(sheet.ForcaTotal) or 0) *4 + (tonumber(sheet.ArmaPA) or 0) + (tonumber(sheet.OutraPA) or 0) + (tonumber(sheet.ArmaduraPA) or 0) + (tonumber(sheet.AcessorioPA) or 0) +
+            											 (tonumber(sheet.PARacial) or 0) + (tonumber(sheet.PABasica) or 0));
+            					end;
             				else 
-            					sheet.PA =  math.floor((tonumber(sheet.ForcaTotal) or 0) *2 + (tonumber(sheet.ArmaPA) or 0) + (tonumber(sheet.OutraPA) or 0) + (tonumber(sheet.ArmaduraPA) or 0) + (tonumber(sheet.AcessorioPA) or 0) +
-            										  (tonumber(sheet.PARacial) or 0) + (tonumber(sheet.PABasica) or 0));
+            					if sheet.Raca == 'Orc' then 
+            						sheet.ORCRacial = (math.floor((tonumber(sheet.ForcaTotal) or 0) *2 + (tonumber(sheet.ArmaPA) or 0) + (tonumber(sheet.OutraPA) or 0) + (tonumber(sheet.ArmaduraPA) or 0) + (tonumber(sheet.AcessorioPA) or 0) +
+            											 (tonumber(sheet.PARacial) or 0) + (tonumber(sheet.PABasica) or 0)) * 0.10);
+            											 
+            						sheet.PA =  math.floor((tonumber(sheet.ForcaTotal) or 0) *2 + (tonumber(sheet.ArmaPA) or 0) + (tonumber(sheet.OutraPA) or 0) + (tonumber(sheet.ArmaduraPA) or 0) + (tonumber(sheet.AcessorioPA) or 0) +
+            											  (tonumber(sheet.PARacial) or 0) + (tonumber(sheet.PABasica) or 0) + (tonumber(sheet.ORCRacial) or 0));									
+            					else
+            						sheet.PA =  math.floor((tonumber(sheet.ForcaTotal) or 0) *2 + (tonumber(sheet.ArmaPA) or 0) + (tonumber(sheet.OutraPA) or 0) + (tonumber(sheet.ArmaduraPA) or 0) + (tonumber(sheet.AcessorioPA) or 0) +
+            											  (tonumber(sheet.PARacial) or 0) + (tonumber(sheet.PABasica) or 0));
+            					end;
             				end;
             				 
             				sheet.PM =  math.floor((tonumber(sheet.InteligenciaTotal) or 0) *2 + (tonumber(sheet.ArmaPM) or 0) + (tonumber(sheet.OutraPM) or 0) + (tonumber(sheet.ArmaduraPM) or 0) + (tonumber(sheet.AcessorioPM) or 0) +
@@ -2665,7 +2740,7 @@ local function constructNew_frmvelen()
             			end;
         end, obj);
 
-    obj._e_event20 = obj.dataLink5:addEventListener("onChange",
+    obj._e_event22 = obj.dataLink5:addEventListener("onChange",
         function (_, field, oldValue, newValue)
             ---------------------------------------------
             			---------------------------------------------
@@ -2823,32 +2898,32 @@ local function constructNew_frmvelen()
             			end;
         end, obj);
 
-    obj._e_event21 = obj.button16:addEventListener("onClick",
+    obj._e_event23 = obj.button18:addEventListener("onClick",
         function (_)
             showMessage('P.A = Poder de Ataque 2x a Força, Se for Monge 4x Força');
         end, obj);
 
-    obj._e_event22 = obj.button17:addEventListener("onClick",
+    obj._e_event24 = obj.button19:addEventListener("onClick",
         function (_)
             showMessage('P.M = Poder Magico 2x a Inteligencia');
         end, obj);
 
-    obj._e_event23 = obj.button18:addEventListener("onClick",
+    obj._e_event25 = obj.button20:addEventListener("onClick",
         function (_)
             showMessage('P.F = Poder de Fogo 2x a Destreza');
         end, obj);
 
-    obj._e_event24 = obj.button19:addEventListener("onClick",
+    obj._e_event26 = obj.button21:addEventListener("onClick",
         function (_)
             showMessage('DEF = Defesa Fisica que é Armadura + Metade da Vitalidade e Metade da Agilidade');
         end, obj);
 
-    obj._e_event25 = obj.button20:addEventListener("onClick",
+    obj._e_event27 = obj.button22:addEventListener("onClick",
         function (_)
             showMessage('RES = Resistencia Magica que é Metade da Força + Metade da Vitalidade + Metade da Defesa');
         end, obj);
 
-    obj._e_event26 = obj.dataLink6:addEventListener("onChange",
+    obj._e_event28 = obj.dataLink6:addEventListener("onChange",
         function (_, field, oldValue, newValue)
             if sheet.SequenciaInicial == true then
             				self.StatusPorRaca(); 
@@ -2859,7 +2934,7 @@ local function constructNew_frmvelen()
             			end;
         end, obj);
 
-    obj._e_event27 = obj.dataLink7:addEventListener("onChange",
+    obj._e_event29 = obj.dataLink7:addEventListener("onChange",
         function (_, field, oldValue, newValue)
             if sheet.SequenciaInicial == true then
             				self.ControlaRacaHPAte20();
@@ -2873,7 +2948,7 @@ local function constructNew_frmvelen()
             			end;
         end, obj);
 
-    obj._e_event28 = obj.dataLink8:addEventListener("onChange",
+    obj._e_event30 = obj.dataLink8:addEventListener("onChange",
         function (_, field, oldValue, newValue)
             if sheet.SequenciaInicial == true then
             				self.ControlaClasseMP();
@@ -2884,7 +2959,7 @@ local function constructNew_frmvelen()
             			end;
         end, obj);
 
-    obj._e_event29 = obj.dataLink9:addEventListener("onChange",
+    obj._e_event31 = obj.dataLink9:addEventListener("onChange",
         function (_, field, oldValue, newValue)
             if sheet.SequenciaInicial == true then
             				self.StatusDeChances();
@@ -2892,17 +2967,17 @@ local function constructNew_frmvelen()
             			end;
         end, obj);
 
-    obj._e_event30 = obj.button21:addEventListener("onClick",
+    obj._e_event32 = obj.button23:addEventListener("onClick",
         function (_)
             AtaqueBasico()
         end, obj);
 
-    obj._e_event31 = obj.btnUpaLevel:addEventListener("onClick",
+    obj._e_event33 = obj.btnUpaLevel:addEventListener("onClick",
         function (_)
             RolarAtributoPorUpar()
         end, obj);
 
-    obj._e_event32 = obj.dataLink10:addEventListener("onChange",
+    obj._e_event34 = obj.dataLink10:addEventListener("onChange",
         function (_, field, oldValue, newValue)
             if sheet.SequenciaInicial == true then	
             				sheet.XPAtual = tonumber(sheet.XPAtual) or 0;
@@ -2927,7 +3002,7 @@ local function constructNew_frmvelen()
             			end;
         end, obj);
 
-    obj._e_event33 = obj.dataLink11:addEventListener("onChange",
+    obj._e_event35 = obj.dataLink11:addEventListener("onChange",
         function (_, field, oldValue, newValue)
             if sheet.Nome == 'DeLevel' then	
             					sheet.level = tonumber(sheet.level) - 1;
@@ -2937,6 +3012,8 @@ local function constructNew_frmvelen()
         end, obj);
 
     function obj:_releaseEvents()
+        __o_rrpgObjs.removeEventListenerById(self._e_event35);
+        __o_rrpgObjs.removeEventListenerById(self._e_event34);
         __o_rrpgObjs.removeEventListenerById(self._e_event33);
         __o_rrpgObjs.removeEventListenerById(self._e_event32);
         __o_rrpgObjs.removeEventListenerById(self._e_event31);
@@ -2996,7 +3073,6 @@ local function constructNew_frmvelen()
         if self.button16 ~= nil then self.button16:destroy(); self.button16 = nil; end;
         if self.label23 ~= nil then self.label23:destroy(); self.label23 = nil; end;
         if self.button2 ~= nil then self.button2:destroy(); self.button2 = nil; end;
-        if self.rectangle19 ~= nil then self.rectangle19:destroy(); self.rectangle19 = nil; end;
         if self.label22 ~= nil then self.label22:destroy(); self.label22 = nil; end;
         if self.dataLink10 ~= nil then self.dataLink10:destroy(); self.dataLink10 = nil; end;
         if self.dataLink5 ~= nil then self.dataLink5:destroy(); self.dataLink5 = nil; end;
@@ -3026,6 +3102,7 @@ local function constructNew_frmvelen()
         if self.dataLink9 ~= nil then self.dataLink9:destroy(); self.dataLink9 = nil; end;
         if self.rectangle15 ~= nil then self.rectangle15:destroy(); self.rectangle15 = nil; end;
         if self.label12 ~= nil then self.label12:destroy(); self.label12 = nil; end;
+        if self.button22 ~= nil then self.button22:destroy(); self.button22 = nil; end;
         if self.edit8 ~= nil then self.edit8:destroy(); self.edit8 = nil; end;
         if self.label16 ~= nil then self.label16:destroy(); self.label16 = nil; end;
         if self.button21 ~= nil then self.button21:destroy(); self.button21 = nil; end;
@@ -3043,9 +3120,9 @@ local function constructNew_frmvelen()
         if self.label1 ~= nil then self.label1:destroy(); self.label1 = nil; end;
         if self.rectangle7 ~= nil then self.rectangle7:destroy(); self.rectangle7 = nil; end;
         if self.button7 ~= nil then self.button7:destroy(); self.button7 = nil; end;
-        if self.rectangle20 ~= nil then self.rectangle20:destroy(); self.rectangle20 = nil; end;
         if self.label17 ~= nil then self.label17:destroy(); self.label17 = nil; end;
         if self.comboBox1 ~= nil then self.comboBox1:destroy(); self.comboBox1 = nil; end;
+        if self.button23 ~= nil then self.button23:destroy(); self.button23 = nil; end;
         if self.edit13 ~= nil then self.edit13:destroy(); self.edit13 = nil; end;
         if self.edit23 ~= nil then self.edit23:destroy(); self.edit23 = nil; end;
         if self.dataLink1 ~= nil then self.dataLink1:destroy(); self.dataLink1 = nil; end;
@@ -3068,6 +3145,7 @@ local function constructNew_frmvelen()
         if self.edit17 ~= nil then self.edit17:destroy(); self.edit17 = nil; end;
         if self.button17 ~= nil then self.button17:destroy(); self.button17 = nil; end;
         if self.rectangle12 ~= nil then self.rectangle12:destroy(); self.rectangle12 = nil; end;
+        if self.progressBar2 ~= nil then self.progressBar2:destroy(); self.progressBar2 = nil; end;
         if self.label11 ~= nil then self.label11:destroy(); self.label11 = nil; end;
         if self.edit15 ~= nil then self.edit15:destroy(); self.edit15 = nil; end;
         if self.label3 ~= nil then self.label3:destroy(); self.label3 = nil; end;
@@ -3086,6 +3164,7 @@ local function constructNew_frmvelen()
         if self.edit3 ~= nil then self.edit3:destroy(); self.edit3 = nil; end;
         if self.label5 ~= nil then self.label5:destroy(); self.label5 = nil; end;
         if self.rectangle4 ~= nil then self.rectangle4:destroy(); self.rectangle4 = nil; end;
+        if self.progressBar1 ~= nil then self.progressBar1:destroy(); self.progressBar1 = nil; end;
         if self.rectangle13 ~= nil then self.rectangle13:destroy(); self.rectangle13 = nil; end;
         if self.dataLink11 ~= nil then self.dataLink11:destroy(); self.dataLink11 = nil; end;
         if self.edit27 ~= nil then self.edit27:destroy(); self.edit27 = nil; end;

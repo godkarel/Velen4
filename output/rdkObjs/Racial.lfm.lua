@@ -130,8 +130,10 @@ local function constructNew_frmRacial()
     obj.edit4:setHeight(20);
     obj.edit4:setOpacity(1.0);
     obj.edit4:setEnabled(false);
+    obj.edit4:setType("float");
+    obj.edit4:setDecimalPlaces(2);
     obj.edit4:setFontSize(16);
-    obj.edit4:setField("PARacial");
+    obj.edit4:setField("OrcRacial");
     obj.edit4:setName("edit4");
 
     obj.edit5 = GUI.fromHandle(_obj_newObject("edit"));

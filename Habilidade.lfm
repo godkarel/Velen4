@@ -129,13 +129,13 @@
 								mesaDoPersonagem.chat:enviarMensagem(".. [§K3]".. node.DescriHabilidade1);
 								if node.DanoAtributo1 == 'Cura' then
 									if sheet.CMagico +1 > rolado.resultado then 
-										mesaDoPersonagem.chat:enviarMensagem("[§K8,0]Curando com [§K4,0] CRITICAL [§K8,0] « [§K4,0] " .. node.Hintensidade1 .. "[§K8,0] »");
+										mesaDoPersonagem.chat:enviarMensagem("[§K8,0]Curando com [§K4,0] CRITICAL [§K8,0] « [§K4,0] " .. node.Hintensidade1 * 2 .. "[§K8,0] »");
 									else
 										mesaDoPersonagem.chat:enviarMensagem("[§K8,0]Curando « [§K4,0]" .. node.Hintensidade1 .. "[§K8,0] »");
 									end;	
 								else
 									if sheet.CMagico +1 > rolado.resultado then 
-										mesaDoPersonagem.chat:enviarMensagem("[§K9,0]Causando com [§K4,0] CRITICAL [§K9,0] « [§K4,0] " .. node.Hintensidade1 .. "[§K9,0] »");
+										mesaDoPersonagem.chat:enviarMensagem("[§K9,0]Causando com [§K4,0] CRITICAL [§K9,0] « [§K4,0] " .. node.Hintensidade1 * 2 .. "[§K9,0] »");
 									else
 										mesaDoPersonagem.chat:enviarMensagem("[§K9,0]Causando « [§K4,0]" .. node.Hintensidade1 .. "[§K9,0] »");
 									end;	

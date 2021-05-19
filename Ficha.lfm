@@ -186,6 +186,8 @@
 		sheet.ClasseAcerto = (tonumber(sheet.ClasseAcerto) or 0);
 		sheet.ClasseEsquiva = (tonumber(sheet.ClasseEsquiva) or 0);
 		sheet.ClassePer = (tonumber(sheet.ClassePer) or 0);
+		sheet.AtualFlecha = (tonumber(sheet.AtualFlecha) or 0); 
+		sheet.MaxFlecha = (tonumber(sheet.MaxFlecha) or 0); 
 		
 		sheet.EspecAM = (tonumber(sheet.EspecAM) or 0);
 		sheet.EspecCM = (tonumber(sheet.EspecCM) or 0);
@@ -195,6 +197,7 @@
 		sheet.EspecPer = (tonumber(sheet.EspecPer) or 0);
 		self.cmbEspecializa.enabled = false;
 		sheet.CLevel = (tonumber(sheet.CLevel) or 0);
+		sheet.ORCRacial = (tonumber(sheet.ORCRacial) or 0);
 		
 		sheet.ControladorAtributos = (tonumber(sheet.ControladorAtributos) or 8);
 		
@@ -276,10 +279,12 @@
 		<label left="490" top="470" width="70" height="20" scale="1.5" fontColor="Navy  " text="Redução" />
 		<label left="490" top="530" width="70" height="20" scale="1.5" fontColor="Navy  " text="Redução" />
 ------------- Status de Vida e outros -------------------------
-		<rectangle left="148" top="603" color="black"  width="100" height="30"  />
-		<label left="150" fontSize="20" top="603" width="100" fontColor="red" height="30" format="%d" field="HPTotal" />
-		<rectangle left="148" top="640" color="black"  width="100" height="30"  />
-		<label left="150" fontSize="20" top="640" width="100" fontColor="blue" height="30" format="%d" field="MPTotal" />
+		<button left="80" top="603" width="38" opacity="0.1" height="32" onClick="IgualarHPMesa()"/>
+		<progressBar left="148" top="603" color="red"  width="100" value="100" max="100" height="30"  />
+		<label left="150" fontSize="20" top="603" width="100" fontColor="white" horzTextAlign="center" height="30" format="%d" field="HPTotal" />
+		<button left="80" top="637" width="38" opacity="0.1" height="32" onClick="IgualarMPMesa()"/>
+		<progressBar left="148" top="640" color="blue"  width="100" value="100" max="100" height="30"  />
+		<label left="150" fontSize="20" top="640" width="100" fontColor="white" horzTextAlign="center" height="30" format="%d" field="MPTotal" />
 		<rectangle left="168" top="702" color="black"  width="75" height="20"/>
 		<label left="170" top="702" width="75" height="20" field="Esquiva" />
 		<rectangle left="168" top="732" color="black"  width="75" height="20"/>
@@ -461,16 +466,34 @@
 	------------------------------------------	
 	<dataLink fields="{'ForcaTotal', 'InteligenciaTotal', 'DestrezaTotal', 'AgilidadeTotal', 'VitalidadeTotal', 'FNivel', 'FNivel', 'INivel', 'DNivel', 'ANivel', 'VNivel', 'DForca', 'DInteligencia', 'DDestreza',
 						'DAgilidade', 'DVitalidade', 'ArmaPA', 'ArmaDEF', 'ArmaPM', 'ArmaRES', 'ArmaPF', 'ArmaduraPA', 'ArmaduraPF', 'ArmaduraPM', 'ArmaduraRES', 'ArmaduraDEF', 'OutraPA', 'OutraPF', 'OutraPM', 'OutraRES', 'OutraDEF',
-						'AcessorioPA', 'AcessorioPF', 'AcessorioPM', 'AcessorioRES', 'AcessorioDEF', 'PABasica', 'PMBasica', 'PFBasica', 'RESBasica', 'DEFBasica', 'PARacial', 'PMRacial', 'PFRacial', 'DEFRacial', 'RESRacial',}">
-		<event name="onChange"> 	
+						'AcessorioPA', 'AcessorioPF', 'AcessorioPM', 'AcessorioRES', 'AcessorioDEF', 'PABasica', 'PMBasica', 'PFBasica', 'RESBasica', 'DEFBasica', 'PARacial', 'PMRacial', 'PFRacial', 'DEFRacial', 'RESRacial', 'Classe', 'ORCRacial'}">
+		<event name="onChange"> 
+			sheet.ORCRacial = 0;
+											 
 			--PA, PM , PF, RES e Def --
 			if sheet.SequenciaInicial == true then
 				if sheet.Classe == 'Monge' then
-					sheet.PA = math.floor((tonumber(sheet.ForcaTotal) or 0) *4 + (tonumber(sheet.ArmaPA) or 0) + (tonumber(sheet.OutraPA) or 0) + (tonumber(sheet.ArmaduraPA) or 0) + (tonumber(sheet.AcessorioPA) or 0) +
-										 (tonumber(sheet.PARacial) or 0) + (tonumber(sheet.PABasica) or 0));
+					if sheet.Raca == 'Orc' then
+						sheet.ORCRacial = (math.floor((tonumber(sheet.ForcaTotal) or 0) *4 + (tonumber(sheet.ArmaPA) or 0) + (tonumber(sheet.OutraPA) or 0) + (tonumber(sheet.ArmaduraPA) or 0) + (tonumber(sheet.AcessorioPA) or 0) +
+											 (tonumber(sheet.PARacial) or 0) + (tonumber(sheet.PABasica) or 0)) * 0.10);
+											 
+						sheet.PA = math.floor((tonumber(sheet.ForcaTotal) or 0) *4 + (tonumber(sheet.ArmaPA) or 0) + (tonumber(sheet.OutraPA) or 0) + (tonumber(sheet.ArmaduraPA) or 0) + (tonumber(sheet.AcessorioPA) or 0) +
+											 (tonumber(sheet.PARacial) or 0) + (tonumber(sheet.PABasica) or 0) + (tonumber(sheet.ORCRacial) or 0));
+					else
+						sheet.PA = math.floor((tonumber(sheet.ForcaTotal) or 0) *4 + (tonumber(sheet.ArmaPA) or 0) + (tonumber(sheet.OutraPA) or 0) + (tonumber(sheet.ArmaduraPA) or 0) + (tonumber(sheet.AcessorioPA) or 0) +
+											 (tonumber(sheet.PARacial) or 0) + (tonumber(sheet.PABasica) or 0));
+					end;
 				else 
-					sheet.PA =  math.floor((tonumber(sheet.ForcaTotal) or 0) *2 + (tonumber(sheet.ArmaPA) or 0) + (tonumber(sheet.OutraPA) or 0) + (tonumber(sheet.ArmaduraPA) or 0) + (tonumber(sheet.AcessorioPA) or 0) +
-										  (tonumber(sheet.PARacial) or 0) + (tonumber(sheet.PABasica) or 0));
+					if sheet.Raca == 'Orc' then 
+						sheet.ORCRacial = (math.floor((tonumber(sheet.ForcaTotal) or 0) *2 + (tonumber(sheet.ArmaPA) or 0) + (tonumber(sheet.OutraPA) or 0) + (tonumber(sheet.ArmaduraPA) or 0) + (tonumber(sheet.AcessorioPA) or 0) +
+											 (tonumber(sheet.PARacial) or 0) + (tonumber(sheet.PABasica) or 0)) * 0.10);
+											 
+						sheet.PA =  math.floor((tonumber(sheet.ForcaTotal) or 0) *2 + (tonumber(sheet.ArmaPA) or 0) + (tonumber(sheet.OutraPA) or 0) + (tonumber(sheet.ArmaduraPA) or 0) + (tonumber(sheet.AcessorioPA) or 0) +
+											  (tonumber(sheet.PARacial) or 0) + (tonumber(sheet.PABasica) or 0) + (tonumber(sheet.ORCRacial) or 0));									
+					else
+						sheet.PA =  math.floor((tonumber(sheet.ForcaTotal) or 0) *2 + (tonumber(sheet.ArmaPA) or 0) + (tonumber(sheet.OutraPA) or 0) + (tonumber(sheet.ArmaduraPA) or 0) + (tonumber(sheet.AcessorioPA) or 0) +
+											  (tonumber(sheet.PARacial) or 0) + (tonumber(sheet.PABasica) or 0));
+					end;
 				end;
 				 
 				sheet.PM =  math.floor((tonumber(sheet.InteligenciaTotal) or 0) *2 + (tonumber(sheet.ArmaPM) or 0) + (tonumber(sheet.OutraPM) or 0) + (tonumber(sheet.ArmaduraPM) or 0) + (tonumber(sheet.AcessorioPM) or 0) +
@@ -732,13 +755,15 @@
 								if sheet.EscolheAtaqueBasico == 'PA' then
 									mesaDoPersonagem.chat:enviarMensagem("[§K4,0]CRITICO CORPO A CORPO CARAI  :awyeah: « " .. sheet.PA * 2 .. " »");
 								elseif sheet.EscolheAtaqueBasico == 'PF' then
-									mesaDoPersonagem.chat:enviarMensagem("[§K4,0]CRITICO A DISTANCIA CARAI :awyeah: « " .. sheet.PF * 2 .. " »");								
+									mesaDoPersonagem.chat:enviarMensagem("[§K4,0]CRITICO A DISTANCIA CARAI :awyeah: « " .. sheet.PF * 2 .. " »");		
+									sheet.AtualFlecha = (tonumber(sheet.AtualFlecha) or 0) - 1;
 								end;	
 							else
 								if sheet.EscolheAtaqueBasico == 'PA' then
 									mesaDoPersonagem.chat:enviarMensagem("[§K9,0]Causando como Dano Fisico corpo a corpo « [§K4,0] " .. sheet.PA .. " [§K9,0]»");
 								elseif sheet.EscolheAtaqueBasico == 'PF' then			
 									mesaDoPersonagem.chat:enviarMensagem("[§K9,0]Causando como Dano Fisico a distancia « [§K4,0] " .. sheet.PF .. " [§K9,0]»");
+									sheet.AtualFlecha = (tonumber(sheet.AtualFlecha) or 0) - 1;
 								end;							
 							end;							
 					end); 
@@ -1881,7 +1906,7 @@
 					
 					sheet.AgilidadeESQ = math.floor((tonumber(sheet.AgilidadeTotal) or 0) /5);
 
-					sheet.ForcaPer =  ((tonumber(sheet.ForcaTotal) or 0) /30);
+					sheet.ForcaPer =  	((tonumber(sheet.ForcaTotal) or 0) /30);
 						
 					sheet.Acerto = math.floor((tonumber(sheet.ClasseAcerto) or 0) + (tonumber(sheet.EspecAcerto) or 0) + (tonumber(sheet.DestrezaAcerto) or 0) + (tonumber(sheet.AcertoBasica) or 0) + (tonumber(sheet.AcertoRacial) or 0));
 
@@ -1951,6 +1976,29 @@
 		]]>
 		
     </script> 	
+	
+	<script>
+		<![CDATA[ 
+			function IgualarHPMesa()			
+				local mesa = Firecast.getMesaDe(sheet); 
+				local HPTotalMesa = (tonumber(sheet.HPTotal) or 0);
+				mesa.meuJogador:requestSetBarValue(1, nil, HPTotalMesa);
+			end;
+		]]>
+		
+    </script> 
+
+	<script>
+		<![CDATA[ 
+			function IgualarMPMesa()			
+				local mesa = Firecast.getMesaDe(sheet); 
+				local MPTotalMesa = (tonumber(sheet.MPTotal) or 0);
+				mesa.meuJogador:requestSetBarValue(2, nil, MPTotalMesa);
+			end;
+		]]>
+		
+    </script> 	
+	
 
 	
 </form>

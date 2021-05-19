@@ -34,11 +34,25 @@ local function constructNew_frmSummon2()
     obj.label1:setParent(obj);
     obj.label1:setAlign("client");
     obj.label1:setText("Teste de label");
-    obj.label1:setField("campoTitulo");
+    obj.label1:setHorzTextAlign("center");
+    obj.label1:setField("NomeSummon2");
     obj.label1:setMargins({left=4, right=4, top=4, bottom=4});
     obj.label1:setName("label1");
 
+    obj.dataLink1 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink1:setParent(obj);
+    obj.dataLink1:setField("NomeSummon");
+    obj.dataLink1:setName("dataLink1");
+
+    obj._e_event0 = obj.dataLink1:addEventListener("onChange",
+        function (_, field, oldValue, newValue)
+            if sheet.NomeSummon ~= nil then
+            					sheet.NomeSummon2 = "👾 " .. sheet.NomeSummon;
+            				end;
+        end, obj);
+
     function obj:_releaseEvents()
+        __o_rrpgObjs.removeEventListenerById(self._e_event0);
     end;
 
     obj._oldLFMDestroy = obj.destroy;
@@ -50,6 +64,7 @@ local function constructNew_frmSummon2()
           self:setNodeDatabase(nil);
         end;
 
+        if self.dataLink1 ~= nil then self.dataLink1:destroy(); self.dataLink1 = nil; end;
         if self.label1 ~= nil then self.label1:destroy(); self.label1 = nil; end;
         self:_oldLFMDestroy();
     end;
